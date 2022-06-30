@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
+using MySql.Data.MySqlClient;
 
 namespace TeamProjectFrontEnd
 {
@@ -19,7 +21,7 @@ namespace TeamProjectFrontEnd
 
         private void button1_Click(object sender, EventArgs e)
         {
-      
+            string Conn = "Server=localhost;Database=test;Uid=root;Pwd=0000;";
             try
             {
                 // 이미 가입되어 있는 이름입니다

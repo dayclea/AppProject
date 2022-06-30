@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
+using MySql.Data.MySqlClient;
 
 namespace TeamProjectFrontEnd
 {
@@ -24,6 +26,13 @@ namespace TeamProjectFrontEnd
         {
             InitializeComponent();
         }
+        Screen.ManagerScreen mScreen = new Screen.ManagerScreen();
+
+        
+        private void ManagerPage_Load(object sender, EventArgs e)
+        {
+            mainPanel.Controls.Add(mScreen);
+        }
 
         private void checkBoxHide_CheckedChanged(object sender, EventArgs e)
         {
@@ -31,20 +40,14 @@ namespace TeamProjectFrontEnd
             if (checkBoxHide.Checked == true)
             {
                 button1.Text = "";
-                button2.Text = "";
-                button3.Text = "";
 
                 checkBoxHide.Text = ">";
             }
             //슬라이딩 메뉴 펼쳤을때
             else
             {
-                button1.Text = "회원 가입 요청";
+                button1.Text = "관리자 페이지";
                 button1.BackgroundImage = null;
-                button2.Text = "회원 리스트";
-                button2.BackgroundImage = null;
-                button3.Text = "솔루션 페이지";
-                button3.BackgroundImage = null;
    
                 checkBoxHide.Text = "<";
             }
@@ -69,6 +72,21 @@ namespace TeamProjectFrontEnd
                     timerSliding.Stop();
             }
             panelSideMenu.Width = _posSliding;
+        }
+
+        // 메뉴 클릭시 클릭된 메뉴 색상 변경
+        private void button1_Click(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.LightSalmon;
+        }
+
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            SolutionPage2 solPage = new SolutionPage2();
+            solPage.Tag = this;
+            solPage.Show();
+            this.Hide();
         }
     }
 

@@ -34,8 +34,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -70,6 +68,7 @@
             // 
             this.textBox6.Location = new System.Drawing.Point(158, 338);
             this.textBox6.Name = "textBox6";
+            this.textBox6.PasswordChar = '*';
             this.textBox6.Size = new System.Drawing.Size(148, 21);
             this.textBox6.TabIndex = 11;
             // 
@@ -87,8 +86,6 @@
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.textBox6);
             this.groupBox1.Controls.Add(this.label6);
@@ -120,32 +117,11 @@
             this.label9.TabIndex = 15;
             this.label9.Text = "      ";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.White;
-            this.label8.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label8.Location = new System.Drawing.Point(55, 308);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(151, 12);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "8자 이상의 영문, 숫자 조합";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.White;
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label7.Location = new System.Drawing.Point(55, 252);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(151, 12);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "6자 이상의 영문, 숫자 조합";
-            // 
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(158, 278);
             this.textBox5.Name = "textBox5";
+            this.textBox5.PasswordChar = '*';
             this.textBox5.Size = new System.Drawing.Size(148, 21);
             this.textBox5.TabIndex = 9;
             // 
@@ -257,8 +233,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox4;

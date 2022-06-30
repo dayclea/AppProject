@@ -20,10 +20,8 @@
 
 
 
-LoginPage : 기존 로그인 페이지
-LoginPage2 : 로그인 버튼을 크게 빼고 회원가입과 관리자 로그인을 밑에 작게 뺌
+LoginPage : 로그인 버튼 크게
 
-뭐가 더 나은지 모르겠어서 일단 둘 다...
 
 
 SignUpPage : LoginPage는 켜진 상태로 새롭게 회원가입 창이 열림 

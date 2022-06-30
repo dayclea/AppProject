@@ -7,22 +7,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
+using MySql.Data.MySqlClient;
 
 namespace TeamProjectFrontEnd
 {
     public partial class SolutionPage2 : Form
     {
-        // 슬라이딩 메뉴의 폭
-        const int MAX_SLIDING_WIDTH = 200;
-        const int MIN_SLIDING_WIDTH = 50;
-        // 슬라이딩 메뉴 펼쳐지는 / 접히는 속도
-        const int STEP_SLIDING = 10;
-        // 슬라이딩 메뉴 최소 크기
-        int _posSliding = 200;
 
         public SolutionPage2()
         {
             InitializeComponent();
+        }
+
+        // 폼 로드시 보여줄 화면
+        // form이 로드될때 판넬 미리 선언한다.
+        Screen.SolutionScreen solScren1 = new Screen.SolutionScreen();
+        
+        private void SolutionPage2_Load(object sender, EventArgs e)
+        {
+            mainPanel.Controls.Add(solScren1);
+
+            // 폼 로드시 메뉴 전부 접기
+            panel2.Hide();
+            panel3.Hide();
+            panel4.Hide();
+            panel1.Hide();
         }
 
         private void checkBoxHide_CheckedChanged(object sender, EventArgs e)
@@ -30,13 +40,70 @@ namespace TeamProjectFrontEnd
 
         }
 
+        // 드롭다운 메뉴
+        // 클릭된 대분류 -> 색상변경 + 펼치기
         private void button1_Click(object sender, EventArgs e)
         {
+            button1.BackColor = Color.LightSalmon;
+            button5.BackColor = Color.DarkSalmon;
+            button8.BackColor = Color.DarkSalmon;
+            button11.BackColor = Color.DarkSalmon;
+
             panel2.Show();
             panel3.Hide();
             panel4.Hide();
             panel1.Hide();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.DarkSalmon;
+            button5.BackColor = Color.LightSalmon;
+            button8.BackColor = Color.DarkSalmon;
+            button11.BackColor = Color.DarkSalmon;
+
+            panel2.Hide();
+            panel3.Show();
+            panel4.Hide();
+            panel1.Hide();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.DarkSalmon;
+            button5.BackColor = Color.DarkSalmon;
+            button8.BackColor = Color.LightSalmon;
+            button11.BackColor = Color.DarkSalmon;
+
+            panel2.Hide();
+            panel3.Hide();
+            panel4.Show();
+            panel1.Hide();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            button1.BackColor = Color.DarkSalmon;
+            button5.BackColor = Color.DarkSalmon;
+            button8.BackColor = Color.DarkSalmon;
+            button11.BackColor = Color.LightSalmon;
+
+            panel2.Hide();
+            panel3.Hide();
+            panel4.Hide();
+            panel1.Show();
+        }
+
+
+
+        // 슬라이딩 메뉴
+        // 슬라이딩 메뉴의 폭
+        const int MAX_SLIDING_WIDTH = 200;
+        const int MIN_SLIDING_WIDTH = 50;
+        // 슬라이딩 메뉴 펼쳐지는 / 접히는 속도
+        const int STEP_SLIDING = 10;
+        // 슬라이딩 메뉴 최소 크기
+        int _posSliding = 200;
 
         private void checkBoxHide_CheckedChanged_1(object sender, EventArgs e)
         {
@@ -132,36 +199,10 @@ namespace TeamProjectFrontEnd
             panelSideMenu.Width = _posSliding;
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            panel2.Hide();
-            panel3.Show();
-            panel4.Hide();
-            panel1.Hide();
-        }
 
-        private void button8_Click(object sender, EventArgs e)
-        {
-            panel2.Hide();
-            panel3.Hide();
-            panel4.Show();
-            panel1.Hide();
-        }
+    
 
-        private void button11_Click(object sender, EventArgs e)
-        {
-            panel2.Hide();
-            panel3.Hide();
-            panel4.Hide();
-            panel1.Show();
-        }
 
-        private void SolutionPage2_Load(object sender, EventArgs e)
-        {
-            panel2.Hide();
-            panel3.Hide();
-            panel4.Hide();
-            panel1.Hide();
-        }
+
     }
 }
