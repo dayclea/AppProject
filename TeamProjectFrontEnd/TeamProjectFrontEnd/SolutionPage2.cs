@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace TeamProjectFrontEnd
 {
@@ -162,6 +163,79 @@ namespace TeamProjectFrontEnd
             panel3.Hide();
             panel4.Hide();
             panel1.Hide();
+        }
+
+
+
+
+
+
+
+
+
+
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("종료하시겠습니까?", "종료", MessageBoxButtons.YesNo) == DialogResult.Cancel)
+                e.Cancel = true;
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            groupBox1.Name = "Dstation";
+            MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
+            DataSet ds;
+            ds = dbLib.GetUser(1);
+
+            dataGridView1.DataSource = ds.Tables[0];
+            /*MySqlDataReader R = cmd.ExecuteReader();*/
+            /*ListViewItem lvt = new ListViewItem()
+            lvt.SubItems.Add(i.ToString());
+            lvt.SubItems.Add(R["uid"].ToString());
+            lvt.SubItems.Add(R.GetString(1));
+            lvt.SubItems.Add(R.GetString(2));
+            lvt.SubItems.Add(R.GetString(3));
+            lvt.SubItems.Add(R.GetString(4));
+            listView1.Items.Add(lvt);
+
+            listView1.sub*/
+            /* objectListView1.SetObjects(ds.Tables[0][1]);*/
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
+            DataSet ds;
+            ds = dbLib.GetUser(2);
+
+            dataGridView1.DataSource = ds.Tables[0];
+        }
+
+        // 데이터 가져오기 버튼 클릭 이벤트
+        private void btnData_Click(object sender, EventArgs e)
+        {
+            // 데이터가 없는 경우 return
+            if (this.dataGridView1.RowCount == 0)
+                return;
+
+            // 현재 Row를 가져온다.
+            DataGridViewRow dgvr = dataGridView1.CurrentRow;
+
+            // 선택한 Row의 데이터를 가져온다.
+            DataRow row = (dgvr.DataBoundItem as DataRowView).Row;
+
+            // TextBox에 그리드 데이터를 넣는다.
+            String[] Querystring = new string[5];
+            Querystring[0] = row["solution_code"].ToString();
+            Querystring[1] = row["release_date"].ToString();
+            Querystring[2] = row["manager"].ToString();
+            Querystring[3] = row["update_version"].ToString();
+            Querystring[4] = row["description"].ToString();
+
+            MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
+            dbLib.InsertDB(Querystring);
+
+          
         }
     }
 }
