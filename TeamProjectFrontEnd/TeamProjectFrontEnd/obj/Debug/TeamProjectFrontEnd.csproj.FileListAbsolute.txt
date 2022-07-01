@@ -34,9 +34,6 @@ D:\CSharpProject\AppProject\TeamProjectFrontEnd\TeamProjectFrontEnd\obj\Debug\Te
 D:\CSharpProject\AppProject\TeamProjectFrontEnd\TeamProjectFrontEnd\obj\Debug\TeamProjectFrontEnd.csproj.CoreCompileInputs.cache
 D:\CSharpProject\AppProject\TeamProjectFrontEnd\TeamProjectFrontEnd\obj\Debug\TeamProjectFrontEnd.exe
 D:\CSharpProject\AppProject\TeamProjectFrontEnd\TeamProjectFrontEnd\obj\Debug\TeamProjectFrontEnd.pdb
-D:\CSharpProject\AppProject\TeamProjectFrontEnd\TeamProjectFrontEnd\bin\Debug\ObjectListView.dll
-D:\CSharpProject\AppProject\TeamProjectFrontEnd\TeamProjectFrontEnd\bin\Debug\ObjectListView.pdb
-D:\CSharpProject\AppProject\TeamProjectFrontEnd\TeamProjectFrontEnd\bin\Debug\ObjectListView.xml
 D:\CSharpProject\AppProject\TeamProjectFrontEnd\TeamProjectFrontEnd\obj\Debug\TeamProjectFrontEnd.csproj.CopyComplete
 D:\CSharpProject\AppProject\TeamProjectFrontEnd\TeamProjectFrontEnd\obj\Debug\TeamProjectFrontEnd.exe.config
 D:\CSharpProject\AppProject\TeamProjectFrontEnd\TeamProjectFrontEnd\bin\Debug\MySql.Data.dll

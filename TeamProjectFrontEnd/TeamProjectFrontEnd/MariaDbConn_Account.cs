@@ -10,10 +10,14 @@ using System.Data;
 // 각 쿼리문을 다른 CS파일에서 만들고 메소드에 넣어서 실행
 // EX)
 // string sql = "select * from tbl_update";
-// MariaDbConn.ConnectionTest(query);
-///
+// dataGridView1.DataSource = MariaDbConn.ConnectionTest(query); // dataGrid 형식에 뿌려줄떄
+
+
+
 /////////////////////////////////////
-///
+
+
+
 // DB 명 : db_emp
 // 테이블 명 : tbl_account
 // 테이블 정보 : empcode, name, account_id, account_psw, login_status
@@ -28,7 +32,7 @@ using System.Data;
 
 
 
-namespace MariaDbConn
+namespace MariaDbConnAccount
 {
     public class MariaDbLib
     {
@@ -41,12 +45,12 @@ namespace MariaDbConn
 
         //AWS 접속 정보
         string connectString = string.Format("Server={0};Database={1};Uid ={2};Pwd={3};", "52.79.165.81",
-                                             "db_solutions", "teammate2", "teammate2");
+                                             "db_emp", "teammate2", "teammate2");
 
         // 접속테스트
         public bool ConnectionTest()
 
-        {
+        {   
             try
             {
                 using (MySqlConnection conn = new MySqlConnection(connectString)) //DB 연결
@@ -67,7 +71,7 @@ namespace MariaDbConn
         //데이터조회
         public DataSet SelectDB(String sql)
         {
-            // string sql = "select * from tbl_update";
+            /*string sql = "select * from tbl_account";*/
 
             DataSet ds = new DataSet();
 
@@ -77,18 +81,15 @@ namespace MariaDbConn
                 MySqlDataAdapter da = new MySqlDataAdapter(sql, conn);
                 da.Fill(ds);
             }
+
             return ds;
         }
 
         //INSERT처리
         public void InsertDB(String sql)
         {
-            /*String[] Querystring = { "VDI001", "20220127", "KIM", "1.27", "Minor Patch" };
-            string sql = String.Format("Insert Into tbl_update (solution_code,release_date,manager,update_version,description) values ('{0}','{1}','{2}','{3}','{4}');"
-                                        , Querystring[0], Querystring[1], Querystring[2], Querystring[3], Querystring[4]);*/
-
-
-            //string sql = "Insert Into tbl_update (solution_code,release_date,manager,update_version,description) values (" + Querystring[0] + "," + Querystring[1] + "," + Querystring[2] + "," + Querystring[3] + "," + Querystring[4] + ");";
+            /*String[] Querystring = { "0000", "Admin", "Admin@tilon.com", "Admin" };
+            string sql = "Insert Into tbl_account (empcode,name,account_id,account_psw) values("+Querystring[0]+", "+Querystring[1]+", "+Querystring[2]+", "+Querystring[3]+");";*/
 
             using (MySqlConnection conn = new MySqlConnection(connectString))
             {
@@ -118,7 +119,11 @@ namespace MariaDbConn
         //UPDATE처리
         public void UpdateDB(string sql)
         {
-            /*string sql = "Update tbl_update Set name ='홍길동2' where id = 1";*/
+
+            /*String[] Querystring = { "홍길동2", "0000"};
+            string sql = string.Format("Update tbl_account Set name = {0}, where empcode = {1}",
+                                            "홍길동2", "0000");*/
+            
 
             using (MySqlConnection conn = new MySqlConnection(connectString))
             {
@@ -132,8 +137,8 @@ namespace MariaDbConn
         //DELETE처리
         public void DeleteDB(string sql)
         {
-            /*string sql = "Delete From tbl_update where id = '1'";*/
-
+/*            string sql = "Delete From tbl_update where id = '1'";
+*/
             using (MySqlConnection conn = new MySqlConnection(connectString))
             {
                 conn.Open();
@@ -142,10 +147,11 @@ namespace MariaDbConn
             }
         }
 
-        //솔루션별 데이터조회
+        //회원별 데이터조회
         public DataSet GetUser(String solution_code)
         {
-            string sql = "select * from tbl_update where 1=1 and solution_code = '" + solution_code + "'";
+            string sql = "select * from tbl_account where 1=1 and empcode = '" + solution_code + "'";
+
             DataSet ds = new DataSet();
 
             using (MySqlConnection conn = new MySqlConnection(connectString))

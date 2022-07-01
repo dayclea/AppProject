@@ -171,7 +171,7 @@ namespace TeamProjectFrontEnd
             groupBox1.Name = "Dstation";
             MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
             DataSet ds;
-            ds = dbLib.GetUser(1);
+            ds = dbLib.GetUser("VDI001");
 
             dataGridView1.DataSource = ds.Tables[0];
          
@@ -181,7 +181,7 @@ namespace TeamProjectFrontEnd
         {
             MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
             DataSet ds;
-            ds = dbLib.GetUser(2);
+            ds = dbLib.GetUser("VDI002");
 
             dataGridView1.DataSource = ds.Tables[0];
         }
