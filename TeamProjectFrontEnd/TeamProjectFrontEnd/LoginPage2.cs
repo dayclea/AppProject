@@ -22,14 +22,32 @@ namespace TeamProjectFrontEnd
             pictureBox2.Parent = pictureBox1;
         }
 
-        // 로그인 성공시 솔루션 페이지로 이동
+
+        // 일반회원 로그인
         private void button1_Click(object sender, EventArgs e)
         {
+            MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
 
-            SolutionPage solPage = new SolutionPage();
-            this.Hide();
-            solPage.ShowDialog();
-            this.Close();
+            if (string.IsNullOrEmpty(textBox2.Text))
+            {
+                MessageBox.Show("아이디를 입력해주세요.");
+            }
+            else if (!string.IsNullOrEmpty(textBox2.Text) && string.IsNullOrEmpty(textBox1.Text))
+            {
+                MessageBox.Show("비밀번호를 입력해주세요.");
+            }
+            else
+            {
+                bool loginResult = dbLib.SelectDB(textBox2.Text, textBox1.Text);
+                if (loginResult)
+                {
+                    SolutionPage solPage = new SolutionPage();
+                    this.Hide();
+                    solPage.ShowDialog();
+                    this.Close();
+                }
+
+            }
         }
 
         // 회원가입 페이지 
@@ -44,10 +62,39 @@ namespace TeamProjectFrontEnd
         // 관리자 페이지
         private void label5_Click(object sender, EventArgs e)
         {
-            ManagerPage managerPage = new ManagerPage();
-            this.Hide();
-            managerPage.ShowDialog();
-            this.Close();
+            MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
+            dbLib.ConnectionTest();
+            Console.WriteLine("hello"); // 일단 여기까진 진입 완
+
+
+            // 관리자 아이디일때(admin) -> 실행
+            if (textBox2.Text == "admin" && !string.IsNullOrEmpty(textBox1.Text))
+            {
+                bool mLogin = dbLib.mLoginDB(textBox1.Text);
+
+                if (mLogin)
+                {
+                    ManagerPage managerPage = new ManagerPage();
+                    this.Hide();
+                    managerPage.ShowDialog();
+                    this.Close();
+                }
+            }
+            // 관리자 아이디가 아닐때
+            else if (textBox2.Text != "admin" && !string.IsNullOrEmpty(textBox2.Text))
+            {
+                MessageBox.Show("관리자 계정이 아닙니다.");
+            }
+            // 아이디를 입력하지 않았을때
+            else if (string.IsNullOrEmpty(textBox2.Text))
+            {
+                MessageBox.Show("아이디를 입력해주세요.");
+            }
+            // 아이디는 입력했으나, 비밀번호를 입력하지 않았을때 
+            else if (!string.IsNullOrEmpty(textBox2.Text) && string.IsNullOrEmpty(textBox1.Text))
+            {
+                MessageBox.Show("비밀번호를 입력해주세요.");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

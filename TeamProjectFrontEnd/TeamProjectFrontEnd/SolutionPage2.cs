@@ -171,9 +171,9 @@ namespace TeamProjectFrontEnd
             groupBox1.Name = "Dstation";
             MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
             DataSet ds;
-            ds = dbLib.GetUser("VDI001");
+            //ds = dbLib.GetUser("VDI001");
 
-            dataGridView1.DataSource = ds.Tables[0];
+            //dataGridView1.DataSource = ds.Tables[0];
          
         }
 
@@ -181,9 +181,9 @@ namespace TeamProjectFrontEnd
         {
             MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
             DataSet ds;
-            ds = dbLib.GetUser("VDI002");
+            //ds = dbLib.GetUser("VDI002");
 
-            dataGridView1.DataSource = ds.Tables[0];
+            //dataGridView1.DataSource = ds.Tables[0];
         }
 
         // 클릭 이벤트
