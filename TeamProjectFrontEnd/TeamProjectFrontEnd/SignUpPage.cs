@@ -195,17 +195,17 @@ namespace TeamProjectFrontEnd
                         }
                     }
                 }
-                else if (dsEmpCode.Tables[0].Rows.Count > 0)
+                else if (dsEmpCode.Tables[0].Rows.Count > 0)    //사원번호 중복이 있을 경우, 관리자 권한 필요
                 {
                     MessageBox.Show("중복된 사원번호가 존재합니다. 관리자에게 문의하시기 바랍니다.");
                 }
                 else if (idCheck == false)
                 {
-                    MessageBox.Show("아이디를 확인해주시기 바랍니다.");
+                    MessageBox.Show("입력하신 아이디를 확인해주시기 바랍니다.");
                 }
                 else if (pwdCheck || pwdRecheck == false)
                 {
-                    MessageBox.Show("비밀번호를 확인해주시기 바랍니다.");
+                    MessageBox.Show("입력하신 비밀번호를 확인해주시기 바랍니다.");
                 }
                 else
                 {
