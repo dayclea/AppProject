@@ -191,5 +191,30 @@ namespace MariaDbConn
             }
             return ds;
         }
+
+        public DataSet GetSolutionSelectedToEdit(String solution_code, String release_date)
+        {
+            string sql = "SELECT A.solution_code as '솔루션 번호'," +
+                                "B.solution_name as '솔루션 명'," +
+                                "A.release_date as '수정/배포일자', " +
+                                "A.manager as '담당자'," +
+                                "A.update_version as 'version'," +
+                                "A.description as '업데이트 개요' " +
+                                "from db_solutions.tbl_update A " +
+                                "INNER JOIN db_solutions.tbl_solution_master B " +
+                                "ON A.solution_code = B.solution_code " +
+                                "where 1 = 1 " +
+                                "AND A.solution_code = '" + solution_code + "'" +
+                                "AND A.release_date = '" + release_date + "'";
+            DataSet ds = new DataSet();
+
+            using (MySqlConnection conn = new MySqlConnection(connectString))
+            {
+                conn.Open();
+                MySqlDataAdapter da = new MySqlDataAdapter(sql, conn);
+                da.Fill(ds);
+            }
+            return ds;
+        }
     }
 }

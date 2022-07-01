@@ -272,27 +272,39 @@ namespace TeamProjectFrontEnd
         // 추가버튼 클릭 이벤트
         private void BtnInsert_Click(object sender, EventArgs e)
         {
-
-            SolutionPage solPage = new SolutionPage(1);
+            SolutionPage solPage = new SolutionPage();
             solPage.Tag = this;
             solPage.Show();
             this.Hide();
-
         }
+
         // 수정버튼 클릭 이벤트
         private void BtnEdit_Click(object sender, EventArgs e)
         {
-            SolutionPage solPage = new SolutionPage(2);
-            solPage.Tag = this;
-            solPage.Show();
-            this.Hide();
+            if (dataGridView1.SelectedCells.Count <= 1)
+            {
+                MessageBox.Show("수정할 데이터를 선택해주세요.", "Error");
+                return;
+            }
+            else
+            {
+                String solution_code = (dataGridView1.SelectedCells[0].Value).ToString();
+                String release_date = (dataGridView1.SelectedCells[2].Value).ToString();
+
+                //수정할 데이터를 찾을거 들고 페이지 이동
+                SolutionPage solPage = new SolutionPage(solution_code, release_date);
+                solPage.Tag = this;
+                solPage.Show();
+                this.Hide();
+            }
+
+        
         }
 
 
         //삭제 버튼 클릭 이벤트
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-            String solution_code = "";
             if (dataGridView1.SelectedCells.Count <= 1)
             {
                 MessageBox.Show("삭제할 데이터를 선택해주세요.", "Error");
@@ -306,7 +318,7 @@ namespace TeamProjectFrontEnd
             
             try
             {
-                solution_code = (dataGridView1.SelectedCells[0].Value).ToString();
+                String solution_code = (dataGridView1.SelectedCells[0].Value).ToString();
                 String release_date = (dataGridView1.SelectedCells[2].Value).ToString();
 
                 Console.WriteLine(solution_code);

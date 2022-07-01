@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Windows.Forms;
 
 
@@ -7,10 +8,17 @@ namespace TeamProjectFrontEnd
     public partial class SolutionPage : Form
     {
        
-        public SolutionPage(int editOrInsert)
+        public SolutionPage()
         {
             InitializeComponent();
             colset(dataGridView1);
+        }
+
+        //edit버튼에서 실행될시
+        public SolutionPage(String solution_code, String release_date)
+        {
+            InitializeComponent();
+            colset2(dataGridView1, solution_code, release_date);
         }
 
         private void checkBoxHide_CheckedChanged_1(object sender, EventArgs e)
@@ -19,7 +27,17 @@ namespace TeamProjectFrontEnd
         }
         private void BtnEdit_Click(object sender, EventArgs e)
         {
+            dataGridView1.SelectAll();
 
+            String solution_code = (dataGridView1.SelectedCells[0].Value).ToString();
+            String release_date = (dataGridView1.SelectedCells[1].Value).ToString();
+            String manager = (dataGridView1.SelectedCells[2].Value).ToString();
+            String update_version = (dataGridView1.SelectedCells[3].Value).ToString();
+            String description = (dataGridView1.SelectedCells[4].Value).ToString();
+
+            string sql = string.Format("Update db_solutions.tbl_update Set () where solution_code = {0} and release_date = {1};",
+                                            solution_code, release_date, manager, update_version, description); 
+           
         }
         public void colset(DataGridView dataGridView1)
         {
@@ -83,18 +101,28 @@ namespace TeamProjectFrontEnd
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             // 수정할 수 있도록 컬럼 추가
-            string[] row0 = { "0", "솔루션명","2020-09-08","김김김","v.0.0.0","" };
+            string[] row0 = { "", "","","","","" };
             dataGridView1.Rows.Add(row0);
 
             // 솔루션명 부분 일단 잠금... 번호 바꿀때마다 솔루션명 변경하는 이벤트 만들어야할듯?
             dataGridView1.Columns["솔루션명"].ReadOnly = true;
 
         }
+        public void colset2(DataGridView dataGridView1, String solution_code, String release_date)
+        {
+            // 화면의 컬럼 출력
+            MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
+            DataSet ds;
+            ds = dbLib.GetSolutionSelectedToEdit(solution_code, release_date);
 
+            dataGridView1.DataSource = ds.Tables[0];
+
+
+        }
         // ToolTip 표시
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if ((e.ColumnIndex == this.dataGridView1.Columns["솔루션명"].Index)
+            /*if ((e.ColumnIndex == this.dataGridView1.Columns["솔루션명"].Index)
                 && e.Value != null)
             {
                 DataGridViewCell cell =
@@ -102,7 +130,7 @@ namespace TeamProjectFrontEnd
 
             cell.ToolTipText = "Dstation";
 
-            }
+            }*/
         }
 
         private void dataGridView1_CellToolTipTextNeeded(object sender, DataGridViewCellToolTipTextNeededEventArgs e)
