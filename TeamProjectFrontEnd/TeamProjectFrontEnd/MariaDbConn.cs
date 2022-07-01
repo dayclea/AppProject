@@ -11,22 +11,32 @@ namespace MariaDbConn
 {
     public class MariaDbLib
     {
+        //AWS 접속 정보
+        string connectString = string.Format("Server={0};Database={1};Uid ={2};Pwd={3};", "13.209.80.79",
+                                             "db_emp", "teammate2", "teammate2");
 
         // 접속테스트
         public bool ConnectionTest()
-        {
-            string connectString = string.Format("Server={0};Database={1};Uid ={2};Pwd={3};", "127.0.0.1",
-                                                 "tilon_project", "root", "kopo");
+
+        {   //AWS 접속 정보
+            /*string connectString = string.Format("Server={0};Database={1};Uid ={2};Pwd={3};", "13.209.80.79",
+                                                 "db_emp", "teammate2", "teammate2");*/
+            //localDB 접속정보
+            /*string connectString = string.Format("Server={0};Database={1};Uid ={2};Pwd={3};", "127.0.0.1",
+                                                 "tilon_project", "root", "kopo");*/
             try
             {
                 using (MySqlConnection conn = new MySqlConnection(connectString))
                 {
+                    Console.WriteLine("connection success");
                     conn.Open();
                 }
                 return true;
             }
-            catch (Exception)
+            catch (Exception exp)
             {
+                Console.WriteLine("Error");
+                Console.WriteLine(exp);
                 return false;
             }
         }
@@ -34,8 +44,6 @@ namespace MariaDbConn
         //데이터조회
         public void SelectDB()
         {
-            string connectString = string.Format("Server={0};Database={1};Uid ={2};Pwd={3};", "127.0.0.1",
-                                                 "tilon_project", "root", "kopo");
             string sql = "select * from tbl_update";
 
             using (MySqlConnection conn = new MySqlConnection(connectString))
@@ -51,8 +59,6 @@ namespace MariaDbConn
         //INSERT처리
         public void InsertDB(String[] Querystring)
         {
-            string connectString = string.Format("Server={0};Database={1};Uid ={2};Pwd={3};", "127.0.0.1",
-                                                 "tilon_project", "root", "kopo");
             string sql = String.Format("Insert Into tilon_project.tbl_update (solution_code,release_date,manager,update_version,description) values ('{0}','{1}','{2}','{3}','{4}');"
                 , Querystring[0], Querystring[1], Querystring[2], Querystring[3], Querystring[4]);
             /*string sql = "Insert Into tbl_update (solution_code,release_date,manager,update_version,description) values ("+Querystring[0]+","+Querystring[1]+","+Querystring[2]+","+Querystring[3]+","+Querystring[4]+");";*/
@@ -85,8 +91,6 @@ namespace MariaDbConn
         //UPDATE처리
         public void UpdateDB()
         {
-            string connectString = string.Format("Server={0};Database={1};Uid ={2};Pwd={3};", "127.0.0.1",
-                                                 "tilon_project", "root", "kopo");
             string sql = "Update tbl_update Set name ='홍길동2' where id = 1";
 
             using (MySqlConnection conn = new MySqlConnection(connectString))
@@ -101,8 +105,6 @@ namespace MariaDbConn
         //DELETE처리
         public void DeleteDB()
         {
-            string connectString = string.Format("Server={0};Database={1};Uid ={2};Pwd={3};", "127.0.0.1",
-                                                 "tilon_project", "root", "kopo");
             string sql = "Delete From tbl_update where id = '1'";
 
             using (MySqlConnection conn = new MySqlConnection(connectString))
@@ -113,11 +115,9 @@ namespace MariaDbConn
             }
         }
 
-        //데이터조회
+        //솔루션별 데이터조회
         public DataSet GetUser(int solution_code)
         {
-            string connectString = string.Format("Server={0};Database={1};Uid ={2};Pwd={3};", "127.0.0.1",
-                                                 "tilon_project", "root", "kopo");
             string sql = "select * from tbl_update where 1=1 and solution_code = " + solution_code;
             DataSet ds = new DataSet();
 

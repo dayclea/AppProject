@@ -50,3 +50,5 @@ D:\CSharpProject\AppProject\TeamProjectFrontEnd\TeamProjectFrontEnd\bin\Debug\Sy
 D:\CSharpProject\AppProject\TeamProjectFrontEnd\TeamProjectFrontEnd\bin\Debug\K4os.Compression.LZ4.dll
 D:\CSharpProject\AppProject\TeamProjectFrontEnd\TeamProjectFrontEnd\bin\Debug\K4os.Hash.xxHash.dll
 D:\CSharpProject\AppProject\TeamProjectFrontEnd\TeamProjectFrontEnd\bin\Debug\MySql.Data.xml
+D:\CSharpProject\AppProject\TeamProjectFrontEnd\TeamProjectFrontEnd\bin\Debug\Renci.SshNet.dll
+D:\CSharpProject\AppProject\TeamProjectFrontEnd\TeamProjectFrontEnd\bin\Debug\Renci.SshNet.xml

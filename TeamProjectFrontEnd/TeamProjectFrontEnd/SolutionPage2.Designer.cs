@@ -49,15 +49,15 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
             this.timerSliding = new System.Windows.Forms.Timer(this.components);
             this.button15 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.button16 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button17 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.TestBtn19 = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -107,7 +107,6 @@
             this.flowLayoutPanel1.Controls.Add(this.panel4);
             this.flowLayoutPanel1.Controls.Add(this.button11);
             this.flowLayoutPanel1.Controls.Add(this.panel1);
-            this.flowLayoutPanel1.Controls.Add(this.button14);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -365,15 +364,6 @@
             this.button13.Text = "Vstation";
             this.button13.UseVisualStyleBackColor = true;
             // 
-            // button14
-            // 
-            this.button14.Location = new System.Drawing.Point(3, 714);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(75, 23);
-            this.button14.TabIndex = 19;
-            this.button14.Text = "button14";
-            this.button14.UseVisualStyleBackColor = true;
-            // 
             // timerSliding
             // 
             this.timerSliding.Interval = 10;
@@ -402,6 +392,12 @@
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.Size = new System.Drawing.Size(738, 503);
             this.dataGridView1.TabIndex = 4;
+            // 
+            // Column1
+            // 
+            this.Column1.Frozen = true;
+            this.Column1.HeaderText = "";
+            this.Column1.Name = "Column1";
             // 
             // button16
             // 
@@ -441,17 +437,22 @@
             this.button18.Text = "삭제";
             this.button18.UseVisualStyleBackColor = true;
             // 
-            // Column1
+            // TestBtn19
             // 
-            this.Column1.Frozen = true;
-            this.Column1.HeaderText = "";
-            this.Column1.Name = "Column1";
+            this.TestBtn19.Location = new System.Drawing.Point(1058, 304);
+            this.TestBtn19.Name = "TestBtn19";
+            this.TestBtn19.Size = new System.Drawing.Size(75, 23);
+            this.TestBtn19.TabIndex = 8;
+            this.TestBtn19.Text = "button19";
+            this.TestBtn19.UseVisualStyleBackColor = true;
+            this.TestBtn19.Click += new System.EventHandler(this.TestBtn19_Click);
             // 
             // SolutionPage2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 636);
+            this.Controls.Add(this.TestBtn19);
             this.Controls.Add(this.button18);
             this.Controls.Add(this.button17);
             this.Controls.Add(this.groupBox1);
@@ -498,7 +499,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button16;
@@ -506,5 +506,6 @@
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
+        private System.Windows.Forms.Button TestBtn19;
     }
 }

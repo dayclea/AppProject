@@ -166,20 +166,6 @@ namespace TeamProjectFrontEnd
         }
 
 
-
-
-
-
-
-
-
-
-        private void Main_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (MessageBox.Show("종료하시겠습니까?", "종료", MessageBoxButtons.YesNo) == DialogResult.Cancel)
-                e.Cancel = true;
-        }
-
         private void button15_Click(object sender, EventArgs e)
         {
             groupBox1.Name = "Dstation";
@@ -188,18 +174,7 @@ namespace TeamProjectFrontEnd
             ds = dbLib.GetUser(1);
 
             dataGridView1.DataSource = ds.Tables[0];
-            /*MySqlDataReader R = cmd.ExecuteReader();*/
-            /*ListViewItem lvt = new ListViewItem()
-            lvt.SubItems.Add(i.ToString());
-            lvt.SubItems.Add(R["uid"].ToString());
-            lvt.SubItems.Add(R.GetString(1));
-            lvt.SubItems.Add(R.GetString(2));
-            lvt.SubItems.Add(R.GetString(3));
-            lvt.SubItems.Add(R.GetString(4));
-            listView1.Items.Add(lvt);
-
-            listView1.sub*/
-            /* objectListView1.SetObjects(ds.Tables[0][1]);*/
+         
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -211,10 +186,16 @@ namespace TeamProjectFrontEnd
             dataGridView1.DataSource = ds.Tables[0];
         }
 
-        // 데이터 가져오기 버튼 클릭 이벤트
+        // 클릭 이벤트
         private void btnData_Click(object sender, EventArgs e)
         {
-            // 데이터가 없는 경우 return
+
+            SolutionPage solPage = new SolutionPage();
+            solPage.Tag = this;
+            solPage.Show();
+            this.Hide();
+
+            /*// 데이터가 없는 경우 return
             if (this.dataGridView1.RowCount == 0)
                 return;
 
@@ -233,9 +214,22 @@ namespace TeamProjectFrontEnd
             Querystring[4] = row["description"].ToString();
 
             MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
-            dbLib.InsertDB(Querystring);
+            dbLib.InsertDB(Querystring);*/
 
           
+        }
+
+        private void TestBtn19_Click(object sender, EventArgs e)
+        {
+            MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
+            dbLib.ConnectionTest();
+        }
+
+        // 종료 이벤트시 알림창
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("종료하시겠습니까?", "종료", MessageBoxButtons.YesNo) == DialogResult.No)
+                e.Cancel = true;
         }
     }
 }

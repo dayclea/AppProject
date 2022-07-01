@@ -7,111 +7,120 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+
 
 namespace TeamProjectFrontEnd
 {
     public partial class SolutionPage : Form
     {
-
-        // 슬라이딩 메뉴의 폭
-        const int MAX_SLIDING_WIDTH = 200;
-        const int MIN_SLIDING_WIDTH = 50;
-        // 슬라이딩 메뉴 펼쳐지는 / 접히는 속도
-        const int STEP_SLIDING = 10;
-        // 슬라이딩 메뉴 최소 크기
-        int _posSliding = 200;
-
+       
         public SolutionPage()
         {
             InitializeComponent();
+            colset(dataGridView1);
         }
-
-        // 슬라이딩 메뉴
-        private void checkBoxHide_CheckedChanged(object sender, EventArgs e)
+        private void checkBoxHide_CheckedChanged_1(object sender, EventArgs e)
         {
-            // 슬라이딩 메뉴 접혔을때
-            if (checkBoxHide.Checked == true)
-            {
-                button1.Text = "";
-                button2.Text = "";
-                button3.Text = "";
-                button4.Text = "";
-                button5.Text = "";
-                button6.Text = "";
-                button7.Text = "";
-                button8.Text = "";
-                button9.Text = "";
 
-                checkBoxHide.Text = ">";
-            }
-            //슬라이딩 메뉴 펼쳤을때
-            else
-            {
-                button1.Text = "Dstation";
-                button1.BackgroundImage = null;
-                button2.Text = "Astation";
-                button2.BackgroundImage = null;
-                button3.Text = "CenterFace";
-                button3.BackgroundImage = null;
-                button4.Text = "Dcanvas";
-                button4.BackgroundImage = null;
-                button5.Text = "elcloud";
-                button5.BackgroundImage = null;
-                button6.Text = "Mstation";
-                button6.BackgroundImage = null;
-                button7.Text = "CenterChain";
-                button7.BackgroundImage = null;
-                button8.Text = "Vstation";
-                button8.BackgroundImage = null;
-                button9.Text = "K-구름";
-                button9.BackgroundImage = null;
-
-                checkBoxHide.Text = "<";
-            }
-            // 타이머 실행
-            timerSliding.Start();
         }
-
-        // 슬라이딩 메뉴 타이머
-        private void timerSliding_Tick(object sender, EventArgs e)
+        private void BtnEdit_Click(object sender, EventArgs e)
         {
-            if(checkBoxHide.Checked == true)
-            {
-                // 체크박스 체크되면 => 메뉴 접힘
-                _posSliding -= STEP_SLIDING;
-                if (_posSliding <= MIN_SLIDING_WIDTH)
-                    timerSliding.Stop();
-            }
-            else
-            {
-                // 체크박스 체크x => 메뉴 열림
-                _posSliding += STEP_SLIDING;
-                if (_posSliding >= MAX_SLIDING_WIDTH)
-                    timerSliding.Stop();
-            }
-            panelSideMenu.Width = _posSliding;
+
         }
-
-        // form이 로드될때 판넬 미리 선언한다.
-        #region
-        Screen.SolutionScreen solScren1 = new Screen.SolutionScreen();
-        Screen.tmp tmp = new Screen.tmp();
-        #endregion
-
-        // 솔루션 페이지 로드되면 -> 가장 기본으로 깔려있을 cs파일 지정
-        private void SolutionPage_Load(object sender, EventArgs e)
+        public void colset(DataGridView dataGridView1)
         {
-            mainPanel.Controls.Add(tmp);
+            // 화면의 컬럼 출력
+            DataGridViewTextBoxColumn titleColumn =
+                new DataGridViewTextBoxColumn();
+            titleColumn.HeaderText = "솔루션 번호";
+            titleColumn.Name = "솔루션 번호";
+            titleColumn.Width = 120;
+            titleColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            titleColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+
+            DataGridViewTextBoxColumn subTitleColumn =
+                new DataGridViewTextBoxColumn();
+            subTitleColumn.HeaderText = "솔루션명";
+            subTitleColumn.Name = "솔루션명";
+            subTitleColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+
+            DataGridViewTextBoxColumn summaryColumn =
+                new DataGridViewTextBoxColumn();
+            summaryColumn.HeaderText = "수정/배포일자";
+            summaryColumn.Name = "수정/배포일자";
+            summaryColumn.Width = 120;
+            summaryColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            summaryColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            summaryColumn.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            DataGridViewTextBoxColumn contentColumn =
+                new DataGridViewTextBoxColumn();
+            contentColumn.HeaderText = "담당자";
+            contentColumn.Name = "담당자";
+            contentColumn.Width = 80;
+            contentColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            contentColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            contentColumn.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+
+            DataGridViewTextBoxColumn amountColumn =
+                new DataGridViewTextBoxColumn();
+            amountColumn.HeaderText = "version";
+            amountColumn.Name = "version";
+            amountColumn.Width = 60;
+            amountColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            amountColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            amountColumn.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            DataGridViewTextBoxColumn descColumn =
+                new DataGridViewTextBoxColumn();
+            descColumn.HeaderText = "업데이트개요";
+            descColumn.Name = "업데이트개요";
+            descColumn.Width = 120;
+            descColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            descColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            descColumn.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            dataGridView1.Columns.AddRange(new DataGridViewTextBoxColumn[] {
+            titleColumn, subTitleColumn,
+            summaryColumn, contentColumn, amountColumn, descColumn });
+
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            // 수정할 수 있도록 컬럼 추가
+            string[] row0 = { "0", "솔루션명","2020-09-08","김김김","v.0.0.0","" };
+            dataGridView1.Rows.Add(row0);
+
+            // 솔루션명 부분 일단 잠금... 번호 바꿀때마다 솔루션명 변경하는 이벤트 만들어야할듯?
+            dataGridView1.Columns["솔루션명"].ReadOnly = true;
+
         }
 
-        // 버튼 클릭시 가져올 cs파일..
-        private void button1_Click(object sender, EventArgs e)
+        // ToolTip 표시
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            // 먼저 판넬을 꼭..! 비워주고 가져와야 함
-            mainPanel.Controls.Clear();
-            mainPanel.Controls.Add(solScren1);
+            if ((e.ColumnIndex == this.dataGridView1.Columns["솔루션명"].Index)
+                && e.Value != null)
+            {
+                DataGridViewCell cell =
+                this.dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex];
+
+            cell.ToolTipText = "Dstation";
+
+            }
         }
 
+        private void dataGridView1_CellToolTipTextNeeded(object sender, DataGridViewCellToolTipTextNeededEventArgs e)
+        {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
+            dbLib.ConnectionTest();
+        }
     }
 }
