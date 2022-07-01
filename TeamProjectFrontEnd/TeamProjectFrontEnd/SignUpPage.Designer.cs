@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUpPage));
             this.finishBtn = new System.Windows.Forms.Button();
-            this.pwdCheckedTBox = new System.Windows.Forms.TextBox();
+            this.pwdCheckTBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pwdCheckedLb = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.pwdCheckLb = new System.Windows.Forms.Label();
+            this.pwdLb = new System.Windows.Forms.Label();
+            this.idLb = new System.Windows.Forms.Label();
+            this.idCheckBtn = new System.Windows.Forms.Button();
             this.pwdTBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.idTBox = new System.Windows.Forms.TextBox();
@@ -66,13 +66,15 @@
             this.finishBtn.UseVisualStyleBackColor = false;
             this.finishBtn.Click += new System.EventHandler(this.finishBtn_Click);
             // 
-            // pwdCheckedTBox
+            // pwdCheckTBox
             // 
-            this.pwdCheckedTBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pwdCheckedTBox.Location = new System.Drawing.Point(233, 320);
-            this.pwdCheckedTBox.Name = "pwdCheckedTBox";
-            this.pwdCheckedTBox.Size = new System.Drawing.Size(168, 21);
-            this.pwdCheckedTBox.TabIndex = 11;
+            this.pwdCheckTBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pwdCheckTBox.Location = new System.Drawing.Point(233, 320);
+            this.pwdCheckTBox.Name = "pwdCheckTBox";
+            this.pwdCheckTBox.Size = new System.Drawing.Size(168, 21);
+            this.pwdCheckTBox.TabIndex = 11;
+            this.pwdCheckTBox.UseSystemPasswordChar = true;
+            this.pwdCheckTBox.TextChanged += new System.EventHandler(this.pwdCheckedTBox_TextChanged);
             // 
             // label6
             // 
@@ -88,12 +90,12 @@
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Controls.Add(this.pwdCheckedLb);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.pwdCheckLb);
+            this.groupBox1.Controls.Add(this.pwdLb);
+            this.groupBox1.Controls.Add(this.idLb);
+            this.groupBox1.Controls.Add(this.idCheckBtn);
             this.groupBox1.Controls.Add(this.finishBtn);
-            this.groupBox1.Controls.Add(this.pwdCheckedTBox);
+            this.groupBox1.Controls.Add(this.pwdCheckTBox);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.pwdTBox);
             this.groupBox1.Controls.Add(this.label5);
@@ -111,53 +113,53 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "계 정 생 성";
             // 
-            // pwdCheckedLb
+            // pwdCheckLb
             // 
-            this.pwdCheckedLb.AutoSize = true;
-            this.pwdCheckedLb.BackColor = System.Drawing.Color.White;
-            this.pwdCheckedLb.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pwdCheckedLb.Location = new System.Drawing.Point(231, 344);
-            this.pwdCheckedLb.Name = "pwdCheckedLb";
-            this.pwdCheckedLb.Size = new System.Drawing.Size(10, 14);
-            this.pwdCheckedLb.TabIndex = 14;
-            this.pwdCheckedLb.Text = " ";
+            this.pwdCheckLb.AutoSize = true;
+            this.pwdCheckLb.BackColor = System.Drawing.Color.White;
+            this.pwdCheckLb.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.pwdCheckLb.Location = new System.Drawing.Point(233, 347);
+            this.pwdCheckLb.Name = "pwdCheckLb";
+            this.pwdCheckLb.Size = new System.Drawing.Size(10, 14);
+            this.pwdCheckLb.TabIndex = 14;
+            this.pwdCheckLb.Text = " ";
             // 
-            // label8
+            // pwdLb
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.White;
-            this.label8.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label8.Location = new System.Drawing.Point(231, 278);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(143, 14);
-            this.label8.TabIndex = 14;
-            this.label8.Text = " 8자 이상의 영문, 숫자 조합";
+            this.pwdLb.AutoSize = true;
+            this.pwdLb.BackColor = System.Drawing.Color.White;
+            this.pwdLb.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.pwdLb.Location = new System.Drawing.Point(233, 278);
+            this.pwdLb.Name = "pwdLb";
+            this.pwdLb.Size = new System.Drawing.Size(169, 14);
+            this.pwdLb.TabIndex = 14;
+            this.pwdLb.Text = "8~20자 이내의 영문 + 숫자 조합";
             // 
-            // label7
+            // idLb
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.White;
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label7.Location = new System.Drawing.Point(231, 211);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(143, 14);
-            this.label7.TabIndex = 13;
-            this.label7.Text = " 6자 이상의 영문, 숫자 조합";
+            this.idLb.AutoSize = true;
+            this.idLb.BackColor = System.Drawing.Color.White;
+            this.idLb.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.idLb.Location = new System.Drawing.Point(233, 211);
+            this.idLb.Name = "idLb";
+            this.idLb.Size = new System.Drawing.Size(158, 14);
+            this.idLb.TabIndex = 13;
+            this.idLb.Text = "6~15자 이내의 영문 또는 숫자";
             // 
-            // button1
+            // idCheckBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(241)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(411, 184);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 21);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "중복확인";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.finishBtn_Click);
+            this.idCheckBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(241)))));
+            this.idCheckBtn.FlatAppearance.BorderSize = 0;
+            this.idCheckBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
+            this.idCheckBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
+            this.idCheckBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.idCheckBtn.Location = new System.Drawing.Point(411, 184);
+            this.idCheckBtn.Name = "idCheckBtn";
+            this.idCheckBtn.Size = new System.Drawing.Size(100, 21);
+            this.idCheckBtn.TabIndex = 12;
+            this.idCheckBtn.Text = "중복 체크";
+            this.idCheckBtn.UseVisualStyleBackColor = false;
+            this.idCheckBtn.Click += new System.EventHandler(this.idCheckBtn_Click);
             // 
             // pwdTBox
             // 
@@ -166,6 +168,8 @@
             this.pwdTBox.Name = "pwdTBox";
             this.pwdTBox.Size = new System.Drawing.Size(168, 21);
             this.pwdTBox.TabIndex = 9;
+            this.pwdTBox.UseSystemPasswordChar = true;
+            this.pwdTBox.TextChanged += new System.EventHandler(this.pwdTBox_TextChanged);
             // 
             // label5
             // 
@@ -262,11 +266,11 @@
         #endregion
 
         private System.Windows.Forms.Button finishBtn;
-        private System.Windows.Forms.TextBox pwdCheckedTBox;
+        private System.Windows.Forms.TextBox pwdCheckTBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label pwdLb;
+        private System.Windows.Forms.Label idLb;
         private System.Windows.Forms.TextBox pwdTBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox idTBox;
@@ -276,7 +280,7 @@
         private System.Windows.Forms.TextBox empNoTBox;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label pwdCheckedLb;
+        private System.Windows.Forms.Button idCheckBtn;
+        private System.Windows.Forms.Label pwdCheckLb;
     }
 }

@@ -7,41 +7,216 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions;
+
 
 namespace TeamProjectFrontEnd
 {
     public partial class SignUpPage : Form
     {
+        string server = "52.79.165.81"; //서버IP
+        string database = "db_emp";     //데이터베이스명
+        string table = "tbl_account";   //테이블명
+        string uid = "teammate2";       //DB 접속계정
+        string pwd = "teammate2";       //DB 접속PWD
+        bool idCheck = false;           //계정 생성 입력 ID 정합성 체크 
+        bool pwdCheck = false;          
+        bool pwdRecheck = false;        //계정 생성 입력 PW 정합성 체크
+
         public SignUpPage()
         {
             InitializeComponent();
         }
         
-
-        private void finishBtn_Click(object sender, EventArgs e)
+        // ID 중복 체크
+        private void idCheckBtn_Click(object sender, EventArgs e)
         {
-      
+            string inputId = idTBox.Text.ToString();
+            
+            //계정리스트 조회 (입력한 ID 기준)
             try
             {
-                // 이미 가입되어 있는 이름입니다
-                // 이미 가입되어 있는 사원번호입니다 
-                // 이미 가입되어 있는 이메일입니다 등 추가하면 좋을듯 -> 디비와 연결하여..
-                // 이미 등록된 아이디입니다... (아이디 / 비번 기준)
-                if (pwdTBox.Text != pwdCheckedTBox.Text)
+                DataSet dsAccountId = new DataSet();
+                string connectString = string.Format("Server={0};Database={1};Uid ={2};Pwd={3};", server, database, uid, pwd);
+                
+                using (MySqlConnection conn = new MySqlConnection(connectString))
                 {
-                    label9.Text = "비밀번호가 일치하지 않습니다.";
+                    string query = string.Format("select account_id from {0} where account_id = '{1}.@tilon.com';", table, inputId);
+                    MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
+                    da.Fill(dsAccountId, table);
+                }
+                if (dsAccountId.Tables[0].Rows.Count == 0 && (inputId.Length >= 6 && inputId.Length <= 15))
+                {
+                    if (Regex.IsMatch(inputId, @"[ㄱ-ㅎ가-힣]") == false)   // 한글 입력 불가하도록 설정 
+                    {
+                        idLb.ForeColor = Color.Green;
+                        idLb.Text = "사용 가능합니다.";
+                        idCheck = true;
+                    }
+                }
+                else if (Regex.IsMatch(inputId, @"[ㄱ-ㅎ가-힣]") == true)
+                {
+                    idLb.ForeColor = Color.Red;
+                    idLb.Text = "한글 사용 불가능합니다. \n영문과 숫자만 사용해주시기 바랍니다.";
+                    idCheck = false;
                 }
                 else
                 {
-                    MessageBox.Show("가입 신청이 완료 되었습니다");
+                    idLb.ForeColor = Color.Red;
+                    idLb.Text = "사용 불가능합니다.";
+                    idCheck = false;
                 }
+            }
+            catch (Exception exc)
+            {
+                Console.WriteLine(exc);
+            }
+        }
+        
+        //PWD 구성 체크 (영문 + 숫자 조합)
+        private void pwdTBox_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string inputPwd = pwdTBox.Text.ToString();
+                if (inputPwd.Length >= 8 && inputPwd.Length <= 20)
+                {
+                    if (Regex.IsMatch(inputPwd, @"[a-zA-Z]") == true)
+                    {
+                        if (Regex.IsMatch(inputPwd, @"[0-9]") == true)
+                        {
+                            pwdLb.ForeColor = Color.Green;
+                            pwdLb.Text = "사용 가능합니다.";
+                            pwdCheck = true;
+                        }
+                    }
+                }
+                else if (inputPwd.Length == 0)
+                {
+                    pwdLb.ForeColor = SystemColors.ControlDarkDark;
+                    pwdLb.Text = "8~20자 이내의 영문 + 숫자 조합";
+                    pwdCheck = false;
+                }
+                else if (Regex.IsMatch(inputPwd, @"[a-zA-Z]") == false)
+                {
+                    pwdLb.ForeColor = Color.Red;
+                    pwdLb.Text = "영문을 포함해야 합니다.";
+                    pwdCheck = false;
+                }
+                else if (Regex.IsMatch(inputPwd, @"[0-9]") == false)
+                {
+                    pwdLb.ForeColor = Color.Red;
+                    pwdLb.Text = "숫자를 포함해야 합니다.";
+                    pwdCheck = false;
+                }
+                else if (idTBox.Text == pwdTBox.Text)
+                {
+                    pwdLb.ForeColor = Color.Red;
+                    pwdLb.Text = "아이디와 비밀번호는 같을 수 없습니다.";
+                    pwdCheck = false;
+                }
+                else
+                {
+                    pwdLb.ForeColor = Color.Red;
+                    pwdLb.Text = "사용 불가능합니다.";
+                    pwdCheck = false;
+                }
+            }
+            catch (Exception exc)
+            {
+                Console.WriteLine (exc);
+            }
+        }
+        
+        //PWD 재입력 확인
+        private void pwdCheckedTBox_TextChanged(object sender, EventArgs e)
+        {
+            if (pwdTBox.Text == pwdCheckTBox.Text)
+            {
+                pwdCheckLb.ForeColor = Color.Green;
+                pwdCheckLb.Text = "비밀번호가 일치합니다.";
+                pwdRecheck = true;
                 
             }
-            catch(Exception)
+            else
             {
-                MessageBox.Show("아이디 / 사원번호 / 이메일 등 기타 중복");
+                pwdCheckLb.ForeColor = Color.Red;
+                pwdCheckLb.Text = "비밀번호가 일치하지 않습니다.";
+                pwdRecheck = false;
             }
         }
 
+        // 입력 완료 후 계정 생성 시도
+        private void finishBtn_Click(object sender, EventArgs e)
+        {
+            string inputEmpCode = empNoTBox.Text.ToString();    //입력한 사원번호
+            string inputName = nameTBox.Text.ToString();        //입력한 이름
+            string inputId = idTBox.Text.ToString();            //입력한 ID
+            string inputPwd = pwdTBox.Text.ToString();          //입력한 PWD
+            string status = "0";                                //승인여부(미승인: 0  승인:1) 계정 신청시 0으로 고정
+            try
+            {
+                DataSet dsEmpCode = new DataSet();
+                string connectString = string.Format("Server={0};Database={1};Uid ={2};Pwd={3};", server, database, uid, pwd);
+
+                using (MySqlConnection conn = new MySqlConnection(connectString))
+                {
+                    string query = string.Format("select empcode from {0} where empcode = '{1}';", table, inputEmpCode);
+                    MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
+                    da.Fill(dsEmpCode, table);
+                }
+                if (dsEmpCode.Tables[0].Rows.Count == 0)    //입력 완료 후 생성 신청시, 사원번호 중복체크
+                {
+                    if (idCheck && pwdCheck && pwdRecheck == true)  //정합성 체크가 모두 true일때만 신청 가능
+                    {
+                        using (MySqlConnection conn = new MySqlConnection(connectString))
+                        {
+                            string insertQuery = string.Format("insert into {0} values ('{1}', '{2}', '{3}@tilon.com', '{4}', {5});",
+                                                                table, inputEmpCode, inputName, inputId, inputPwd, status);
+                            try
+                            {
+                                conn.Open();
+                                MySqlCommand cmd = new MySqlCommand(insertQuery, conn);
+                                if (cmd.ExecuteNonQuery() == 1)
+                                {
+                                    MessageBox.Show("계정 생성 신청이 정상적으로 되었습니다.");
+                                    //정상적인 신청 완료 후, 로그인 화면으로 재이동
+                                    LoginPage2 loginPage2 = new LoginPage2();
+                                    loginPage2.Tag = this;
+                                    loginPage2.Show();
+                                    this.Hide();
+                                }
+                            }
+                            catch (Exception exc)
+                            {
+                                Console.WriteLine(exc);
+                            }
+                        }
+                    }
+                }
+                else if (dsEmpCode.Tables[0].Rows.Count > 0)
+                {
+                    MessageBox.Show("중복된 사원번호가 존재합니다. 관리자에게 문의하시기 바랍니다.");
+                }
+                else if (idCheck == false)
+                {
+                    MessageBox.Show("아이디를 확인해주시기 바랍니다.");
+                }
+                else if (pwdCheck || pwdRecheck == false)
+                {
+                    MessageBox.Show("비밀번호를 확인해주시기 바랍니다.");
+                }
+                else
+                {
+                    MessageBox.Show("입력하신 사항을 다시 한번 확인해주시기 바랍니다.");
+                }
+            }
+            catch (Exception exc)
+            {
+                Console.WriteLine(exc);
+            }
+            
+        }
     }
 }
