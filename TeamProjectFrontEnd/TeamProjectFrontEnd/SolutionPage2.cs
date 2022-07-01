@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace TeamProjectFrontEnd
 {
@@ -50,18 +43,18 @@ namespace TeamProjectFrontEnd
                 panel1.Hide();
 
                 button1.Text = "";
-                button2.Text = "";
-                button3.Text = "";
-                button4.Text = "";
+                BtnAstation.Text = "";
+                BtnCenterFace.Text = "";
+                BtnDstation.Text = "";
                 button5.Text = "";
-                button6.Text = "";
-                button7.Text = "";
+                Btnelcloud.Text = "";
+                BtnDcanvas.Text = "";
                 button8.Text = "";
-                button9.Text = "";
-                button10.Text = "";
+                BtnCenterChain.Text = "";
+                BtnMstation.Text = "";
                 button11.Text = "";
-                button12.Text = "";
-                button13.Text = "";
+                BtnKCloud.Text = "";
+                BtnVstation.Text = "";
 
 
                 checkBoxHide.Text = ">";
@@ -76,36 +69,36 @@ namespace TeamProjectFrontEnd
 
                 button1.Text = "가상화";
                 button1.BackgroundImage = null;
-                button4.Text = "Dstation";
-                button4.BackgroundImage = null;
-                button2.Text = "Astation";
-                button2.BackgroundImage = null;
-                button3.Text = "CenterFace";
-                button3.BackgroundImage = null;
+                BtnDstation.Text = "Dstation";
+                BtnDstation.BackgroundImage = null;
+                BtnAstation.Text = "Astation";
+                BtnAstation.BackgroundImage = null;
+                BtnCenterFace.Text = "CenterFace";
+                BtnCenterFace.BackgroundImage = null;
 
 
                 button5.Text = "클라우드";
                 button5.BackgroundImage = null;
-                button7.Text = "Dcanvas";
-                button7.BackgroundImage = null;
-                button6.Text = "elcloud";
-                button6.BackgroundImage = null;
+                BtnDcanvas.Text = "Dcanvas";
+                BtnDcanvas.BackgroundImage = null;
+                Btnelcloud.Text = "elcloud";
+                Btnelcloud.BackgroundImage = null;
 
 
                 button8.Text = "블록체인";
                 button8.BackgroundImage = null;
-                button10.Text = "Mstation";
-                button10.BackgroundImage = null;
-                button9.Text = "CenterChain";
-                button9.BackgroundImage = null;
+                BtnMstation.Text = "Mstation";
+                BtnMstation.BackgroundImage = null;
+                BtnCenterChain.Text = "CenterChain";
+                BtnCenterChain.BackgroundImage = null;
 
 
                 button11.Text = "제로디바이스";
                 button11.BackgroundImage = null;
-                button13.Text = "Vstation";
-                button13.BackgroundImage = null;
-                button12.Text = "K-구름";
-                button12.BackgroundImage = null;
+                BtnVstation.Text = "Vstation";
+                BtnVstation.BackgroundImage = null;
+                BtnKCloud.Text = "K-구름";
+                BtnKCloud.BackgroundImage = null;
 
 
                 checkBoxHide.Text = "<";
@@ -166,64 +159,9 @@ namespace TeamProjectFrontEnd
         }
 
 
-        private void button15_Click(object sender, EventArgs e)
-        {
-            groupBox1.Name = "Dstation";
-            MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
-            DataSet ds;
-            ds = dbLib.GetUser("VDI001");
+    
 
-            dataGridView1.DataSource = ds.Tables[0];
-         
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
-            DataSet ds;
-            ds = dbLib.GetUser("VDI002");
-
-            dataGridView1.DataSource = ds.Tables[0];
-        }
-
-        // 클릭 이벤트
-        private void btnData_Click(object sender, EventArgs e)
-        {
-
-            SolutionPage solPage = new SolutionPage();
-            solPage.Tag = this;
-            solPage.Show();
-            this.Hide();
-
-            /*// 데이터가 없는 경우 return
-            if (this.dataGridView1.RowCount == 0)
-                return;
-
-            // 현재 Row를 가져온다.
-            DataGridViewRow dgvr = dataGridView1.CurrentRow;
-
-            // 선택한 Row의 데이터를 가져온다.
-            DataRow row = (dgvr.DataBoundItem as DataRowView).Row;
-
-            // TextBox에 그리드 데이터를 넣는다.
-            String[] Querystring = new string[5];
-            Querystring[0] = row["solution_code"].ToString();
-            Querystring[1] = row["release_date"].ToString();
-            Querystring[2] = row["manager"].ToString();
-            Querystring[3] = row["update_version"].ToString();
-            Querystring[4] = row["description"].ToString();
-
-            MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
-            dbLib.InsertDB(Querystring);*/
-
-          
-        }
-
-        private void TestBtn19_Click(object sender, EventArgs e)
-        {
-            MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
-            dbLib.ConnectionTest();
-        }
+       
 
         // 종료 이벤트시 알림창
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
@@ -231,5 +169,172 @@ namespace TeamProjectFrontEnd
             if (MessageBox.Show("종료하시겠습니까?", "종료", MessageBoxButtons.YesNo) == DialogResult.No)
                 e.Cancel = true;
         }
+
+        private void BtnDstation_Click(object sender, EventArgs e)
+        {
+            groupBox1.Text = "Dstation";
+            MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
+            DataSet ds;
+            ds = dbLib.GetSolution("VDI001");
+
+            dataGridView1.DataSource = ds.Tables[0];
+
+        }
+
+        //목록 버튼 클릭 이벤트들 
+        private void BtnAstation_Click(object sender, EventArgs e)
+        {
+            groupBox1.Text = "Astation";
+            MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
+            DataSet ds;
+            ds = dbLib.GetSolution("Astation");
+
+            dataGridView1.DataSource = ds.Tables[0];
+        }
+
+        private void BtnCenterFace_Click(object sender, EventArgs e)
+        {
+            groupBox1.Text = "CenterFace";
+            MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
+            DataSet ds;
+            ds = dbLib.GetSolution("CenterFace");
+
+            dataGridView1.DataSource = ds.Tables[0];
+        }
+
+        private void BtnDcanvas_Click(object sender, EventArgs e)
+        {
+            groupBox1.Text = "Dcanvas";
+            MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
+            DataSet ds;
+            ds = dbLib.GetSolution("Dcanvas");
+
+            dataGridView1.DataSource = ds.Tables[0];
+        }
+
+        private void Btnelcloud_Click(object sender, EventArgs e)
+        {
+            groupBox1.Text = "elcloud";
+            MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
+            DataSet ds;
+            ds = dbLib.GetSolution("elcloud");
+
+            dataGridView1.DataSource = ds.Tables[0];
+        }
+
+        private void BtnMstation_Click(object sender, EventArgs e)
+        {
+            groupBox1.Text = "Mstation";
+            MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
+            DataSet ds;
+            ds = dbLib.GetSolution("Mstation");
+
+            dataGridView1.DataSource = ds.Tables[0];
+        }
+
+        private void BtnCenterChain_Click(object sender, EventArgs e)
+        {
+            groupBox1.Text = "CenterChain";
+            MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
+            DataSet ds;
+            ds = dbLib.GetSolution("CenterChain");
+
+            dataGridView1.DataSource = ds.Tables[0];
+        }
+
+        private void BtnVstation_Click(object sender, EventArgs e)
+        {
+            groupBox1.Text = "Vstation";
+            MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
+            DataSet ds;
+            ds = dbLib.GetSolution("Vstation");
+
+            dataGridView1.DataSource = ds.Tables[0];
+        }
+
+        private void BtnKCloud_Click(object sender, EventArgs e)
+        {
+            groupBox1.Text = "K-구름";
+            MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
+            DataSet ds;
+            ds = dbLib.GetSolution("K-구름");
+
+            dataGridView1.DataSource = ds.Tables[0];
+        }
+
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dataGridView1.Rows[e.RowIndex].Selected = true;
+
+        }
+
+        // 추가버튼 클릭 이벤트
+        private void BtnInsert_Click(object sender, EventArgs e)
+        {
+
+            SolutionPage solPage = new SolutionPage(1);
+            solPage.Tag = this;
+            solPage.Show();
+            this.Hide();
+
+        }
+        // 수정버튼 클릭 이벤트
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+            SolutionPage solPage = new SolutionPage(2);
+            solPage.Tag = this;
+            solPage.Show();
+            this.Hide();
+        }
+
+
+        //삭제 버튼 클릭 이벤트
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            String solution_code = "";
+            if (dataGridView1.SelectedCells.Count <= 1)
+            {
+                MessageBox.Show("삭제할 데이터를 선택해주세요.", "Error");
+                return;
+            }
+            else if (MessageBox.Show("삭제하시겠습니까?", "데이터 삭제", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                return;
+            }
+            
+            
+            try
+            {
+                solution_code = (dataGridView1.SelectedCells[0].Value).ToString();
+                String release_date = (dataGridView1.SelectedCells[2].Value).ToString();
+
+                Console.WriteLine(solution_code);
+                Console.WriteLine(release_date);
+
+                string sql = string.Format("DELETE FROM db_solutions.tbl_update WHERE 1=1 and (solution_code = '{0}' AND release_date = '{1}' );",
+                                            solution_code, release_date);
+
+
+                MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
+                dbLib.DeleteDB(sql);
+            }
+            catch (Exception exp)
+            {
+                Console.WriteLine(exp);
+                MessageBox.Show("Error occurred");
+
+            }
+
+            // 삭제쿼리 실행 후 다시 데이터 불러오기
+            MariaDbConn.MariaDbLib dbLib2 = new MariaDbConn.MariaDbLib();
+            DataSet ds;
+            ds = dbLib2.GetSolution(groupBox1.Text);
+
+            dataGridView1.DataSource = ds.Tables[0];
+            
+        }
+
+       
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 using MySql.Data.MySqlClient;
 using System.Data;
@@ -40,8 +41,8 @@ namespace MariaDbConn
                                              "tilon_project", "root", "kopo");*/
 
         //AWS 접속 정보
-        string connectString = string.Format("Server={0};Database={1};Uid ={2};Pwd={3};", "52.79.165.81",
-                                             "db_solutions", "teammate2", "teammate2");
+        string connectString = string.Format("Server={0};Uid ={1};Pwd={2};", "52.79.165.81",
+                                             "teammate2", "teammate2");
 
         // 접속테스트
         public bool ConnectionTest()
@@ -137,15 +138,49 @@ namespace MariaDbConn
             using (MySqlConnection conn = new MySqlConnection(connectString))
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand(sql, conn);
-                cmd.ExecuteNonQuery();
+                MySqlCommand command = new MySqlCommand(sql, conn);
+                if (command.ExecuteNonQuery() != 1)
+                    MessageBox.Show("Failed to delete data.");
             }
+            /*using (MySqlConnection conn = new MySqlConnection(connectString))
+            {
+                try
+                {
+                    conn.Open();
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+                    if (cmd.ExecuteNonQuery() == 1)
+                    {
+                        Console.WriteLine("삭제 성공");
+                    }
+                    else
+                    {
+                        Console.WriteLine("삭제 실패");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("실패");
+                    Console.WriteLine(ex.ToString());
+                    throw;
+                }
+
+            }*/
         }
 
         //솔루션별 데이터조회
-        public DataSet GetUser(String solution_code)
+        public DataSet GetSolution(String solution_name)
         {
-            string sql = "select * from tbl_update where 1=1 and solution_code = '" + solution_code + "'";
+            string sql = "SELECT A.solution_code as '솔루션 번호'," +
+                                "B.solution_name as '솔루션 명'," +
+                                "A.release_date as '수정/배포일자', " +
+                                "A.manager as '담당자'," +
+                                "A.update_version as 'version'," +
+                                "A.description as '업데이트 개요' " +
+                                "from db_solutions.tbl_update A " +
+                                "INNER JOIN db_solutions.tbl_solution_master B " +
+                                "ON A.solution_code = B.solution_code " +
+                                "where 1 = 1 " +
+                                "AND B.solution_name = '" + solution_name + "'";
             DataSet ds = new DataSet();
 
             using (MySqlConnection conn = new MySqlConnection(connectString))

@@ -34,7 +34,7 @@ using System.Data;
 
 namespace MariaDbConnAccount
 {
-    public class MariaDbLib
+    public class MariaDbLib_Account
     {
         //AWS 접속 정보
         /*string connectString = string.Format("Server={0};Database={1};Uid ={2};Pwd={3};", "52.79.165.81", // 인스턴스 껐다가 키면 초기화됨

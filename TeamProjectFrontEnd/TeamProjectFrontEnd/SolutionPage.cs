@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 
 namespace TeamProjectFrontEnd
@@ -15,11 +7,12 @@ namespace TeamProjectFrontEnd
     public partial class SolutionPage : Form
     {
        
-        public SolutionPage()
+        public SolutionPage(int editOrInsert)
         {
             InitializeComponent();
             colset(dataGridView1);
         }
+
         private void checkBoxHide_CheckedChanged_1(object sender, EventArgs e)
         {
 
