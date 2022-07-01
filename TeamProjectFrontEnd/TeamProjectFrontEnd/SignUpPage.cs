@@ -16,8 +16,9 @@ namespace TeamProjectFrontEnd
         {
             InitializeComponent();
         }
+        
 
-        private void button1_Click(object sender, EventArgs e)
+        private void finishBtn_Click(object sender, EventArgs e)
         {
       
             try
@@ -26,7 +27,7 @@ namespace TeamProjectFrontEnd
                 // 이미 가입되어 있는 사원번호입니다 
                 // 이미 가입되어 있는 이메일입니다 등 추가하면 좋을듯 -> 디비와 연결하여..
                 // 이미 등록된 아이디입니다... (아이디 / 비번 기준)
-                if (textBox5.Text != textBox6.Text)
+                if (pwdTBox.Text != pwdCheckedTBox.Text)
                 {
                     label9.Text = "비밀번호가 일치하지 않습니다.";
                 }
@@ -40,7 +41,7 @@ namespace TeamProjectFrontEnd
             {
                 MessageBox.Show("아이디 / 사원번호 / 이메일 등 기타 중복");
             }
-            
         }
+
     }
 }
