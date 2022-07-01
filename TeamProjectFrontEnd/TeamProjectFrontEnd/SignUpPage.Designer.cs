@@ -57,7 +57,7 @@
             this.finishBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.finishBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.finishBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.finishBtn.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.finishBtn.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.finishBtn.Location = new System.Drawing.Point(176, 402);
             this.finishBtn.Name = "finishBtn";
             this.finishBtn.Size = new System.Drawing.Size(250, 50);
@@ -69,6 +69,7 @@
             // pwdCheckTBox
             // 
             this.pwdCheckTBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pwdCheckTBox.Font = new System.Drawing.Font("나눔고딕", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.pwdCheckTBox.Location = new System.Drawing.Point(233, 320);
             this.pwdCheckTBox.Name = "pwdCheckTBox";
             this.pwdCheckTBox.Size = new System.Drawing.Size(168, 21);
@@ -79,7 +80,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("나눔고딕", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label6.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label6.Location = new System.Drawing.Point(141, 323);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(76, 14);
@@ -105,7 +106,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.empNoTBox);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("나눔고딕", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.groupBox1.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox1.Location = new System.Drawing.Point(292, 59);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(600, 500);
@@ -164,6 +165,7 @@
             // pwdTBox
             // 
             this.pwdTBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pwdTBox.Font = new System.Drawing.Font("나눔고딕", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.pwdTBox.Location = new System.Drawing.Point(233, 251);
             this.pwdTBox.Name = "pwdTBox";
             this.pwdTBox.Size = new System.Drawing.Size(168, 21);
@@ -174,7 +176,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("나눔고딕", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label5.Location = new System.Drawing.Point(141, 254);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 14);
@@ -184,6 +186,7 @@
             // idTBox
             // 
             this.idTBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.idTBox.Font = new System.Drawing.Font("나눔고딕", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.idTBox.Location = new System.Drawing.Point(233, 184);
             this.idTBox.Name = "idTBox";
             this.idTBox.Size = new System.Drawing.Size(168, 21);
@@ -192,7 +195,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("나눔고딕", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label4.Location = new System.Drawing.Point(141, 188);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 14);
@@ -202,6 +205,7 @@
             // nameTBox
             // 
             this.nameTBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nameTBox.Font = new System.Drawing.Font("나눔고딕", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.nameTBox.Location = new System.Drawing.Point(233, 121);
             this.nameTBox.Name = "nameTBox";
             this.nameTBox.Size = new System.Drawing.Size(168, 21);
@@ -210,7 +214,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("나눔고딕", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.Location = new System.Drawing.Point(141, 125);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 14);
@@ -220,6 +224,7 @@
             // empNoTBox
             // 
             this.empNoTBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.empNoTBox.Font = new System.Drawing.Font("나눔고딕", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.empNoTBox.Location = new System.Drawing.Point(233, 61);
             this.empNoTBox.Name = "empNoTBox";
             this.empNoTBox.Size = new System.Drawing.Size(168, 21);
@@ -228,7 +233,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("나눔고딕", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.Location = new System.Drawing.Point(141, 64);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 14);

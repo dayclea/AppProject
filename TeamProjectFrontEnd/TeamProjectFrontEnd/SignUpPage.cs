@@ -79,8 +79,9 @@ namespace TeamProjectFrontEnd
         {
             try
             {
+                string inputId = idTBox.Text.ToString();
                 string inputPwd = pwdTBox.Text.ToString();
-                if (inputPwd.Length >= 8 && inputPwd.Length <= 20)
+                if ((inputPwd != inputId) && (inputPwd.Length >= 8) && (inputPwd.Length <= 20))
                 {
                     if (Regex.IsMatch(inputPwd, @"[a-zA-Z]") == true)
                     {
@@ -110,7 +111,7 @@ namespace TeamProjectFrontEnd
                     pwdLb.Text = "숫자를 포함해야 합니다.";
                     pwdCheck = false;
                 }
-                else if (idTBox.Text == pwdTBox.Text)
+                else if (inputPwd == inputId)
                 {
                     pwdLb.ForeColor = Color.Red;
                     pwdLb.Text = "아이디와 비밀번호는 같을 수 없습니다.";
@@ -182,6 +183,7 @@ namespace TeamProjectFrontEnd
                                 {
                                     MessageBox.Show("계정 생성 신청이 정상적으로 되었습니다.");
                                     //정상적인 신청 완료 후, 로그인 화면으로 재이동
+                                    //if ()
                                     LoginPage2 loginPage2 = new LoginPage2();
                                     loginPage2.Tag = this;
                                     loginPage2.Show();
