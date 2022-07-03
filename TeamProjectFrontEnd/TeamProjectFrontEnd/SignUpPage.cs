@@ -189,7 +189,7 @@ namespace TeamProjectFrontEnd
                 }
                 else if (dsEmpCode.Tables[0].Rows.Count == 0)    //입력 완료 후 생성 신청시, 사원번호 중복체크
                 {
-                    if (idCheck && pwdCheck && pwdRecheck == true)  //정합성 체크가 모두 true일때만 신청 가능
+                    if (idCheck == true && pwdCheck == true && pwdRecheck == true)  //정합성 체크가 모두 true일때만 신청 가능
                     {
                         using (MySqlConnection conn = new MySqlConnection(connectString))
                         {
