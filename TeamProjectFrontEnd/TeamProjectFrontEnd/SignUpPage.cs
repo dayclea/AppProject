@@ -167,7 +167,27 @@ namespace TeamProjectFrontEnd
                     MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
                     da.Fill(dsEmpCode, table);
                 }
-                if (dsEmpCode.Tables[0].Rows.Count == 0)    //입력 완료 후 생성 신청시, 사원번호 중복체크
+                if (inputEmpCode == "" || inputEmpCode == null)
+                {
+                    MessageBox.Show("사원번호를 확인해주시기 바랍니다.");
+                }
+                else if (inputName == "" || inputName == null)
+                {
+                    MessageBox.Show("이름을 확인해주시기 바랍니다.");
+                }
+                else if (idCheck == false)
+                {
+                    MessageBox.Show("아이디를 확인해주시기 바랍니다.");
+                }
+                else if (pwdCheck == false || pwdRecheck == false)
+                {
+                    MessageBox.Show("비밀번호를 확인해주시기 바랍니다.");
+                }
+                else if (dsEmpCode.Tables[0].Rows.Count > 0)    //사원번호 중복이 있을 경우, 관리자 권한 필요
+                {
+                    MessageBox.Show("중복된 사원번호가 존재합니다. 관리자에게 문의하시기 바랍니다.");
+                }
+                else if (dsEmpCode.Tables[0].Rows.Count == 0)    //입력 완료 후 생성 신청시, 사원번호 중복체크
                 {
                     if (idCheck && pwdCheck && pwdRecheck == true)  //정합성 체크가 모두 true일때만 신청 가능
                     {
@@ -196,18 +216,6 @@ namespace TeamProjectFrontEnd
                             }
                         }
                     }
-                }
-                else if (dsEmpCode.Tables[0].Rows.Count > 0)    //사원번호 중복이 있을 경우, 관리자 권한 필요
-                {
-                    MessageBox.Show("중복된 사원번호가 존재합니다. 관리자에게 문의하시기 바랍니다.");
-                }
-                else if (idCheck == false)
-                {
-                    MessageBox.Show("입력하신 아이디를 확인해주시기 바랍니다.");
-                }
-                else if (pwdCheck || pwdRecheck == false)
-                {
-                    MessageBox.Show("입력하신 비밀번호를 확인해주시기 바랍니다.");
                 }
                 else
                 {
