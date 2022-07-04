@@ -159,9 +159,9 @@ namespace TeamProjectFrontEnd
         }
 
 
-    
 
-       
+
+
 
         // 종료 이벤트시 알림창
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
@@ -298,7 +298,7 @@ namespace TeamProjectFrontEnd
                 solPage.ShowDialog();
             }
 
-        
+
         }
 
 
@@ -314,8 +314,8 @@ namespace TeamProjectFrontEnd
             {
                 return;
             }
-            
-            
+
+
             try
             {
                 String solution_code = (dataGridView1.SelectedCells[0].Value).ToString();
@@ -344,7 +344,7 @@ namespace TeamProjectFrontEnd
             ds = dbLib2.GetSolution(groupBox1.Text);
 
             dataGridView1.DataSource = ds.Tables[0];
-            
+
         }
 
         // 종료 버튼 클릭시

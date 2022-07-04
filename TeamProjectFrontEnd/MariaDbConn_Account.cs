@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
-
 using System.Windows.Forms;
 
 // 각 쿼리문을 다른 CS파일에서 만들고 메소드에 넣어서 실행
@@ -52,7 +46,7 @@ namespace MariaDbConnAccount
         // 접속테스트
         public bool ConnectionTest()
 
-        {   
+        {
             try
             {
                 using (MySqlConnection conn = new MySqlConnection(connectString)) //DB 연결
@@ -114,7 +108,7 @@ namespace MariaDbConnAccount
                     Console.WriteLine(ex.ToString());
                     throw;
                 }
-                
+
             }
         }
 
@@ -125,7 +119,7 @@ namespace MariaDbConnAccount
             /*String[] Querystring = { "홍길동2", "0000"};
             string sql = string.Format("Update tbl_account Set name = {0}, where empcode = {1}",
                                             "홍길동2", "0000");*/
-            
+
 
             using (MySqlConnection conn = new MySqlConnection(connectString))
             {
@@ -139,8 +133,8 @@ namespace MariaDbConnAccount
         //DELETE처리
         public void DeleteDB(string sql)
         {
-/*            string sql = "Delete From tbl_update where id = '1'";
-*/
+            /*            string sql = "Delete From tbl_update where id = '1'";
+            */
             using (MySqlConnection conn = new MySqlConnection(connectString))
             {
                 conn.Open();

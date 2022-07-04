@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 using System.Text.RegularExpressions;
+using System.Windows.Forms;
 
 
 namespace TeamProjectFrontEnd
@@ -21,25 +16,25 @@ namespace TeamProjectFrontEnd
         string uid = "teammate2";       //DB 접속계정
         string pwd = "teammate2";       //DB 접속PWD
         bool idCheck = false;           //계정 생성 입력 ID 정합성 체크 
-        bool pwdCheck = false;          
+        bool pwdCheck = false;
         bool pwdRecheck = false;        //계정 생성 입력 PW 정합성 체크
 
         public SignUpPage()
         {
             InitializeComponent();
         }
-        
+
         // ID 중복 체크
         private void idCheckBtn_Click(object sender, EventArgs e)
         {
             string inputId = idTBox.Text.ToString();
-            
+
             //계정리스트 조회 (입력한 ID 기준)
             try
             {
                 DataSet dsAccountId = new DataSet();
                 string connectString = string.Format("Server={0};Database={1};Uid ={2};Pwd={3};", server, database, uid, pwd);
-                
+
                 using (MySqlConnection conn = new MySqlConnection(connectString))
                 {
                     string query = string.Format("select account_id from {0} where account_id = '{1}.@tilon.com';", table, inputId);
@@ -73,7 +68,7 @@ namespace TeamProjectFrontEnd
                 Console.WriteLine(exc);
             }
         }
-        
+
         //PWD 구성 체크 (영문 + 숫자 조합)
         private void pwdTBox_TextChanged(object sender, EventArgs e)
         {
@@ -126,10 +121,10 @@ namespace TeamProjectFrontEnd
             }
             catch (Exception exc)
             {
-                Console.WriteLine (exc);
+                Console.WriteLine(exc);
             }
         }
-        
+
         //PWD 재입력 확인
         private void pwdCheckedTBox_TextChanged(object sender, EventArgs e)
         {
@@ -138,7 +133,7 @@ namespace TeamProjectFrontEnd
                 pwdCheckLb.ForeColor = Color.Green;
                 pwdCheckLb.Text = "비밀번호가 일치합니다.";
                 pwdRecheck = true;
-                
+
             }
             else
             {
@@ -226,7 +221,7 @@ namespace TeamProjectFrontEnd
             {
                 Console.WriteLine(exc);
             }
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)

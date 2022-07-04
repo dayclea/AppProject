@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
+using System.Windows.Forms;
 
 // 각 쿼리문을 다른 CS파일에서 만들고 메소드에 넣어서 실행
 // EX)
@@ -112,7 +107,7 @@ namespace MariaDbConn
                     Console.WriteLine(ex.ToString());
                     throw;
                 }
-                
+
             }
         }
 

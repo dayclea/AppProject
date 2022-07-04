@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TeamProjectFrontEnd
@@ -45,7 +38,7 @@ namespace TeamProjectFrontEnd
                 button2.BackgroundImage = null;
                 button3.Text = "솔루션 페이지";
                 button3.BackgroundImage = null;
-   
+
                 checkBoxHide.Text = "<";
             }
             // 타이머 실행

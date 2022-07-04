@@ -75,7 +75,7 @@
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(229, 1111);
+            this.panelSideMenu.Size = new System.Drawing.Size(229, 795);
             this.panelSideMenu.TabIndex = 0;
             // 
             // checkBoxHide
@@ -87,7 +87,7 @@
             this.checkBoxHide.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.checkBoxHide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxHide.ForeColor = System.Drawing.Color.White;
-            this.checkBoxHide.Location = new System.Drawing.Point(0, 1049);
+            this.checkBoxHide.Location = new System.Drawing.Point(0, 733);
             this.checkBoxHide.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBoxHide.Name = "checkBoxHide";
             this.checkBoxHide.Size = new System.Drawing.Size(229, 62);
@@ -475,7 +475,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1353, 1111);
+            this.ClientSize = new System.Drawing.Size(1353, 795);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.BtnDelete);
             this.Controls.Add(this.BtnEdit);

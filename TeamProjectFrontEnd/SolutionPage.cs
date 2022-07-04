@@ -7,7 +7,7 @@ namespace TeamProjectFrontEnd
 {
     public partial class SolutionPage : Form
     {
-       
+
         /*public SolutionPage()
         {
             InitializeComponent();
@@ -15,7 +15,7 @@ namespace TeamProjectFrontEnd
         }*/
 
         // insert버튼 실행 시
-        public SolutionPage(String solution_code)
+        public SolutionPage(String solution_code/*, int insertOrEdit_Key*/)
         {
             InitializeComponent();
             colset(dataGridView1, solution_code);
@@ -24,7 +24,7 @@ namespace TeamProjectFrontEnd
         }
 
         //edit버튼에서 실행될시
-        public SolutionPage(String solution_code, String release_date)
+        public SolutionPage(String solution_code, String release_date/*, int insertOrEdit_Key*/)
         {
             InitializeComponent();
             colset2(dataGridView1, solution_code, release_date);
@@ -44,9 +44,12 @@ namespace TeamProjectFrontEnd
             String update_version = (dataGridView1.SelectedCells[3].Value).ToString();
             String description = (dataGridView1.SelectedCells[4].Value).ToString();
 
+            /*if (SeOrEd_Key.Tag) {*/
             string sql = string.Format("Update db_solutions.tbl_update Set () where solution_code = {0} and release_date = {1};",
-                                            solution_code, release_date, manager, update_version, description); 
-           
+                                        solution_code, release_date, manager, update_version, description);
+            /* }*/
+
+
         }
         public void colset(DataGridView dataGridView1, String solution_code)
         {
@@ -64,7 +67,7 @@ namespace TeamProjectFrontEnd
             subTitleColumn.HeaderText = "솔루션명";
             subTitleColumn.Name = "솔루션명";
             subTitleColumn.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            
+
 
             DataGridViewTextBoxColumn summaryColumn =
                 new DataGridViewTextBoxColumn();
@@ -107,9 +110,9 @@ namespace TeamProjectFrontEnd
             summaryColumn, contentColumn, amountColumn, descColumn });
 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            
+
             // 수정할 수 있도록 컬럼 추가
-            string[] row0 = { solution_code, SolutionCodeCheck(solution_code), "","","","" };
+            string[] row0 = { solution_code, SolutionCodeCheck(solution_code), "", "", "", "" };
             dataGridView1.Rows.Add(row0);
 
             // 솔루션명 부분 일단 잠금... 번호 바꿀때마다 솔루션명 변경하는 이벤트 만들어야할듯?
@@ -143,7 +146,7 @@ namespace TeamProjectFrontEnd
 
         private void dataGridView1_CellToolTipTextNeeded(object sender, DataGridViewCellToolTipTextNeededEventArgs e)
         {
-         
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -208,7 +211,8 @@ namespace TeamProjectFrontEnd
             {
                 SolName = "K-구름";
             }
-            else {
+            else
+            {
                 return "ERROR";
             }
             return SolName;
