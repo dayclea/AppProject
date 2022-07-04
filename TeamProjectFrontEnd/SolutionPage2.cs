@@ -263,18 +263,23 @@ namespace TeamProjectFrontEnd
         }
 
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            dataGridView1.Rows[e.RowIndex].Selected = true;
-
-        }
+  
 
         // 추가버튼 클릭 이벤트
         private void BtnInsert_Click(object sender, EventArgs e)
         {
-            String solution_code = (dataGridView1.SelectedCells[0].Value).ToString();
+            ////////////////////////////////////////////////////
+            /// 솔루션 번호 가져오는거 다시짜기
+            /// 지금은 데이터 불러온거 없으면 안댐
+            ////////////////////////////
+            String solution_code = SolutionNameCheck(groupBox1.Text);
 
-            SolutionPage solPage = new SolutionPage(solution_code);
+            if (solution_code.Equals("ERROR")) {
+                MessageBox.Show("오류 발생.", "Error");
+                return;
+            }
+
+            SolutionPage solPage = new SolutionPage(solution_code, 0);
             solPage.Tag = this;
             solPage.ShowDialog();
         }
@@ -293,7 +298,7 @@ namespace TeamProjectFrontEnd
                 String release_date = (dataGridView1.SelectedCells[2].Value).ToString();
 
                 //수정할 데이터를 찾을거 들고 페이지 이동
-                SolutionPage solPage = new SolutionPage(solution_code, release_date);
+                SolutionPage solPage = new SolutionPage(solution_code, release_date, 1);
                 solPage.Tag = this;
                 solPage.ShowDialog();
             }
@@ -358,6 +363,62 @@ namespace TeamProjectFrontEnd
             if (MessageBox.Show("종료하시겠습니까?", "종료", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 Application.Exit();
 
+        }
+
+        // 솔루션 코드 체크
+        private String SolutionNameCheck(String SolName)
+        {
+            String solution_code;
+
+            if (SolName.Equals("Dstation"))
+            {
+                solution_code = "VDI001";
+            }
+            else if (SolName.Equals("Astation"))
+            {
+                solution_code = "VDI002";
+            }
+            else if (SolName.Equals("CenterFace"))
+            {
+                solution_code = "VDI003";
+            }
+            else if (SolName.Equals("Dcanvas"))
+            {
+                solution_code = "VDI011";
+            }
+            else if (SolName.Equals("elcloud"))
+            {
+                solution_code = "VDI012";
+            }
+            else if (SolName.Equals("Mstation"))
+            {
+                solution_code = "VDI021";
+            }
+            else if (SolName.Equals("CenterChain"))
+            {
+                solution_code = "VDI022";
+            }
+            else if (SolName.Equals("Vstation"))
+            {
+                solution_code = "VDI031";
+            }
+            else if (SolName.Equals("K-구름"))
+            {
+                solution_code = "VDI032";
+            }
+            else
+            {
+                return "ERROR";
+            }
+            return solution_code;
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                dataGridView1.Rows[e.RowIndex].Selected = true;
+            }
         }
     }
 }
