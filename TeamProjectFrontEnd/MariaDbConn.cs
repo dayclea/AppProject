@@ -95,10 +95,13 @@ namespace MariaDbConn
                     if (cmd.ExecuteNonQuery() == 1)
                     {
                         Console.WriteLine("인서트 성공");
+                        MessageBox.Show("추가 완료");
                     }
                     else
                     {
                         Console.WriteLine("인서트 실패");
+                        MessageBox.Show("추가 실패");
+
                     }
                 }
                 catch (Exception ex)
@@ -119,9 +122,24 @@ namespace MariaDbConn
             using (MySqlConnection conn = new MySqlConnection(connectString))
             {
                 conn.Open();
-
+                try { 
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
-                Console.WriteLine(cmd.ExecuteNonQuery());
+                if (cmd.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("수정 완료");
+                }
+                else
+                {
+                    MessageBox.Show("수정 실패");
+
+                }
+            }
+                 catch (Exception ex)
+                {
+                    Console.WriteLine("실패");
+                    Console.WriteLine(ex.ToString());
+                    throw;
+                }
             }
         }
 
