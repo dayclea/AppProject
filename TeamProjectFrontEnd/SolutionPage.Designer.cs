@@ -66,7 +66,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(229, 62);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Dstation";
+            this.button1.Text = "Solution";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // panelSideMenu
@@ -178,9 +178,6 @@
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.Size = new System.Drawing.Size(837, 490);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
-            this.dataGridView1.CellToolTipTextNeeded += new System.Windows.Forms.DataGridViewCellToolTipTextNeededEventHandler(this.dataGridView1_CellToolTipTextNeeded);
-            this.dataGridView1.MouseHover += new System.EventHandler(this.dataGridView1_MouseHover);
             // 
             // tableLayoutPanel1
             // 

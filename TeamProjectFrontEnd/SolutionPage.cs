@@ -20,7 +20,8 @@ namespace TeamProjectFrontEnd
             InitializeComponent();
             colset(dataGridView1, solution_code);
 
-            this.dataGridView1.MouseHover += dataGridView1_MouseHover;
+            dataGridView1.Rows[0].Cells[0].ToolTipText = "이 셀은 변경할수 없습니다.";
+            dataGridView1.Rows[0].Cells[1].ToolTipText = "이 셀은 변경할수 없습니다.";
         }
 
         //edit버튼에서 실행될시
@@ -28,6 +29,9 @@ namespace TeamProjectFrontEnd
         {
             InitializeComponent();
             colset2(dataGridView1, solution_code, release_date);
+
+            dataGridView1.Rows[0].Cells[0].ToolTipText = "이 셀은 변경할수 없습니다.";
+            dataGridView1.Rows[0].Cells[1].ToolTipText = "이 셀은 변경할수 없습니다.";
         }
 
         private void checkBoxHide_CheckedChanged_1(object sender, EventArgs e)
@@ -183,24 +187,8 @@ namespace TeamProjectFrontEnd
 
 
         }
-        // ToolTip 표시
-        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            /*if ((e.ColumnIndex == this.dataGridView1.Columns["솔루션명"].Index)
-                && e.Value != null)
-            {
-                DataGridViewCell cell =
-                this.dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex];
+       
 
-            cell.ToolTipText = "Dstation";
-
-            }*/
-        }
-
-        private void dataGridView1_CellToolTipTextNeeded(object sender, DataGridViewCellToolTipTextNeededEventArgs e)
-        {
-
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -216,12 +204,6 @@ namespace TeamProjectFrontEnd
             this.Close();
         }
 
-        private void dataGridView1_MouseHover(object sender, EventArgs e)
-        {
-            ToolTip ttip = new ToolTip();
-
-            ttip.SetToolTip(this.dataGridView1, "Main 버튼 입니다.");
-        }
 
         // 솔루션 코드 체크
         private String SolutionCodeCheck(String solution_code)
