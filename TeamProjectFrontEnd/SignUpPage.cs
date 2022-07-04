@@ -15,6 +15,8 @@ namespace TeamProjectFrontEnd
         string table = "tbl_account";   //테이블명
         string uid = "teammate2";       //DB 접속계정
         string pwd = "teammate2";       //DB 접속PWD
+        bool empNoCheck = false;
+        bool nameCheck = false;
         bool idCheck = false;           //계정 생성 입력 ID 정합성 체크 
         bool pwdCheck = false;
         bool pwdRecheck = false;        //계정 생성 입력 PW 정합성 체크
@@ -22,6 +24,50 @@ namespace TeamProjectFrontEnd
         public SignUpPage()
         {
             InitializeComponent();
+        }
+
+        private void empNoTBox_TextChanged(object sender, EventArgs e)
+        {
+            string inputEmpCode = empNoTBox.Text.ToString();
+            try
+            {
+                if (Regex.IsMatch(inputEmpCode, @"[~!@#$%^&*()_\-=+[\]{};:<>,.\""\']") == true)
+                {
+                    empNoCheck = false;
+                }
+                else if (Regex.IsMatch(inputEmpCode, @"[ㄱ-ㅎ가-힣]") == true)
+                {
+                    empNoCheck = false;
+                }
+                else if (Regex.IsMatch(inputEmpCode, @"[a-zA-Z]") == true && Regex.IsMatch(inputEmpCode, @"[0-9]") == true)
+                {
+                    empNoCheck = true;
+                }
+            }
+            catch (Exception exc)
+            {
+                Console.WriteLine(exc);
+            }
+        }
+
+        private void nameTBox_TextChanged(object sender, EventArgs e)
+        {
+            string inputName = nameTBox.Text.ToString();
+            try
+            {
+                if (Regex.IsMatch(inputName, @"[~!@#$%^&*()_\-=+[\]{};:<>,.\""\']") == true)
+                {
+                    nameCheck = false;
+                }
+                else
+                {
+                    nameCheck = true;
+                }
+            }
+            catch (Exception exc)
+            {
+                Console.WriteLine(exc);
+            }
         }
 
         // ID 중복 체크
@@ -184,9 +230,17 @@ namespace TeamProjectFrontEnd
                 {
                     MessageBox.Show("사원번호를 확인해주시기 바랍니다.");
                 }
+                else if (empNoCheck == false)
+                {
+                    MessageBox.Show("사원번호에 특수문자 또는 한글이 포함되었습니다. \n영문 + 숫자 조합으로 다시 확인해주시기 바랍니다.");
+                }
                 else if (inputName == "" || inputName == null)
                 {
                     MessageBox.Show("이름을 확인해주시기 바랍니다.");
+                }
+                else if (nameCheck == false)
+                {
+                    MessageBox.Show("이름에 특수문자가 포함되었습니다. 다시 확인해주시기 바랍니다.");
                 }
                 else if (idCheck == false)
                 {
