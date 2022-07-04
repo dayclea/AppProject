@@ -245,7 +245,10 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-
+            //
+            // 폼 제목 수정
+            //
+            this.Text = "솔루션 관리";
         }
 
         #endregion

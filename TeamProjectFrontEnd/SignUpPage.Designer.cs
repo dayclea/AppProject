@@ -59,10 +59,9 @@
             this.finishBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.finishBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.finishBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.finishBtn.Location = new System.Drawing.Point(201, 502);
-            this.finishBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.finishBtn.Location = new System.Drawing.Point(176, 402);
             this.finishBtn.Name = "finishBtn";
-            this.finishBtn.Size = new System.Drawing.Size(286, 62);
+            this.finishBtn.Size = new System.Drawing.Size(250, 50);
             this.finishBtn.TabIndex = 6;
             this.finishBtn.Text = "작성완료";
             this.finishBtn.UseVisualStyleBackColor = false;
@@ -72,10 +71,9 @@
             // 
             this.pwdCheckTBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pwdCheckTBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.pwdCheckTBox.Location = new System.Drawing.Point(266, 400);
-            this.pwdCheckTBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pwdCheckTBox.Location = new System.Drawing.Point(233, 320);
             this.pwdCheckTBox.Name = "pwdCheckTBox";
-            this.pwdCheckTBox.Size = new System.Drawing.Size(191, 21);
+            this.pwdCheckTBox.Size = new System.Drawing.Size(168, 21);
             this.pwdCheckTBox.TabIndex = 5;
             this.pwdCheckTBox.UseSystemPasswordChar = true;
             this.pwdCheckTBox.TextChanged += new System.EventHandler(this.pwdCheckedTBox_TextChanged);
@@ -84,7 +82,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label6.Location = new System.Drawing.Point(161, 404);
+            this.label6.Location = new System.Drawing.Point(141, 323);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(83, 15);
             this.label6.TabIndex = 11;
@@ -110,11 +108,9 @@
             this.groupBox1.Controls.Add(this.empNoTBox);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.groupBox1.Location = new System.Drawing.Point(334, 74);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Location = new System.Drawing.Point(292, 59);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(686, 625);
+            this.groupBox1.Size = new System.Drawing.Size(600, 500);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "계 정 생 성";
@@ -124,7 +120,7 @@
             this.pwdCheckLb.AutoSize = true;
             this.pwdCheckLb.BackColor = System.Drawing.Color.White;
             this.pwdCheckLb.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pwdCheckLb.Location = new System.Drawing.Point(266, 434);
+            this.pwdCheckLb.Location = new System.Drawing.Point(233, 347);
             this.pwdCheckLb.Name = "pwdCheckLb";
             this.pwdCheckLb.Size = new System.Drawing.Size(11, 15);
             this.pwdCheckLb.TabIndex = 14;
@@ -135,7 +131,7 @@
             this.pwdLb.AutoSize = true;
             this.pwdLb.BackColor = System.Drawing.Color.White;
             this.pwdLb.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pwdLb.Location = new System.Drawing.Point(266, 348);
+            this.pwdLb.Location = new System.Drawing.Point(233, 278);
             this.pwdLb.Name = "pwdLb";
             this.pwdLb.Size = new System.Drawing.Size(187, 15);
             this.pwdLb.TabIndex = 13;
@@ -146,7 +142,7 @@
             this.idLb.AutoSize = true;
             this.idLb.BackColor = System.Drawing.Color.White;
             this.idLb.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.idLb.Location = new System.Drawing.Point(266, 264);
+            this.idLb.Location = new System.Drawing.Point(233, 211);
             this.idLb.Name = "idLb";
             this.idLb.Size = new System.Drawing.Size(175, 15);
             this.idLb.TabIndex = 12;
@@ -159,10 +155,9 @@
             this.idCheckBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.idCheckBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.idCheckBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.idCheckBtn.Location = new System.Drawing.Point(470, 230);
-            this.idCheckBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.idCheckBtn.Location = new System.Drawing.Point(411, 184);
             this.idCheckBtn.Name = "idCheckBtn";
-            this.idCheckBtn.Size = new System.Drawing.Size(114, 26);
+            this.idCheckBtn.Size = new System.Drawing.Size(100, 21);
             this.idCheckBtn.TabIndex = 3;
             this.idCheckBtn.Text = "중복 체크";
             this.idCheckBtn.UseVisualStyleBackColor = false;
@@ -172,10 +167,9 @@
             // 
             this.pwdTBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pwdTBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.pwdTBox.Location = new System.Drawing.Point(266, 314);
-            this.pwdTBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pwdTBox.Location = new System.Drawing.Point(233, 251);
             this.pwdTBox.Name = "pwdTBox";
-            this.pwdTBox.Size = new System.Drawing.Size(191, 21);
+            this.pwdTBox.Size = new System.Drawing.Size(168, 21);
             this.pwdTBox.TabIndex = 4;
             this.pwdTBox.UseSystemPasswordChar = true;
             this.pwdTBox.TextChanged += new System.EventHandler(this.pwdTBox_TextChanged);
@@ -184,7 +178,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(161, 318);
+            this.label5.Location = new System.Drawing.Point(141, 254);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 15);
             this.label5.TabIndex = 10;
@@ -194,17 +188,16 @@
             // 
             this.idTBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.idTBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.idTBox.Location = new System.Drawing.Point(266, 230);
-            this.idTBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.idTBox.Location = new System.Drawing.Point(233, 184);
             this.idTBox.Name = "idTBox";
-            this.idTBox.Size = new System.Drawing.Size(191, 21);
+            this.idTBox.Size = new System.Drawing.Size(168, 21);
             this.idTBox.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(161, 235);
+            this.label4.Location = new System.Drawing.Point(141, 188);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 15);
             this.label4.TabIndex = 9;
@@ -214,17 +207,17 @@
             // 
             this.nameTBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nameTBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.nameTBox.Location = new System.Drawing.Point(266, 151);
-            this.nameTBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.nameTBox.Location = new System.Drawing.Point(233, 121);
             this.nameTBox.Name = "nameTBox";
-            this.nameTBox.Size = new System.Drawing.Size(191, 21);
+            this.nameTBox.Size = new System.Drawing.Size(168, 21);
             this.nameTBox.TabIndex = 1;
+            this.nameTBox.TextChanged += new System.EventHandler(this.nameTBox_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(161, 156);
+            this.label2.Location = new System.Drawing.Point(141, 125);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(31, 15);
             this.label2.TabIndex = 8;
@@ -234,17 +227,17 @@
             // 
             this.empNoTBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.empNoTBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.empNoTBox.Location = new System.Drawing.Point(266, 76);
-            this.empNoTBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.empNoTBox.Location = new System.Drawing.Point(233, 61);
             this.empNoTBox.Name = "empNoTBox";
-            this.empNoTBox.Size = new System.Drawing.Size(191, 21);
+            this.empNoTBox.Size = new System.Drawing.Size(168, 21);
             this.empNoTBox.TabIndex = 0;
+            this.empNoTBox.TextChanged += new System.EventHandler(this.empNoTBox_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(161, 80);
+            this.label1.Location = new System.Drawing.Point(141, 64);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 15);
             this.label1.TabIndex = 7;
@@ -256,17 +249,17 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1353, 795);
+            this.pictureBox1.Size = new System.Drawing.Size(1184, 636);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1217, 724);
+            this.button1.Location = new System.Drawing.Point(1065, 579);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 40);
+            this.button1.Size = new System.Drawing.Size(90, 32);
             this.button1.TabIndex = 1;
             this.button1.Text = "뒤로가기";
             this.button1.UseVisualStyleBackColor = true;
@@ -274,16 +267,15 @@
             // 
             // SignUpPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1353, 795);
+            this.ClientSize = new System.Drawing.Size(1184, 636);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "SignUpPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SignUpPage";
+            this.Text = "회원가입";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
