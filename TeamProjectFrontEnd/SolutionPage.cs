@@ -53,7 +53,7 @@ namespace TeamProjectFrontEnd
             String release_date = (dataGridView1.SelectedCells[2].Value).ToString();
             String manager = (dataGridView1.SelectedCells[3].Value).ToString();
             String update_version = (dataGridView1.SelectedCells[4].Value).ToString();
-            String description = (dataGridView1.SelectedCells[5].Value).ToString();
+            // String description = (dataGridView1.SelectedCells[5].Value).ToString();
 
             if (solution_code == "" || release_date == "")
             {
@@ -63,21 +63,21 @@ namespace TeamProjectFrontEnd
 
 
 
-            String[] Querystring = { solution_code, release_date, manager, update_version, description };
+            String[] Querystring = { solution_code, release_date, manager, update_version };
 
             MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
 
             if (BtnEdit.Text.Equals("추가"))
             {
                 string sql = String.Format("Insert Into db_solutions.tbl_update (solution_code,release_date,manager,update_version,description) values ('{0}','{1}','{2}','{3}','{4}');"
-                                            , Querystring[0], Querystring[1], Querystring[2], Querystring[3], Querystring[4]);
+                                            , Querystring[0], Querystring[1], Querystring[2], Querystring[3], dataGridView1.SelectedCells[5].Value);
 
                 dbLib.InsertDB(sql);
             }
             else if (BtnEdit.Text.Equals("수정"))
             {
                 string sql = string.Format("update db_solutions.tbl_update Set manager = '{0}', update_version = '{1}', description = '{2}' where solution_code = '{3}' and release_date = '{4}';",
-                                        Querystring[2], Querystring[3], Querystring[4], Querystring[0], Querystring[1]);
+                                        Querystring[2], Querystring[3], dataGridView1.SelectedCells[5].Value, Querystring[0], Querystring[1]);
                 Console.WriteLine(sql);
                 dbLib.UpdateDB(sql);
 

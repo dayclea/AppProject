@@ -108,6 +108,8 @@ namespace MariaDbConn
                 catch (Exception ex)
                 {
                     Console.WriteLine("실패");
+                    MessageBox.Show("에러발생");
+
                     Console.WriteLine(ex.ToString());
                 }
 
@@ -137,6 +139,7 @@ namespace MariaDbConn
                  catch (Exception ex)
                 {
                     Console.WriteLine("실패");
+                    MessageBox.Show("에러발생");
                     Console.WriteLine(ex.ToString());
                 }
             }

@@ -50,20 +50,20 @@
             this.BtnKCloud = new System.Windows.Forms.Button();
             this.BtnVstation = new System.Windows.Forms.Button();
             this.timerSliding = new System.Windows.Forms.Timer(this.components);
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.BtnInsert = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.BtnEdit = new System.Windows.Forms.Button();
             this.BtnDelete = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panelSideMenu.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -73,9 +73,8 @@
             this.panelSideMenu.Controls.Add(this.flowLayoutPanel1);
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelSideMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(229, 795);
+            this.panelSideMenu.Size = new System.Drawing.Size(200, 636);
             this.panelSideMenu.TabIndex = 0;
             // 
             // checkBoxHide
@@ -87,10 +86,9 @@
             this.checkBoxHide.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.checkBoxHide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxHide.ForeColor = System.Drawing.Color.White;
-            this.checkBoxHide.Location = new System.Drawing.Point(0, 733);
-            this.checkBoxHide.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBoxHide.Location = new System.Drawing.Point(0, 586);
             this.checkBoxHide.Name = "checkBoxHide";
-            this.checkBoxHide.Size = new System.Drawing.Size(229, 62);
+            this.checkBoxHide.Size = new System.Drawing.Size(200, 50);
             this.checkBoxHide.TabIndex = 20;
             this.checkBoxHide.Text = "<";
             this.checkBoxHide.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -109,9 +107,8 @@
             this.flowLayoutPanel1.Controls.Add(this.panel1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(229, 881);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 705);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // button1
@@ -122,12 +119,11 @@
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button1.Font = new System.Drawing.Font("나눔고딕OTF", 10F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.Linen;
-            this.button1.Location = new System.Drawing.Point(3, 4);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Location = new System.Drawing.Point(3, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(229, 62);
+            this.button1.Size = new System.Drawing.Size(200, 50);
             this.button1.TabIndex = 0;
             this.button1.Text = "가상화";
             this.button1.UseVisualStyleBackColor = false;
@@ -138,10 +134,9 @@
             this.panel2.Controls.Add(this.BtnCenterFace);
             this.panel2.Controls.Add(this.BtnAstation);
             this.panel2.Controls.Add(this.BtnDstation);
-            this.panel2.Location = new System.Drawing.Point(3, 74);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Location = new System.Drawing.Point(3, 59);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(229, 196);
+            this.panel2.Size = new System.Drawing.Size(200, 157);
             this.panel2.TabIndex = 12;
             // 
             // BtnCenterFace
@@ -151,12 +146,11 @@
             this.BtnCenterFace.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.BtnCenterFace.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.BtnCenterFace.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCenterFace.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.BtnCenterFace.Font = new System.Drawing.Font("나눔고딕OTF", 9F);
             this.BtnCenterFace.ForeColor = System.Drawing.Color.White;
-            this.BtnCenterFace.Location = new System.Drawing.Point(0, 124);
-            this.BtnCenterFace.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnCenterFace.Location = new System.Drawing.Point(0, 100);
             this.BtnCenterFace.Name = "BtnCenterFace";
-            this.BtnCenterFace.Size = new System.Drawing.Size(229, 62);
+            this.BtnCenterFace.Size = new System.Drawing.Size(200, 50);
             this.BtnCenterFace.TabIndex = 2;
             this.BtnCenterFace.Text = "CenterFace";
             this.BtnCenterFace.UseVisualStyleBackColor = true;
@@ -169,12 +163,11 @@
             this.BtnAstation.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.BtnAstation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.BtnAstation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAstation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.BtnAstation.Font = new System.Drawing.Font("나눔고딕OTF", 9F);
             this.BtnAstation.ForeColor = System.Drawing.Color.White;
-            this.BtnAstation.Location = new System.Drawing.Point(0, 62);
-            this.BtnAstation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnAstation.Location = new System.Drawing.Point(0, 50);
             this.BtnAstation.Name = "BtnAstation";
-            this.BtnAstation.Size = new System.Drawing.Size(229, 62);
+            this.BtnAstation.Size = new System.Drawing.Size(200, 50);
             this.BtnAstation.TabIndex = 1;
             this.BtnAstation.Text = "Astation";
             this.BtnAstation.UseVisualStyleBackColor = true;
@@ -187,12 +180,11 @@
             this.BtnDstation.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.BtnDstation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.BtnDstation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnDstation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.BtnDstation.Font = new System.Drawing.Font("나눔고딕OTF", 9F);
             this.BtnDstation.ForeColor = System.Drawing.Color.White;
             this.BtnDstation.Location = new System.Drawing.Point(0, 0);
-            this.BtnDstation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnDstation.Name = "BtnDstation";
-            this.BtnDstation.Size = new System.Drawing.Size(229, 62);
+            this.BtnDstation.Size = new System.Drawing.Size(200, 50);
             this.BtnDstation.TabIndex = 0;
             this.BtnDstation.Text = "Dstation";
             this.BtnDstation.UseVisualStyleBackColor = true;
@@ -206,12 +198,11 @@
             this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button5.Font = new System.Drawing.Font("나눔고딕OTF", 10F, System.Drawing.FontStyle.Bold);
             this.button5.ForeColor = System.Drawing.Color.Linen;
-            this.button5.Location = new System.Drawing.Point(3, 278);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button5.Location = new System.Drawing.Point(3, 222);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(229, 62);
+            this.button5.Size = new System.Drawing.Size(200, 50);
             this.button5.TabIndex = 1;
             this.button5.Text = "클라우드";
             this.button5.UseVisualStyleBackColor = false;
@@ -221,10 +212,9 @@
             // 
             this.panel3.Controls.Add(this.Btnelcloud);
             this.panel3.Controls.Add(this.BtnDcanvas);
-            this.panel3.Location = new System.Drawing.Point(3, 348);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel3.Location = new System.Drawing.Point(3, 278);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(229, 128);
+            this.panel3.Size = new System.Drawing.Size(200, 102);
             this.panel3.TabIndex = 14;
             // 
             // Btnelcloud
@@ -234,12 +224,11 @@
             this.Btnelcloud.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.Btnelcloud.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.Btnelcloud.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btnelcloud.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Btnelcloud.Font = new System.Drawing.Font("나눔고딕OTF", 9F);
             this.Btnelcloud.ForeColor = System.Drawing.Color.White;
-            this.Btnelcloud.Location = new System.Drawing.Point(0, 62);
-            this.Btnelcloud.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Btnelcloud.Location = new System.Drawing.Point(0, 50);
             this.Btnelcloud.Name = "Btnelcloud";
-            this.Btnelcloud.Size = new System.Drawing.Size(229, 62);
+            this.Btnelcloud.Size = new System.Drawing.Size(200, 50);
             this.Btnelcloud.TabIndex = 1;
             this.Btnelcloud.Text = "elcloud";
             this.Btnelcloud.UseVisualStyleBackColor = true;
@@ -252,12 +241,11 @@
             this.BtnDcanvas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.BtnDcanvas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.BtnDcanvas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnDcanvas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.BtnDcanvas.Font = new System.Drawing.Font("나눔고딕OTF", 9F);
             this.BtnDcanvas.ForeColor = System.Drawing.Color.White;
             this.BtnDcanvas.Location = new System.Drawing.Point(0, 0);
-            this.BtnDcanvas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnDcanvas.Name = "BtnDcanvas";
-            this.BtnDcanvas.Size = new System.Drawing.Size(229, 62);
+            this.BtnDcanvas.Size = new System.Drawing.Size(200, 50);
             this.BtnDcanvas.TabIndex = 0;
             this.BtnDcanvas.Text = "Dcanvas";
             this.BtnDcanvas.UseVisualStyleBackColor = true;
@@ -271,12 +259,11 @@
             this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button8.Font = new System.Drawing.Font("나눔고딕OTF", 10F, System.Drawing.FontStyle.Bold);
             this.button8.ForeColor = System.Drawing.Color.Linen;
-            this.button8.Location = new System.Drawing.Point(3, 484);
-            this.button8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button8.Location = new System.Drawing.Point(3, 386);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(229, 62);
+            this.button8.Size = new System.Drawing.Size(200, 50);
             this.button8.TabIndex = 2;
             this.button8.Text = "블록체인";
             this.button8.UseVisualStyleBackColor = false;
@@ -286,10 +273,9 @@
             // 
             this.panel4.Controls.Add(this.BtnCenterChain);
             this.panel4.Controls.Add(this.BtnMstation);
-            this.panel4.Location = new System.Drawing.Point(3, 554);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel4.Location = new System.Drawing.Point(3, 442);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(229, 128);
+            this.panel4.Size = new System.Drawing.Size(200, 102);
             this.panel4.TabIndex = 16;
             // 
             // BtnCenterChain
@@ -299,12 +285,11 @@
             this.BtnCenterChain.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.BtnCenterChain.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.BtnCenterChain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCenterChain.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.BtnCenterChain.Font = new System.Drawing.Font("나눔고딕OTF", 9F);
             this.BtnCenterChain.ForeColor = System.Drawing.Color.White;
-            this.BtnCenterChain.Location = new System.Drawing.Point(0, 62);
-            this.BtnCenterChain.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnCenterChain.Location = new System.Drawing.Point(0, 50);
             this.BtnCenterChain.Name = "BtnCenterChain";
-            this.BtnCenterChain.Size = new System.Drawing.Size(229, 62);
+            this.BtnCenterChain.Size = new System.Drawing.Size(200, 50);
             this.BtnCenterChain.TabIndex = 1;
             this.BtnCenterChain.Text = "CenterChain";
             this.BtnCenterChain.UseVisualStyleBackColor = true;
@@ -317,12 +302,11 @@
             this.BtnMstation.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.BtnMstation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.BtnMstation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnMstation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.BtnMstation.Font = new System.Drawing.Font("나눔고딕OTF", 9F);
             this.BtnMstation.ForeColor = System.Drawing.Color.White;
             this.BtnMstation.Location = new System.Drawing.Point(0, 0);
-            this.BtnMstation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnMstation.Name = "BtnMstation";
-            this.BtnMstation.Size = new System.Drawing.Size(229, 62);
+            this.BtnMstation.Size = new System.Drawing.Size(200, 50);
             this.BtnMstation.TabIndex = 0;
             this.BtnMstation.Text = "Mstation";
             this.BtnMstation.UseVisualStyleBackColor = true;
@@ -336,12 +320,11 @@
             this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button11.Font = new System.Drawing.Font("나눔고딕OTF", 10F, System.Drawing.FontStyle.Bold);
             this.button11.ForeColor = System.Drawing.Color.Linen;
-            this.button11.Location = new System.Drawing.Point(3, 690);
-            this.button11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button11.Location = new System.Drawing.Point(3, 550);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(229, 62);
+            this.button11.Size = new System.Drawing.Size(200, 50);
             this.button11.TabIndex = 3;
             this.button11.Text = "제로디바이스";
             this.button11.UseVisualStyleBackColor = false;
@@ -351,10 +334,9 @@
             // 
             this.panel1.Controls.Add(this.BtnKCloud);
             this.panel1.Controls.Add(this.BtnVstation);
-            this.panel1.Location = new System.Drawing.Point(3, 760);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Location = new System.Drawing.Point(3, 606);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(229, 128);
+            this.panel1.Size = new System.Drawing.Size(200, 102);
             this.panel1.TabIndex = 18;
             // 
             // BtnKCloud
@@ -364,12 +346,11 @@
             this.BtnKCloud.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.BtnKCloud.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.BtnKCloud.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnKCloud.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.BtnKCloud.Font = new System.Drawing.Font("나눔고딕OTF", 9F);
             this.BtnKCloud.ForeColor = System.Drawing.Color.White;
-            this.BtnKCloud.Location = new System.Drawing.Point(0, 62);
-            this.BtnKCloud.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnKCloud.Location = new System.Drawing.Point(0, 50);
             this.BtnKCloud.Name = "BtnKCloud";
-            this.BtnKCloud.Size = new System.Drawing.Size(229, 62);
+            this.BtnKCloud.Size = new System.Drawing.Size(200, 50);
             this.BtnKCloud.TabIndex = 1;
             this.BtnKCloud.Text = "K-구름";
             this.BtnKCloud.UseVisualStyleBackColor = true;
@@ -382,12 +363,11 @@
             this.BtnVstation.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.BtnVstation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.BtnVstation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnVstation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.BtnVstation.Font = new System.Drawing.Font("나눔고딕OTF", 9F);
             this.BtnVstation.ForeColor = System.Drawing.Color.White;
             this.BtnVstation.Location = new System.Drawing.Point(0, 0);
-            this.BtnVstation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnVstation.Name = "BtnVstation";
-            this.BtnVstation.Size = new System.Drawing.Size(229, 62);
+            this.BtnVstation.Size = new System.Drawing.Size(200, 50);
             this.BtnVstation.TabIndex = 0;
             this.BtnVstation.Text = "Vstation";
             this.BtnVstation.UseVisualStyleBackColor = true;
@@ -398,30 +378,12 @@
             this.timerSliding.Interval = 10;
             this.timerSliding.Tick += new System.EventHandler(this.timerSliding_Tick);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 22);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 50;
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(844, 628);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
             // BtnInsert
             // 
-            this.BtnInsert.Location = new System.Drawing.Point(1202, 586);
-            this.BtnInsert.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnInsert.Font = new System.Drawing.Font("나눔고딕OTF", 10F, System.Drawing.FontStyle.Bold);
+            this.BtnInsert.Location = new System.Drawing.Point(1036, 423);
             this.BtnInsert.Name = "BtnInsert";
-            this.BtnInsert.Size = new System.Drawing.Size(86, 29);
+            this.BtnInsert.Size = new System.Drawing.Size(100, 45);
             this.BtnInsert.TabIndex = 2;
             this.BtnInsert.Text = "추가";
             this.BtnInsert.UseVisualStyleBackColor = true;
@@ -430,21 +392,20 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Location = new System.Drawing.Point(267, 126);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Font = new System.Drawing.Font("나눔고딕OTF", 10F);
+            this.groupBox1.Location = new System.Drawing.Point(234, 101);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(850, 654);
+            this.groupBox1.Size = new System.Drawing.Size(744, 523);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "솔루션";
             // 
             // BtnEdit
             // 
-            this.BtnEdit.Location = new System.Drawing.Point(1202, 635);
-            this.BtnEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnEdit.Font = new System.Drawing.Font("나눔고딕OTF", 10F, System.Drawing.FontStyle.Bold);
+            this.BtnEdit.Location = new System.Drawing.Point(1036, 474);
             this.BtnEdit.Name = "BtnEdit";
-            this.BtnEdit.Size = new System.Drawing.Size(86, 29);
+            this.BtnEdit.Size = new System.Drawing.Size(100, 45);
             this.BtnEdit.TabIndex = 3;
             this.BtnEdit.Text = "수정";
             this.BtnEdit.UseVisualStyleBackColor = true;
@@ -452,10 +413,10 @@
             // 
             // BtnDelete
             // 
-            this.BtnDelete.Location = new System.Drawing.Point(1202, 688);
-            this.BtnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnDelete.Font = new System.Drawing.Font("나눔고딕OTF", 10F, System.Drawing.FontStyle.Bold);
+            this.BtnDelete.Location = new System.Drawing.Point(1036, 525);
             this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(86, 29);
+            this.BtnDelete.Size = new System.Drawing.Size(100, 45);
             this.BtnDelete.TabIndex = 4;
             this.BtnDelete.Text = "삭제";
             this.BtnDelete.UseVisualStyleBackColor = true;
@@ -463,27 +424,45 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1202, 748);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button2.Font = new System.Drawing.Font("나눔고딕OTF", 10F, System.Drawing.FontStyle.Bold);
+            this.button2.Location = new System.Drawing.Point(1036, 576);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 29);
+            this.button2.Size = new System.Drawing.Size(100, 45);
             this.button2.TabIndex = 5;
             this.button2.Text = "종료";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1.ColumnHeadersHeight = 40;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 19);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 40;
+            this.dataGridView1.RowTemplate.Height = 23;
+            this.dataGridView1.Size = new System.Drawing.Size(738, 501);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.Text = "나눔고딕OTF, 5pt";
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
             // SolutionPage2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1353, 795);
+            this.ClientSize = new System.Drawing.Size(1184, 636);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.BtnDelete);
             this.Controls.Add(this.BtnEdit);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.BtnInsert);
             this.Controls.Add(this.panelSideMenu);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "SolutionPage2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SolutionPage2";
@@ -494,8 +473,8 @@
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
