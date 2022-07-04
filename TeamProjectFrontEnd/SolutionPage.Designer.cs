@@ -163,7 +163,7 @@
             this.SolutionName.Size = new System.Drawing.Size(843, 516);
             this.SolutionName.TabIndex = 1;
             this.SolutionName.TabStop = false;
-            this.SolutionName.Text = "SolutionName";
+            this.SolutionName.Text = "Solution";
             // 
             // dataGridView1
             // 
