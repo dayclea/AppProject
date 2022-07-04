@@ -469,6 +469,7 @@
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
+            this.Text = "솔루션 조회";
         }
 
         #endregion

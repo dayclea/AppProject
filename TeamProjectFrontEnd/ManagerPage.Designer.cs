@@ -269,6 +269,7 @@
             this.mainPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
+            this.Text = "계정관리";
         }
 
         #endregion

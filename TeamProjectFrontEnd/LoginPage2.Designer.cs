@@ -192,6 +192,7 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+            this.Text = "로그인";
         }
 
         #endregion

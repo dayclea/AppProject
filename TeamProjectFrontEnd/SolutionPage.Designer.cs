@@ -246,6 +246,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
+            this.Text = "솔루션 관리";
         }
 
         #endregion

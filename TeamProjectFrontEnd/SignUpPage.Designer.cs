@@ -289,6 +289,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
+            this.Text = "회원가입";
         }
 
         #endregion
