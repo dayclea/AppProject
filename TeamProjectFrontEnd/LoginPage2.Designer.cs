@@ -191,7 +191,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
+            //
+            // 폼 제목 수정
+            //
             this.Text = "로그인";
         }
 

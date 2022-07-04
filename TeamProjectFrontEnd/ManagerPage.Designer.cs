@@ -268,7 +268,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.mainPanel.ResumeLayout(false);
             this.ResumeLayout(false);
-
+            //
+            // 폼 제목 수정
+            //
             this.Text = "계정관리";
         }
 
