@@ -73,8 +73,9 @@
             this.panelSideMenu.Controls.Add(this.flowLayoutPanel1);
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelSideMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(200, 636);
+            this.panelSideMenu.Size = new System.Drawing.Size(229, 795);
             this.panelSideMenu.TabIndex = 0;
             // 
             // checkBoxHide
@@ -86,9 +87,10 @@
             this.checkBoxHide.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.checkBoxHide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBoxHide.ForeColor = System.Drawing.Color.White;
-            this.checkBoxHide.Location = new System.Drawing.Point(0, 586);
+            this.checkBoxHide.Location = new System.Drawing.Point(0, 733);
+            this.checkBoxHide.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkBoxHide.Name = "checkBoxHide";
-            this.checkBoxHide.Size = new System.Drawing.Size(200, 50);
+            this.checkBoxHide.Size = new System.Drawing.Size(229, 62);
             this.checkBoxHide.TabIndex = 20;
             this.checkBoxHide.Text = "<";
             this.checkBoxHide.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -107,8 +109,9 @@
             this.flowLayoutPanel1.Controls.Add(this.panel1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 705);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(229, 881);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // button1
@@ -121,9 +124,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button1.ForeColor = System.Drawing.Color.Linen;
-            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Location = new System.Drawing.Point(3, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 50);
+            this.button1.Size = new System.Drawing.Size(229, 62);
             this.button1.TabIndex = 0;
             this.button1.Text = "가상화";
             this.button1.UseVisualStyleBackColor = false;
@@ -134,9 +138,10 @@
             this.panel2.Controls.Add(this.BtnCenterFace);
             this.panel2.Controls.Add(this.BtnAstation);
             this.panel2.Controls.Add(this.BtnDstation);
-            this.panel2.Location = new System.Drawing.Point(3, 59);
+            this.panel2.Location = new System.Drawing.Point(3, 74);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 157);
+            this.panel2.Size = new System.Drawing.Size(229, 196);
             this.panel2.TabIndex = 12;
             // 
             // BtnCenterFace
@@ -148,9 +153,10 @@
             this.BtnCenterFace.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCenterFace.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.BtnCenterFace.ForeColor = System.Drawing.Color.White;
-            this.BtnCenterFace.Location = new System.Drawing.Point(0, 100);
+            this.BtnCenterFace.Location = new System.Drawing.Point(0, 124);
+            this.BtnCenterFace.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnCenterFace.Name = "BtnCenterFace";
-            this.BtnCenterFace.Size = new System.Drawing.Size(200, 50);
+            this.BtnCenterFace.Size = new System.Drawing.Size(229, 62);
             this.BtnCenterFace.TabIndex = 2;
             this.BtnCenterFace.Text = "CenterFace";
             this.BtnCenterFace.UseVisualStyleBackColor = true;
@@ -165,9 +171,10 @@
             this.BtnAstation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAstation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.BtnAstation.ForeColor = System.Drawing.Color.White;
-            this.BtnAstation.Location = new System.Drawing.Point(0, 50);
+            this.BtnAstation.Location = new System.Drawing.Point(0, 62);
+            this.BtnAstation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnAstation.Name = "BtnAstation";
-            this.BtnAstation.Size = new System.Drawing.Size(200, 50);
+            this.BtnAstation.Size = new System.Drawing.Size(229, 62);
             this.BtnAstation.TabIndex = 1;
             this.BtnAstation.Text = "Astation";
             this.BtnAstation.UseVisualStyleBackColor = true;
@@ -183,8 +190,9 @@
             this.BtnDstation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.BtnDstation.ForeColor = System.Drawing.Color.White;
             this.BtnDstation.Location = new System.Drawing.Point(0, 0);
+            this.BtnDstation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnDstation.Name = "BtnDstation";
-            this.BtnDstation.Size = new System.Drawing.Size(200, 50);
+            this.BtnDstation.Size = new System.Drawing.Size(229, 62);
             this.BtnDstation.TabIndex = 0;
             this.BtnDstation.Text = "Dstation";
             this.BtnDstation.UseVisualStyleBackColor = true;
@@ -200,9 +208,10 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button5.ForeColor = System.Drawing.Color.Linen;
-            this.button5.Location = new System.Drawing.Point(3, 222);
+            this.button5.Location = new System.Drawing.Point(3, 278);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(200, 50);
+            this.button5.Size = new System.Drawing.Size(229, 62);
             this.button5.TabIndex = 1;
             this.button5.Text = "클라우드";
             this.button5.UseVisualStyleBackColor = false;
@@ -212,9 +221,10 @@
             // 
             this.panel3.Controls.Add(this.Btnelcloud);
             this.panel3.Controls.Add(this.BtnDcanvas);
-            this.panel3.Location = new System.Drawing.Point(3, 278);
+            this.panel3.Location = new System.Drawing.Point(3, 348);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 102);
+            this.panel3.Size = new System.Drawing.Size(229, 128);
             this.panel3.TabIndex = 14;
             // 
             // Btnelcloud
@@ -226,9 +236,10 @@
             this.Btnelcloud.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btnelcloud.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Btnelcloud.ForeColor = System.Drawing.Color.White;
-            this.Btnelcloud.Location = new System.Drawing.Point(0, 50);
+            this.Btnelcloud.Location = new System.Drawing.Point(0, 62);
+            this.Btnelcloud.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Btnelcloud.Name = "Btnelcloud";
-            this.Btnelcloud.Size = new System.Drawing.Size(200, 50);
+            this.Btnelcloud.Size = new System.Drawing.Size(229, 62);
             this.Btnelcloud.TabIndex = 1;
             this.Btnelcloud.Text = "elcloud";
             this.Btnelcloud.UseVisualStyleBackColor = true;
@@ -244,8 +255,9 @@
             this.BtnDcanvas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.BtnDcanvas.ForeColor = System.Drawing.Color.White;
             this.BtnDcanvas.Location = new System.Drawing.Point(0, 0);
+            this.BtnDcanvas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnDcanvas.Name = "BtnDcanvas";
-            this.BtnDcanvas.Size = new System.Drawing.Size(200, 50);
+            this.BtnDcanvas.Size = new System.Drawing.Size(229, 62);
             this.BtnDcanvas.TabIndex = 0;
             this.BtnDcanvas.Text = "Dcanvas";
             this.BtnDcanvas.UseVisualStyleBackColor = true;
@@ -261,9 +273,10 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button8.ForeColor = System.Drawing.Color.Linen;
-            this.button8.Location = new System.Drawing.Point(3, 386);
+            this.button8.Location = new System.Drawing.Point(3, 484);
+            this.button8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(200, 50);
+            this.button8.Size = new System.Drawing.Size(229, 62);
             this.button8.TabIndex = 2;
             this.button8.Text = "블록체인";
             this.button8.UseVisualStyleBackColor = false;
@@ -273,9 +286,10 @@
             // 
             this.panel4.Controls.Add(this.BtnCenterChain);
             this.panel4.Controls.Add(this.BtnMstation);
-            this.panel4.Location = new System.Drawing.Point(3, 442);
+            this.panel4.Location = new System.Drawing.Point(3, 554);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(200, 102);
+            this.panel4.Size = new System.Drawing.Size(229, 128);
             this.panel4.TabIndex = 16;
             // 
             // BtnCenterChain
@@ -287,9 +301,10 @@
             this.BtnCenterChain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCenterChain.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.BtnCenterChain.ForeColor = System.Drawing.Color.White;
-            this.BtnCenterChain.Location = new System.Drawing.Point(0, 50);
+            this.BtnCenterChain.Location = new System.Drawing.Point(0, 62);
+            this.BtnCenterChain.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnCenterChain.Name = "BtnCenterChain";
-            this.BtnCenterChain.Size = new System.Drawing.Size(200, 50);
+            this.BtnCenterChain.Size = new System.Drawing.Size(229, 62);
             this.BtnCenterChain.TabIndex = 1;
             this.BtnCenterChain.Text = "CenterChain";
             this.BtnCenterChain.UseVisualStyleBackColor = true;
@@ -305,8 +320,9 @@
             this.BtnMstation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.BtnMstation.ForeColor = System.Drawing.Color.White;
             this.BtnMstation.Location = new System.Drawing.Point(0, 0);
+            this.BtnMstation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnMstation.Name = "BtnMstation";
-            this.BtnMstation.Size = new System.Drawing.Size(200, 50);
+            this.BtnMstation.Size = new System.Drawing.Size(229, 62);
             this.BtnMstation.TabIndex = 0;
             this.BtnMstation.Text = "Mstation";
             this.BtnMstation.UseVisualStyleBackColor = true;
@@ -322,9 +338,10 @@
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button11.ForeColor = System.Drawing.Color.Linen;
-            this.button11.Location = new System.Drawing.Point(3, 550);
+            this.button11.Location = new System.Drawing.Point(3, 690);
+            this.button11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(200, 50);
+            this.button11.Size = new System.Drawing.Size(229, 62);
             this.button11.TabIndex = 3;
             this.button11.Text = "제로디바이스";
             this.button11.UseVisualStyleBackColor = false;
@@ -334,9 +351,10 @@
             // 
             this.panel1.Controls.Add(this.BtnKCloud);
             this.panel1.Controls.Add(this.BtnVstation);
-            this.panel1.Location = new System.Drawing.Point(3, 606);
+            this.panel1.Location = new System.Drawing.Point(3, 760);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 102);
+            this.panel1.Size = new System.Drawing.Size(229, 128);
             this.panel1.TabIndex = 18;
             // 
             // BtnKCloud
@@ -348,9 +366,10 @@
             this.BtnKCloud.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnKCloud.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.BtnKCloud.ForeColor = System.Drawing.Color.White;
-            this.BtnKCloud.Location = new System.Drawing.Point(0, 50);
+            this.BtnKCloud.Location = new System.Drawing.Point(0, 62);
+            this.BtnKCloud.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnKCloud.Name = "BtnKCloud";
-            this.BtnKCloud.Size = new System.Drawing.Size(200, 50);
+            this.BtnKCloud.Size = new System.Drawing.Size(229, 62);
             this.BtnKCloud.TabIndex = 1;
             this.BtnKCloud.Text = "K-구름";
             this.BtnKCloud.UseVisualStyleBackColor = true;
@@ -366,8 +385,9 @@
             this.BtnVstation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.BtnVstation.ForeColor = System.Drawing.Color.White;
             this.BtnVstation.Location = new System.Drawing.Point(0, 0);
+            this.BtnVstation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnVstation.Name = "BtnVstation";
-            this.BtnVstation.Size = new System.Drawing.Size(200, 50);
+            this.BtnVstation.Size = new System.Drawing.Size(229, 62);
             this.BtnVstation.TabIndex = 0;
             this.BtnVstation.Text = "Vstation";
             this.BtnVstation.UseVisualStyleBackColor = true;
@@ -386,19 +406,22 @@
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 17);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 22);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 50;
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(738, 503);
+            this.dataGridView1.Size = new System.Drawing.Size(844, 628);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // BtnInsert
             // 
-            this.BtnInsert.Location = new System.Drawing.Point(1052, 469);
+            this.BtnInsert.Location = new System.Drawing.Point(1202, 586);
+            this.BtnInsert.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnInsert.Name = "BtnInsert";
-            this.BtnInsert.Size = new System.Drawing.Size(75, 23);
+            this.BtnInsert.Size = new System.Drawing.Size(86, 29);
             this.BtnInsert.TabIndex = 2;
             this.BtnInsert.Text = "추가";
             this.BtnInsert.UseVisualStyleBackColor = true;
@@ -407,18 +430,21 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Location = new System.Drawing.Point(234, 101);
+            this.groupBox1.Location = new System.Drawing.Point(267, 126);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(744, 523);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(850, 654);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "솔루션";
             // 
             // BtnEdit
             // 
-            this.BtnEdit.Location = new System.Drawing.Point(1052, 508);
+            this.BtnEdit.Location = new System.Drawing.Point(1202, 635);
+            this.BtnEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnEdit.Name = "BtnEdit";
-            this.BtnEdit.Size = new System.Drawing.Size(75, 23);
+            this.BtnEdit.Size = new System.Drawing.Size(86, 29);
             this.BtnEdit.TabIndex = 3;
             this.BtnEdit.Text = "수정";
             this.BtnEdit.UseVisualStyleBackColor = true;
@@ -426,9 +452,10 @@
             // 
             // BtnDelete
             // 
-            this.BtnDelete.Location = new System.Drawing.Point(1052, 550);
+            this.BtnDelete.Location = new System.Drawing.Point(1202, 688);
+            this.BtnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(75, 23);
+            this.BtnDelete.Size = new System.Drawing.Size(86, 29);
             this.BtnDelete.TabIndex = 4;
             this.BtnDelete.Text = "삭제";
             this.BtnDelete.UseVisualStyleBackColor = true;
@@ -436,9 +463,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1052, 598);
+            this.button2.Location = new System.Drawing.Point(1202, 748);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(86, 29);
             this.button2.TabIndex = 5;
             this.button2.Text = "종료";
             this.button2.UseVisualStyleBackColor = true;
@@ -446,15 +474,16 @@
             // 
             // SolutionPage2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 636);
+            this.ClientSize = new System.Drawing.Size(1353, 795);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.BtnDelete);
             this.Controls.Add(this.BtnEdit);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.BtnInsert);
             this.Controls.Add(this.panelSideMenu);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "SolutionPage2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SolutionPage2";
