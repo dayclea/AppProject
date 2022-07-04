@@ -143,5 +143,13 @@ namespace TeamProjectFrontEnd
             MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
             dbLib.ConnectionTest();
         }
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            /*SolutionPage2 solPage = new SolutionPage2();
+            solPage.Tag = this;
+            solPage.Show();*/
+            this.Hide();
+        }
     }
 }

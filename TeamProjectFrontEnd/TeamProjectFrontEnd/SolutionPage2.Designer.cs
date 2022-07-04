@@ -55,6 +55,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.BtnEdit = new System.Windows.Forms.Button();
             this.BtnDelete = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -395,7 +396,7 @@
             // 
             // BtnInsert
             // 
-            this.BtnInsert.Location = new System.Drawing.Point(1045, 469);
+            this.BtnInsert.Location = new System.Drawing.Point(1052, 469);
             this.BtnInsert.Name = "BtnInsert";
             this.BtnInsert.Size = new System.Drawing.Size(75, 23);
             this.BtnInsert.TabIndex = 2;
@@ -415,7 +416,7 @@
             // 
             // BtnEdit
             // 
-            this.BtnEdit.Location = new System.Drawing.Point(1045, 521);
+            this.BtnEdit.Location = new System.Drawing.Point(1052, 508);
             this.BtnEdit.Name = "BtnEdit";
             this.BtnEdit.Size = new System.Drawing.Size(75, 23);
             this.BtnEdit.TabIndex = 6;
@@ -425,7 +426,7 @@
             // 
             // BtnDelete
             // 
-            this.BtnDelete.Location = new System.Drawing.Point(1045, 577);
+            this.BtnDelete.Location = new System.Drawing.Point(1052, 550);
             this.BtnDelete.Name = "BtnDelete";
             this.BtnDelete.Size = new System.Drawing.Size(75, 23);
             this.BtnDelete.TabIndex = 7;
@@ -433,11 +434,22 @@
             this.BtnDelete.UseVisualStyleBackColor = true;
             this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(1052, 598);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "종료";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // SolutionPage2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 889);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.BtnDelete);
             this.Controls.Add(this.BtnEdit);
             this.Controls.Add(this.groupBox1);
@@ -446,7 +458,6 @@
             this.Name = "SolutionPage2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SolutionPage2";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.SolutionPage2_Load);
             this.panelSideMenu.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -488,5 +499,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button BtnEdit;
         private System.Windows.Forms.Button BtnDelete;
+        private System.Windows.Forms.Button button2;
     }
 }

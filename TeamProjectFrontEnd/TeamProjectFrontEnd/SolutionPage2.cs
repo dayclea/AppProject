@@ -275,7 +275,6 @@ namespace TeamProjectFrontEnd
             SolutionPage solPage = new SolutionPage();
             solPage.Tag = this;
             solPage.Show();
-            this.Hide();
         }
 
         // 수정버튼 클릭 이벤트
@@ -295,7 +294,6 @@ namespace TeamProjectFrontEnd
                 SolutionPage solPage = new SolutionPage(solution_code, release_date);
                 solPage.Tag = this;
                 solPage.Show();
-                this.Hide();
             }
 
         
@@ -347,6 +345,16 @@ namespace TeamProjectFrontEnd
             
         }
 
-       
+        private void button2_Click(object sender, EventArgs e)
+        {
+            /*SolutionPage2 newpage = new SolutionPage2();
+            this.Hide();
+            newpage.Show();
+            this.Close();*/
+
+            if (MessageBox.Show("종료하시겠습니까?", "종료", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                Application.Exit();
+
+        }
     }
 }

@@ -34,7 +34,6 @@
             this.checkBoxHide = new System.Windows.Forms.CheckBox();
             this.timerSliding = new System.Windows.Forms.Timer(this.components);
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnCancel = new System.Windows.Forms.Button();
             this.BtnEdit = new System.Windows.Forms.Button();
@@ -98,7 +97,6 @@
             // 
             // mainPanel
             // 
-            this.mainPanel.Controls.Add(this.button2);
             this.mainPanel.Controls.Add(this.label1);
             this.mainPanel.Controls.Add(this.BtnCancel);
             this.mainPanel.Controls.Add(this.BtnEdit);
@@ -108,16 +106,6 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(978, 560);
             this.mainPanel.TabIndex = 1;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(809, 327);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -137,6 +125,7 @@
             this.BtnCancel.TabIndex = 1;
             this.BtnCancel.Text = "취소";
             this.BtnCancel.UseVisualStyleBackColor = true;
+            this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // BtnEdit
             // 
@@ -249,6 +238,5 @@
         private System.Windows.Forms.Button BtnEdit;
         private System.Windows.Forms.GroupBox SolutionName;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button2;
     }
 }
