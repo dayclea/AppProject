@@ -155,6 +155,7 @@ namespace TeamProjectFrontEnd
             string inputName = nameTBox.Text.ToString();        //입력한 이름
             string inputId = idTBox.Text.ToString();            //입력한 ID
             string inputPwd = pwdTBox.Text.ToString();          //입력한 PWD
+            string inputRePwd = pwdCheckTBox.Text.ToString();   //입력한 rePWD
             string status = "0";                                //승인여부(미승인: 0  승인:1) 계정 신청시 0으로 고정
             try
             {
@@ -169,19 +170,27 @@ namespace TeamProjectFrontEnd
                 }
                 if (inputEmpCode == "" || inputEmpCode == null)
                 {
-                    MessageBox.Show("사원번호를 확인해주시기 바랍니다.");
+                    MessageBox.Show("사원번호가 입력되지 않았습니다.");
                 }
                 else if (inputName == "" || inputName == null)
                 {
-                    MessageBox.Show("이름을 확인해주시기 바랍니다.");
+                    MessageBox.Show("이름이 입력되지 않았습니다.");
+                }
+                else if (inputId == "" || inputId == null)
+                {
+                    MessageBox.Show("아이디가 입력되지 않았습니다.");
+                }
+                else if (inputPwd == "" || inputPwd == null || inputRePwd == "" || inputRePwd == null)
+                {
+                    MessageBox.Show("비밀번호가 입력되지 않았습니다.");
                 }
                 else if (idCheck == false)
                 {
-                    MessageBox.Show("아이디를 확인해주시기 바랍니다.");
+                    MessageBox.Show("아이디 중복체크를 주시기 바랍니다.");
                 }
                 else if (pwdCheck == false || pwdRecheck == false)
                 {
-                    MessageBox.Show("비밀번호를 확인해주시기 바랍니다.");
+                    MessageBox.Show("비밀번호가 적합한지 확인해주시기 바랍니다.");
                 }
                 else if (dsEmpCode.Tables[0].Rows.Count > 0)    //사원번호 중복이 있을 경우, 관리자 권한 필요
                 {
