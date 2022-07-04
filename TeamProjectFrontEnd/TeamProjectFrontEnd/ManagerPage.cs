@@ -52,10 +52,10 @@ namespace TeamProjectFrontEnd
         //메인화면으로 버튼
         private void button3_Click(object sender, EventArgs e)
         {
-            SolutionPage solPage = new SolutionPage();
-            this.Hide();
-            solPage.ShowDialog();
-            this.Close();
+            //SolutionPage solPage = new SolutionPage();
+            //this.Hide();
+            //solPage.ShowDialog();
+            //this.Close();
         }
 
 
