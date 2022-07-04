@@ -16,7 +16,8 @@ namespace TeamProjectFrontEnd
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SolutionPage2());
+            //Application.Run(new SolutionPage2());
+            Application.Run(new ManagerPage());
         }
     }
 }

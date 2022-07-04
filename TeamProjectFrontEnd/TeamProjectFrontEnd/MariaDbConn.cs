@@ -12,7 +12,7 @@ namespace MariaDbConn
     public class MariaDbLib
     {
         //AWS 접속 정보
-        string connectString = string.Format("Server={0};Database={1};Uid ={2};Pwd={3};", "13.209.80.79",
+        string connectString = string.Format("Server={0};Database={1};Uid ={2};Pwd={3};", "52.79.165.81",
                                              "db_emp", "teammate2", "teammate2");
 
         // 접속테스트
@@ -53,6 +53,7 @@ namespace MariaDbConn
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataReader dr = cmd.ExecuteReader();
                 dr.Close();
+                conn.Close();
             }
         }
 
