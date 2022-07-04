@@ -46,20 +46,26 @@ namespace TeamProjectFrontEnd
                     MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
                     da.Fill(dsAccountId, table);
                 }
-                if (dsAccountId.Tables[0].Rows.Count == 0 && (inputId.Length >= 6 && inputId.Length <= 15))
+                if (Regex.IsMatch(inputId, @"[ㄱ-ㅎ가-힣]") == true)
                 {
-                    if (Regex.IsMatch(inputId, @"[ㄱ-ㅎ가-힣]") == false)   // 한글 입력 불가하도록 설정 
+                    idLb.ForeColor = Color.Red;
+                    idLb.Text = "한글 사용 불가능합니다. \n영문과 숫자만 사용해주시기 바랍니다.";
+                    idCheck = false;
+                }
+                else if (Regex.IsMatch(inputId, @"[~!@#$%^&*()_\-=+[\]{};:<>,.\""\']") == true)
+                {
+                    idLb.ForeColor = Color.Red;
+                    idLb.Text = "특수문자 사용 불가능합니다. \n영문과 숫자만 사용해주시기 바랍니다.";
+                    idCheck = false;
+                }
+                else if (dsAccountId.Tables[0].Rows.Count == 0 && (inputId.Length >= 6 && inputId.Length <= 15))
+                {
+                    if (Regex.IsMatch(inputId, @"[ㄱ-ㅎ가-힣]") == false || Regex.IsMatch(inputId, @"[~!@#$%^&*()_\-=+[\]{};:<>,.\""\']") == false)   // 한글 입력 불가하도록 설정 
                     {
                         idLb.ForeColor = Color.Green;
                         idLb.Text = "사용 가능합니다.";
                         idCheck = true;
                     }
-                }
-                else if (Regex.IsMatch(inputId, @"[ㄱ-ㅎ가-힣]") == true)
-                {
-                    idLb.ForeColor = Color.Red;
-                    idLb.Text = "한글 사용 불가능합니다. \n영문과 숫자만 사용해주시기 바랍니다.";
-                    idCheck = false;
                 }
                 else
                 {
@@ -80,20 +86,8 @@ namespace TeamProjectFrontEnd
             try
             {
                 string inputId = idTBox.Text.ToString();
-                string inputPwd = pwdTBox.Text.ToString();
-                if ((inputPwd != inputId) && (inputPwd.Length >= 8) && (inputPwd.Length <= 20))
-                {
-                    if (Regex.IsMatch(inputPwd, @"[a-zA-Z]") == true)
-                    {
-                        if (Regex.IsMatch(inputPwd, @"[0-9]") == true)
-                        {
-                            pwdLb.ForeColor = Color.Green;
-                            pwdLb.Text = "사용 가능합니다.";
-                            pwdCheck = true;
-                        }
-                    }
-                }
-                else if (inputPwd.Length == 0)
+                string inputPwd = pwdTBox.Text.ToString();                
+                if (inputPwd.Length == 0)
                 {
                     pwdLb.ForeColor = SystemColors.ControlDarkDark;
                     pwdLb.Text = "8~20자 이내의 영문 + 숫자 조합";
@@ -116,6 +110,30 @@ namespace TeamProjectFrontEnd
                     pwdLb.ForeColor = Color.Red;
                     pwdLb.Text = "아이디와 비밀번호는 같을 수 없습니다.";
                     pwdCheck = false;
+                }
+                else if (Regex.IsMatch(inputPwd, @"[ㄱ-ㅎ가-힣]") == true)
+                {
+                    idLb.ForeColor = Color.Red;
+                    idLb.Text = "한글 사용 불가능합니다. \n영문과 숫자만 사용해주시기 바랍니다.";
+                    idCheck = false;
+                }
+                else if (Regex.IsMatch(inputPwd, @"[~!@#$%^&*()_\-=+[\]{};:<>,.\""\']") == true)
+                {
+                    idLb.ForeColor = Color.Red;
+                    idLb.Text = "특수문자 사용 불가능합니다. \n영문과 숫자만 사용해주시기 바랍니다.";
+                    idCheck = false;
+                }
+                else if ((inputPwd != inputId) && (inputPwd.Length >= 8) && (inputPwd.Length <= 20))
+                {
+                    if (Regex.IsMatch(inputPwd, @"[a-zA-Z]") == true)
+                    {
+                        if (Regex.IsMatch(inputPwd, @"[0-9]") == true)
+                        {
+                            pwdLb.ForeColor = Color.Green;
+                            pwdLb.Text = "사용 가능합니다.";
+                            pwdCheck = true;
+                        }
+                    }
                 }
                 else
                 {
