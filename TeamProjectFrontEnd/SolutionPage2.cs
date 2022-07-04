@@ -175,7 +175,7 @@ namespace TeamProjectFrontEnd
             groupBox1.Text = "Dstation";
             MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
             DataSet ds;
-            ds = dbLib.GetSolution("VDI001");
+            ds = dbLib.GetSolution("Dstation");
 
             dataGridView1.DataSource = ds.Tables[0];
 
