@@ -88,9 +88,10 @@ namespace MariaDbConn
 
             using (MySqlConnection conn = new MySqlConnection(connectString))
             {
+                conn.Open();
+
                 try
                 {
-                    conn.Open();
                     MySqlCommand cmd = new MySqlCommand(sql, conn);
                     if (cmd.ExecuteNonQuery() == 1)
                     {
@@ -107,8 +108,9 @@ namespace MariaDbConn
                 catch (Exception ex)
                 {
                     Console.WriteLine("실패");
+                    MessageBox.Show("에러발생");
+
                     Console.WriteLine(ex.ToString());
-                    throw;
                 }
 
             }
@@ -137,8 +139,8 @@ namespace MariaDbConn
                  catch (Exception ex)
                 {
                     Console.WriteLine("실패");
+                    MessageBox.Show("에러발생");
                     Console.WriteLine(ex.ToString());
-                    throw;
                 }
             }
         }

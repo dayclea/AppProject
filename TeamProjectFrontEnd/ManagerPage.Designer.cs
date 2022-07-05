@@ -61,7 +61,7 @@
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("NanumGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button2.Font = new System.Drawing.Font("나눔고딕OTF", 12F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(0, 67);
             this.button2.Name = "button2";
@@ -78,7 +78,7 @@
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("NanumGothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button1.Font = new System.Drawing.Font("나눔고딕OTF", 15F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Name = "button1";
@@ -162,7 +162,7 @@
             // 
             // button6
             // 
-            this.button6.Font = new System.Drawing.Font("NanumGothicExtraBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button6.Font = new System.Drawing.Font("나눔고딕OTF", 10F, System.Drawing.FontStyle.Bold);
             this.button6.Location = new System.Drawing.Point(650, 409);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(158, 58);
@@ -173,7 +173,7 @@
             // 
             // button5
             // 
-            this.button5.Font = new System.Drawing.Font("NanumGothicExtraBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button5.Font = new System.Drawing.Font("나눔고딕OTF", 10F, System.Drawing.FontStyle.Bold);
             this.button5.Location = new System.Drawing.Point(650, 99);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(159, 52);
@@ -184,7 +184,7 @@
             // 
             // button4
             // 
-            this.button4.Font = new System.Drawing.Font("NanumGothicExtraBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button4.Font = new System.Drawing.Font("나눔고딕OTF", 10F, System.Drawing.FontStyle.Bold);
             this.button4.Location = new System.Drawing.Point(650, 40);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(159, 53);
@@ -195,7 +195,7 @@
             // 
             // button3
             // 
-            this.button3.Font = new System.Drawing.Font("NanumGothicExtraBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button3.Font = new System.Drawing.Font("나눔고딕OTF", 10F, System.Drawing.FontStyle.Bold);
             this.button3.Location = new System.Drawing.Point(650, 345);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(159, 58);
@@ -212,13 +212,13 @@
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5});
-            this.listView1.Font = new System.Drawing.Font("NanumGothic", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.listView1.Font = new System.Drawing.Font("나눔고딕OTF", 9F);
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(182, 40);
+            this.listView1.Location = new System.Drawing.Point(97, 40);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(450, 427);
+            this.listView1.Size = new System.Drawing.Size(535, 427);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -268,7 +268,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.mainPanel.ResumeLayout(false);
             this.ResumeLayout(false);
-
+            //
+            // 폼 제목 수정
+            //
+            this.Text = "계정관리";
         }
 
         #endregion

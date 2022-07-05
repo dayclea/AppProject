@@ -1,9 +1,14 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Text.RegularExpressions;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions;
 
 
 namespace TeamProjectFrontEnd
@@ -37,20 +42,20 @@ namespace TeamProjectFrontEnd
 
                 using (MySqlConnection conn = new MySqlConnection(connectString))
                 {
-                    string query = string.Format("select account_id from {0} where account_id = '{1}.@tilon.com';", table, inputId);
+                    string query = string.Format("select account_id from {0} where account_id = '{1}@tilon.com';", table, inputId);
                     MySqlDataAdapter da = new MySqlDataAdapter(query, conn);
                     da.Fill(dsAccountId, table);
                 }
                 if (Regex.IsMatch(inputId, @"[ㄱ-ㅎ가-힣]") == true)
                 {
                     idLb.ForeColor = Color.Red;
-                    idLb.Text = "한글 사용 불가능합니다. \n영문과 숫자만 사용해주시기 바랍니다.";
+                    idLb.Text = "한글 또는 특수문자 사용 불가합니다. \n영문과 숫자만 사용해주시기 바랍니다.";
                     idCheck = false;
                 }
                 else if (Regex.IsMatch(inputId, @"[~!@#$%^&*()_\-=+[\]{};:<>,.\""\']") == true)
                 {
                     idLb.ForeColor = Color.Red;
-                    idLb.Text = "특수문자 사용 불가능합니다. \n영문과 숫자만 사용해주시기 바랍니다.";
+                    idLb.Text = "특수문자 사용 불가합니다. \n영문과 숫자만 사용해주시기 바랍니다.";
                     idCheck = false;
                 }
                 else if (dsAccountId.Tables[0].Rows.Count == 0 && (inputId.Length >= 6 && inputId.Length <= 15))
@@ -65,7 +70,7 @@ namespace TeamProjectFrontEnd
                 else
                 {
                     idLb.ForeColor = Color.Red;
-                    idLb.Text = "사용 불가능합니다.";
+                    idLb.Text = "사용 불가합니다.";
                     idCheck = false;
                 }
             }
@@ -81,7 +86,7 @@ namespace TeamProjectFrontEnd
             try
             {
                 string inputId = idTBox.Text.ToString();
-                string inputPwd = pwdTBox.Text.ToString();                
+                string inputPwd = pwdTBox.Text.ToString();
                 if (inputPwd.Length == 0)
                 {
                     pwdLb.ForeColor = SystemColors.ControlDarkDark;
@@ -108,15 +113,15 @@ namespace TeamProjectFrontEnd
                 }
                 else if (Regex.IsMatch(inputPwd, @"[ㄱ-ㅎ가-힣]") == true)
                 {
-                    idLb.ForeColor = Color.Red;
-                    idLb.Text = "한글 사용 불가능합니다. \n영문과 숫자만 사용해주시기 바랍니다.";
-                    idCheck = false;
+                    pwdLb.ForeColor = Color.Red;
+                    pwdLb.Text = "한글 또는 특수문자 사용 불가합니다. \n영문과 숫자만 사용해주시기 바랍니다.";
+                    pwdCheck = false;
                 }
                 else if (Regex.IsMatch(inputPwd, @"[~!@#$%^&*()_\-=+[\]{};:<>,.\""\']") == true)
                 {
-                    idLb.ForeColor = Color.Red;
-                    idLb.Text = "특수문자 사용 불가능합니다. \n영문과 숫자만 사용해주시기 바랍니다.";
-                    idCheck = false;
+                    pwdLb.ForeColor = Color.Red;
+                    pwdLb.Text = "특수문자 사용 불가합니다. \n영문과 숫자만 사용해주시기 바랍니다.";
+                    pwdCheck = false;
                 }
                 else if ((inputPwd != inputId) && (inputPwd.Length >= 8) && (inputPwd.Length <= 20))
                 {
@@ -133,7 +138,7 @@ namespace TeamProjectFrontEnd
                 else
                 {
                     pwdLb.ForeColor = Color.Red;
-                    pwdLb.Text = "사용 불가능합니다.";
+                    pwdLb.Text = "사용 불가합니다.";
                     pwdCheck = false;
                 }
             }
@@ -168,6 +173,7 @@ namespace TeamProjectFrontEnd
             string inputName = nameTBox.Text.ToString();        //입력한 이름
             string inputId = idTBox.Text.ToString();            //입력한 ID
             string inputPwd = pwdTBox.Text.ToString();          //입력한 PWD
+            string inputRePwd = pwdCheckTBox.Text.ToString();   //입력한 rePWD
             string status = "0";                                //승인여부(미승인: 0  승인:1) 계정 신청시 0으로 고정
             try
             {
@@ -182,19 +188,43 @@ namespace TeamProjectFrontEnd
                 }
                 if (inputEmpCode == "" || inputEmpCode == null)
                 {
-                    MessageBox.Show("사원번호를 확인해주시기 바랍니다.");
+                    MessageBox.Show("사원번호가 입력되지 않았습니다.");
+                }
+                else if (Regex.IsMatch(inputEmpCode, @"[ㄱ-ㅎ가-힣~!@#$%^&*()_\-=+[\]{};:<>,.\""\']") == true)
+                {
+                    MessageBox.Show("사원번호에 한글 또는 특수문자는 사용이 불가합니다.");
                 }
                 else if (inputName == "" || inputName == null)
                 {
-                    MessageBox.Show("이름을 확인해주시기 바랍니다.");
+                    MessageBox.Show("이름이 입력되지 않았습니다.");
+                }
+                else if (Regex.IsMatch(inputName, @"[~!@#$%^&*()_\-=+[\]{};:<>,.\""\']") == true)
+                {
+                    MessageBox.Show("이름에 특수문자는 사용이 불가합니다.");
+                }
+                else if (inputId == "" || inputId == null)
+                {
+                    MessageBox.Show("아이디가 입력되지 않았습니다.");
+                }
+                else if (Regex.IsMatch(inputId, @"[ㄱ-ㅎ가-힣~!@#$%^&*()_\-=+[\]{};:<>,.\""\']") == true)
+                {
+                    MessageBox.Show("아이디에는 한글 또는 특수문자는 사용이 불가합니다.");
+                }
+                else if (inputPwd == "" || inputPwd == null || inputRePwd == "" || inputRePwd == null)
+                {
+                    MessageBox.Show("비밀번호가 입력되지 않았습니다.");
+                }
+                else if (Regex.IsMatch(inputPwd, @"[ㄱ-ㅎ가-힣~!@#$%^&*()_\-=+[\]{};:<>,.\""\']") == true)
+                {
+                    MessageBox.Show("비밀번호에는 한글 또는 특수문자는 사용이 불가합니다.");
                 }
                 else if (idCheck == false)
                 {
-                    MessageBox.Show("아이디를 확인해주시기 바랍니다.");
+                    MessageBox.Show("아이디 중복체크를 주시기 바랍니다.");
                 }
                 else if (pwdCheck == false || pwdRecheck == false)
                 {
-                    MessageBox.Show("비밀번호를 확인해주시기 바랍니다.");
+                    MessageBox.Show("비밀번호가 적합한지 확인해주시기 바랍니다.");
                 }
                 else if (dsEmpCode.Tables[0].Rows.Count > 0)    //사원번호 중복이 있을 경우, 관리자 권한 필요
                 {
@@ -218,7 +248,10 @@ namespace TeamProjectFrontEnd
                                     //정상적인 신청 완료 후, 로그인 화면으로 재이동
                                     //if ()
                                     LoginPage2 loginPage2 = new LoginPage2();
-                                    loginPage2.Tag = this;
+                                    //이하 2줄 빌드 시, 회원가입 완료 후 프로그램 종료되는 이슈로 인하여 수정
+                                    //loginPage2.Tag = this;
+                                    //loginPage2.Show();
+                                    this.Hide();
                                     loginPage2.ShowDialog();
                                     this.Close();
                                 }
@@ -239,18 +272,13 @@ namespace TeamProjectFrontEnd
             {
                 Console.WriteLine(exc);
             }
-
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
-
             LoginPage2 LoginPage = new LoginPage2();
             this.Hide();
             LoginPage.ShowDialog();
             this.Close();
-
-
         }
     }
 }

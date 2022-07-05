@@ -15,61 +15,92 @@ namespace TeamProjectFrontEnd
         }*/
 
         // insert버튼 실행 시
-        public SolutionPage(String solution_code, int insertOrEdit_Key)
+        public SolutionPage(String solution_code)
         {
             InitializeComponent();
-            colset(dataGridView1, solution_code, insertOrEdit_Key);
-
-            this.dataGridView1.MouseHover += dataGridView1_MouseHover;
+            colset(dataGridView1, solution_code);
         }
 
         //edit버튼에서 실행될시
-        public SolutionPage(String solution_code, String release_date, int insertOrEdit_Key)
+        public SolutionPage(String solution_code, String release_date)
         {
             InitializeComponent();
-            colset2(dataGridView1, solution_code, release_date, insertOrEdit_Key);
+            colset2(dataGridView1, solution_code, release_date);
         }
 
-        private void checkBoxHide_CheckedChanged_1(object sender, EventArgs e)
-        {
 
-        }
         private void BtnEdit_Click(object sender, EventArgs e)
         {
+
             dataGridView1.SelectAll();
 
-            String solution_code = (dataGridView1.SelectedCells[0].Value).ToString();
-            String release_date = (dataGridView1.SelectedCells[2].Value).ToString();
-            String manager = (dataGridView1.SelectedCells[3].Value).ToString();
-            String update_version = (dataGridView1.SelectedCells[4].Value).ToString();
-            String description = (dataGridView1.SelectedCells[5].Value).ToString();
+            if (dataGridView1.SelectedCells[0].Value == null || dataGridView1.SelectedCells[2].Value == null || dataGridView1.SelectedCells[3].Value == null || dataGridView1.SelectedCells[4].Value == null)
+            {
+                MessageBox.Show("값을 입력해 주세요.", "Error");
+                return;
+            }
 
-            String[] Querystring = { solution_code, release_date, manager, update_version, description };
+            // String solution_code = (dataGridView1.SelectedCells[0].Value).ToString();
+            // String release_date = (dataGridView1.SelectedCells[2].Value).ToString();
+            // String manager = (dataGridView1.SelectedCells[3].Value).ToString();
+            // String update_version = (dataGridView1.SelectedCells[4].Value).ToString();
+            // String description = (dataGridView1.SelectedCells[5].Value).ToString();
+            // String[] Querystring = { solution_code, release_date, manager, update_version };
 
             MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
 
             if (BtnEdit.Text.Equals("추가"))
             {
                 string sql = String.Format("Insert Into db_solutions.tbl_update (solution_code,release_date,manager,update_version,description) values ('{0}','{1}','{2}','{3}','{4}');"
-                                            , Querystring[0], Querystring[1], Querystring[2], Querystring[3], Querystring[4]);
+                                            , dataGridView1.SelectedCells[0].Value, dataGridView1.SelectedCells[2].Value, dataGridView1.SelectedCells[3].Value, dataGridView1.SelectedCells[4].Value, dataGridView1.SelectedCells[5].Value);
 
                 dbLib.InsertDB(sql);
             }
             else if (BtnEdit.Text.Equals("수정"))
             {
-                string sql = string.Format("update db_solutions.tbl_update Set  manager = {0}, update_version = {1}, description = {2} where solution_code = {3} and release_date = {4};",
-                                        Querystring[2], Querystring[3], Querystring[4], Querystring[0], Querystring[1]);
-
+                string sql = string.Format("update db_solutions.tbl_update Set manager = '{0}', update_version = '{1}', description = '{2}' where solution_code = '{3}' and release_date = '{4}';",
+                                        dataGridView1.SelectedCells[3].Value, dataGridView1.SelectedCells[4].Value, dataGridView1.SelectedCells[5].Value, dataGridView1.SelectedCells[0].Value, dataGridView1.SelectedCells[2].Value);
+                Console.WriteLine(sql);
                 dbLib.UpdateDB(sql);
 
             };
 
+            SolutionPage2 solPage = new SolutionPage2(button1.Text);
+
             this.Hide();
+            solPage.ShowDialog();
+            this.Close();
+
+        }
+
+
+        // 수정 화면 
+        public void colset2(DataGridView dataGridView1, String solution_code, String release_date)
+        {
+            // 화면의 컬럼 출력
+            MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
+            DataSet ds;
+            ds = dbLib.GetSolutionSelectedToEdit(solution_code, release_date);
+
+            dataGridView1.DataSource = ds.Tables[0];
+
+            BtnEdit.Text = "수정";
+
+            dataGridView1.Columns["솔루션 번호"].ReadOnly = true;
+            dataGridView1.Columns["솔루션 명"].ReadOnly = true;
+            dataGridView1.Columns["수정/배포일자"].ReadOnly = true;
+
+            String solName = SolutionCodeCheck(solution_code);
+            button1.Text = solName;
+
+            dataGridView1.Rows[0].Cells[0].ToolTipText = "이 셀은 변경할수 없습니다.";
+            dataGridView1.Rows[0].Cells[1].ToolTipText = "이 셀은 변경할수 없습니다.";
+            dataGridView1.Rows[0].Cells[2].ToolTipText = "이 셀은 변경할수 없습니다.";
 
         }
 
         // 추가 화면
-        public void colset(DataGridView dataGridView1, String solution_code, int insertOrEdit_Key)
+        public void colset(DataGridView dataGridView1, String solution_code)
         {
             // 화면의 컬럼 출력
             DataGridViewTextBoxColumn titleColumn =
@@ -128,9 +159,10 @@ namespace TeamProjectFrontEnd
             summaryColumn, contentColumn, amountColumn, descColumn });
 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            String solName = SolutionCodeCheck(solution_code);
 
             // 수정할 수 있도록 컬럼 추가
-            string[] row0 = { solution_code, SolutionCodeCheck(solution_code), "", "", "", "" };
+            string[] row0 = { solution_code, solName };
             dataGridView1.Rows.Add(row0);
 
             // 솔루션명 부분 일단 잠금... 번호 바꿀때마다 솔루션명 변경하는 이벤트 만들어야할듯?
@@ -138,44 +170,16 @@ namespace TeamProjectFrontEnd
             dataGridView1.Columns["솔루션 번호"].ReadOnly = true;
 
             BtnEdit.Text = "추가";
+            button1.Text = solName;
+
+
+            dataGridView1.Rows[0].Cells[0].ToolTipText = "이 셀은 변경할수 없습니다.";
+            dataGridView1.Rows[0].Cells[1].ToolTipText = "이 셀은 변경할수 없습니다.";
 
         }
 
 
-        // 수정 화면 
-        public void colset2(DataGridView dataGridView1, String solution_code, String release_date, int insertOrEdit_Key)
-        {
-            // 화면의 컬럼 출력
-            MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
-            DataSet ds;
-            ds = dbLib.GetSolutionSelectedToEdit(solution_code, release_date);
 
-            dataGridView1.DataSource = ds.Tables[0];
-
-            BtnEdit.Text = "수정";
-
-            dataGridView1.Columns["솔루션 번호"].ReadOnly = true;
-            dataGridView1.Columns["솔루션 명"].ReadOnly = true;
-
-        }
-        // ToolTip 표시
-        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            /*if ((e.ColumnIndex == this.dataGridView1.Columns["솔루션명"].Index)
-                && e.Value != null)
-            {
-                DataGridViewCell cell =
-                this.dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex];
-
-            cell.ToolTipText = "Dstation";
-
-            }*/
-        }
-
-        private void dataGridView1_CellToolTipTextNeeded(object sender, DataGridViewCellToolTipTextNeededEventArgs e)
-        {
-
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -185,18 +189,12 @@ namespace TeamProjectFrontEnd
 
         private void BtnCancel_Click(object sender, EventArgs e)
         {
-            /*SolutionPage2 solPage = new SolutionPage2();
-            solPage.Tag = this;
-            solPage.Show();*/
+            SolutionPage2 solPage = new SolutionPage2(SolutionName.Text);
             this.Hide();
+            solPage.ShowDialog();
+            this.Close();
         }
 
-        private void dataGridView1_MouseHover(object sender, EventArgs e)
-        {
-            ToolTip ttip = new ToolTip();
-
-            ttip.SetToolTip(this.dataGridView1, "Main 버튼 입니다.");
-        }
 
         // 솔루션 코드 체크
         private String SolutionCodeCheck(String solution_code)
@@ -244,6 +242,18 @@ namespace TeamProjectFrontEnd
                 return "ERROR";
             }
             return SolName;
+        }
+
+        private void dataGridView1_MouseHover(object sender, EventArgs e)
+        {
+            dataGridView1.Rows[0].Cells[0].ToolTipText = "이 셀은 변경할수 없습니다.";
+            dataGridView1.Rows[0].Cells[1].ToolTipText = "이 셀은 변경할수 없습니다.";
+            if (BtnEdit.Text.Equals("수정"))
+            {
+                dataGridView1.Rows[0].Cells[2].ToolTipText = "이 셀은 변경할수 없습니다.";
+            }
+
+
         }
     }
 }

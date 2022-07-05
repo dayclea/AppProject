@@ -59,14 +59,14 @@
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button1.Font = new System.Drawing.Font("나눔고딕OTF", 15F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(229, 62);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Dstation";
+            this.button1.Text = "Solution";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // panelSideMenu
@@ -124,19 +124,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("굴림", 12F);
+            this.label1.Font = new System.Drawing.Font("나눔고딕OTF", 15F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(40, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 16);
+            this.label1.Size = new System.Drawing.Size(157, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "수정/추가 페이지";
             // 
             // BtnCancel
             // 
-            this.BtnCancel.Location = new System.Drawing.Point(925, 552);
+            this.BtnCancel.Font = new System.Drawing.Font("나눔고딕OTF", 10F, System.Drawing.FontStyle.Bold);
+            this.BtnCancel.Location = new System.Drawing.Point(951, 548);
             this.BtnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnCancel.Name = "BtnCancel";
-            this.BtnCancel.Size = new System.Drawing.Size(113, 56);
+            this.BtnCancel.Size = new System.Drawing.Size(114, 56);
             this.BtnCancel.TabIndex = 3;
             this.BtnCancel.Text = "취소";
             this.BtnCancel.UseVisualStyleBackColor = true;
@@ -144,10 +145,11 @@
             // 
             // BtnEdit
             // 
-            this.BtnEdit.Location = new System.Drawing.Point(925, 459);
+            this.BtnEdit.Font = new System.Drawing.Font("나눔고딕OTF", 10F, System.Drawing.FontStyle.Bold);
+            this.BtnEdit.Location = new System.Drawing.Point(951, 445);
             this.BtnEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnEdit.Name = "BtnEdit";
-            this.BtnEdit.Size = new System.Drawing.Size(113, 56);
+            this.BtnEdit.Size = new System.Drawing.Size(114, 56);
             this.BtnEdit.TabIndex = 2;
             this.BtnEdit.Text = "수정/추가";
             this.BtnEdit.UseVisualStyleBackColor = true;
@@ -156,30 +158,33 @@
             // SolutionName
             // 
             this.SolutionName.Controls.Add(this.dataGridView1);
+            this.SolutionName.Font = new System.Drawing.Font("나눔고딕OTF", 10F);
             this.SolutionName.Location = new System.Drawing.Point(42, 92);
             this.SolutionName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SolutionName.Name = "SolutionName";
             this.SolutionName.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.SolutionName.Size = new System.Drawing.Size(843, 516);
+            this.SolutionName.Size = new System.Drawing.Size(877, 516);
             this.SolutionName.TabIndex = 1;
             this.SolutionName.TabStop = false;
-            this.SolutionName.Text = "SolutionName";
+            this.SolutionName.Text = "Solution";
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.ColumnHeadersHeight = 40;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 22);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 20);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 40;
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(837, 490);
+            this.dataGridView1.Size = new System.Drawing.Size(871, 492);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
-            this.dataGridView1.CellToolTipTextNeeded += new System.Windows.Forms.DataGridViewCellToolTipTextNeededEventHandler(this.dataGridView1_CellToolTipTextNeeded);
+            this.dataGridView1.Text = "나눔고딕OTF, 5pt";
             this.dataGridView1.MouseHover += new System.EventHandler(this.dataGridView1_MouseHover);
             // 
             // tableLayoutPanel1
@@ -245,7 +250,10 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-
+            //
+            // 폼 제목 수정
+            //
+            this.Text = "솔루션 관리";
         }
 
         #endregion

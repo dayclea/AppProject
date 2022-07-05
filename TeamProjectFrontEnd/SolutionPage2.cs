@@ -18,6 +18,11 @@ namespace TeamProjectFrontEnd
         {
             InitializeComponent();
         }
+        public SolutionPage2(String SolutionName)
+        {
+            InitializeComponent();
+            BtnMenuClickEvent(SolutionName);
+        }
 
         private void checkBoxHide_CheckedChanged(object sender, EventArgs e)
         {
@@ -170,118 +175,91 @@ namespace TeamProjectFrontEnd
                 e.Cancel = true;
         }
 
-        private void BtnDstation_Click(object sender, EventArgs e)
-        {
-            groupBox1.Text = "Dstation";
-            MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
-            DataSet ds;
-            ds = dbLib.GetSolution("Dstation");
 
-            dataGridView1.DataSource = ds.Tables[0];
-
-        }
 
         //목록 버튼 클릭 이벤트들 
-        private void BtnAstation_Click(object sender, EventArgs e)
+
+        private void BtnMenuClickEvent(String SolName)
         {
-            groupBox1.Text = "Astation";
+            groupBox1.Text = SolName;
             MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
             DataSet ds;
-            ds = dbLib.GetSolution("Astation");
+            ds = dbLib.GetSolution(SolName);
 
             dataGridView1.DataSource = ds.Tables[0];
+        }
+        private void BtnDstation_Click(object sender, EventArgs e)
+        {
+            BtnMenuClickEvent("Dstation");
+        }
+
+        private void BtnAstation_Click(object sender, EventArgs e)
+        {
+            BtnMenuClickEvent("Astation");
         }
 
         private void BtnCenterFace_Click(object sender, EventArgs e)
         {
-            groupBox1.Text = "CenterFace";
-            MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
-            DataSet ds;
-            ds = dbLib.GetSolution("CenterFace");
-
-            dataGridView1.DataSource = ds.Tables[0];
+            BtnMenuClickEvent("CenterFace");
         }
 
         private void BtnDcanvas_Click(object sender, EventArgs e)
         {
-            groupBox1.Text = "Dcanvas";
-            MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
-            DataSet ds;
-            ds = dbLib.GetSolution("Dcanvas");
-
-            dataGridView1.DataSource = ds.Tables[0];
+            BtnMenuClickEvent("Dcanvas");
         }
 
         private void Btnelcloud_Click(object sender, EventArgs e)
         {
-            groupBox1.Text = "elcloud";
-            MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
-            DataSet ds;
-            ds = dbLib.GetSolution("elcloud");
-
-            dataGridView1.DataSource = ds.Tables[0];
+            BtnMenuClickEvent("elcloud");
         }
 
         private void BtnMstation_Click(object sender, EventArgs e)
         {
-            groupBox1.Text = "Mstation";
-            MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
-            DataSet ds;
-            ds = dbLib.GetSolution("Mstation");
-
-            dataGridView1.DataSource = ds.Tables[0];
+            BtnMenuClickEvent("Mstation");
         }
 
         private void BtnCenterChain_Click(object sender, EventArgs e)
         {
-            groupBox1.Text = "CenterChain";
-            MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
-            DataSet ds;
-            ds = dbLib.GetSolution("CenterChain");
-
-            dataGridView1.DataSource = ds.Tables[0];
+            BtnMenuClickEvent("CenterChain");
         }
 
         private void BtnVstation_Click(object sender, EventArgs e)
         {
-            groupBox1.Text = "Vstation";
-            MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
-            DataSet ds;
-            ds = dbLib.GetSolution("Vstation");
-
-            dataGridView1.DataSource = ds.Tables[0];
+            BtnMenuClickEvent("Vstation");
         }
 
         private void BtnKCloud_Click(object sender, EventArgs e)
         {
-            groupBox1.Text = "K-구름";
-            MariaDbConn.MariaDbLib dbLib = new MariaDbConn.MariaDbLib();
-            DataSet ds;
-            ds = dbLib.GetSolution("K-구름");
-
-            dataGridView1.DataSource = ds.Tables[0];
+            BtnMenuClickEvent("K-구름");
         }
-
-
-  
 
         // 추가버튼 클릭 이벤트
         private void BtnInsert_Click(object sender, EventArgs e)
         {
-            ////////////////////////////////////////////////////
-            /// 솔루션 번호 가져오는거 다시짜기
-            /// 지금은 데이터 불러온거 없으면 안댐
-            ////////////////////////////
-            String solution_code = SolutionNameCheck(groupBox1.Text);
+            if (groupBox1.Text.Equals("Solution"))
+            {
+                MessageBox.Show("추가할 솔루션을 선택 해주세요.", "Error");
 
-            if (solution_code.Equals("ERROR")) {
-                MessageBox.Show("오류 발생.", "Error");
-                return;
+            }
+            else
+            {
+                String solution_code = SolutionNameCheck(groupBox1.Text);
+
+                if (solution_code.Equals("ERROR"))
+                {
+                    MessageBox.Show("오류 발생.", "Error");
+                    return;
+                }
+
+                SolutionPage solPage = new SolutionPage(solution_code);
+                this.Hide();
+                solPage.ShowDialog();
+                this.Close();
+
             }
 
-            SolutionPage solPage = new SolutionPage(solution_code, 0);
-            solPage.Tag = this;
-            solPage.ShowDialog();
+
+
         }
 
         // 수정버튼 클릭 이벤트
@@ -298,9 +276,10 @@ namespace TeamProjectFrontEnd
                 String release_date = (dataGridView1.SelectedCells[2].Value).ToString();
 
                 //수정할 데이터를 찾을거 들고 페이지 이동
-                SolutionPage solPage = new SolutionPage(solution_code, release_date, 1);
-                solPage.Tag = this;
+                SolutionPage solPage = new SolutionPage(solution_code, release_date);
+                this.Hide();
                 solPage.ShowDialog();
+                this.Close();
             }
 
 
@@ -413,12 +392,24 @@ namespace TeamProjectFrontEnd
             return solution_code;
         }
 
+        // 데이터 선택시 한줄 선택
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex != -1)
             {
                 dataGridView1.Rows[e.RowIndex].Selected = true;
             }
+        }
+
+        // 수정 및 추가시 바로 데이터그리드에 반영
+        private void refreshMethod()
+        {
+            // 데이터 불러오기
+            MariaDbConn.MariaDbLib dbLib2 = new MariaDbConn.MariaDbLib();
+            DataSet ds;
+            ds = dbLib2.GetSolution(groupBox1.Text);
+
+            dataGridView1.DataSource = ds.Tables[0];
         }
     }
 }
