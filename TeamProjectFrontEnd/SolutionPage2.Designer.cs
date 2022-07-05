@@ -50,20 +50,24 @@
             this.BtnKCloud = new System.Windows.Forms.Button();
             this.BtnVstation = new System.Windows.Forms.Button();
             this.timerSliding = new System.Windows.Forms.Timer(this.components);
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.BtnInsert = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.BtnEdit = new System.Windows.Forms.Button();
             this.BtnDelete = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelSideMenu.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -122,7 +126,7 @@
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button1.Font = new System.Drawing.Font("나눔고딕OTF", 10F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.Linen;
             this.button1.Location = new System.Drawing.Point(3, 4);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -151,7 +155,7 @@
             this.BtnCenterFace.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.BtnCenterFace.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.BtnCenterFace.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCenterFace.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.BtnCenterFace.Font = new System.Drawing.Font("나눔고딕OTF", 9F);
             this.BtnCenterFace.ForeColor = System.Drawing.Color.White;
             this.BtnCenterFace.Location = new System.Drawing.Point(0, 124);
             this.BtnCenterFace.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -169,7 +173,7 @@
             this.BtnAstation.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.BtnAstation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.BtnAstation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnAstation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.BtnAstation.Font = new System.Drawing.Font("나눔고딕OTF", 9F);
             this.BtnAstation.ForeColor = System.Drawing.Color.White;
             this.BtnAstation.Location = new System.Drawing.Point(0, 62);
             this.BtnAstation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -187,7 +191,7 @@
             this.BtnDstation.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.BtnDstation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.BtnDstation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnDstation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.BtnDstation.Font = new System.Drawing.Font("나눔고딕OTF", 9F);
             this.BtnDstation.ForeColor = System.Drawing.Color.White;
             this.BtnDstation.Location = new System.Drawing.Point(0, 0);
             this.BtnDstation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -206,7 +210,7 @@
             this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button5.Font = new System.Drawing.Font("나눔고딕OTF", 10F, System.Drawing.FontStyle.Bold);
             this.button5.ForeColor = System.Drawing.Color.Linen;
             this.button5.Location = new System.Drawing.Point(3, 278);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -234,7 +238,7 @@
             this.Btnelcloud.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.Btnelcloud.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.Btnelcloud.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btnelcloud.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Btnelcloud.Font = new System.Drawing.Font("나눔고딕OTF", 9F);
             this.Btnelcloud.ForeColor = System.Drawing.Color.White;
             this.Btnelcloud.Location = new System.Drawing.Point(0, 62);
             this.Btnelcloud.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -252,7 +256,7 @@
             this.BtnDcanvas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.BtnDcanvas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.BtnDcanvas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnDcanvas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.BtnDcanvas.Font = new System.Drawing.Font("나눔고딕OTF", 9F);
             this.BtnDcanvas.ForeColor = System.Drawing.Color.White;
             this.BtnDcanvas.Location = new System.Drawing.Point(0, 0);
             this.BtnDcanvas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -271,7 +275,7 @@
             this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button8.Font = new System.Drawing.Font("나눔고딕OTF", 10F, System.Drawing.FontStyle.Bold);
             this.button8.ForeColor = System.Drawing.Color.Linen;
             this.button8.Location = new System.Drawing.Point(3, 484);
             this.button8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -299,7 +303,7 @@
             this.BtnCenterChain.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.BtnCenterChain.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.BtnCenterChain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCenterChain.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.BtnCenterChain.Font = new System.Drawing.Font("나눔고딕OTF", 9F);
             this.BtnCenterChain.ForeColor = System.Drawing.Color.White;
             this.BtnCenterChain.Location = new System.Drawing.Point(0, 62);
             this.BtnCenterChain.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -317,7 +321,7 @@
             this.BtnMstation.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.BtnMstation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.BtnMstation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnMstation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.BtnMstation.Font = new System.Drawing.Font("나눔고딕OTF", 9F);
             this.BtnMstation.ForeColor = System.Drawing.Color.White;
             this.BtnMstation.Location = new System.Drawing.Point(0, 0);
             this.BtnMstation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -336,7 +340,7 @@
             this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button11.Font = new System.Drawing.Font("나눔고딕OTF", 10F, System.Drawing.FontStyle.Bold);
             this.button11.ForeColor = System.Drawing.Color.Linen;
             this.button11.Location = new System.Drawing.Point(3, 690);
             this.button11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -364,7 +368,7 @@
             this.BtnKCloud.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.BtnKCloud.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.BtnKCloud.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnKCloud.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.BtnKCloud.Font = new System.Drawing.Font("나눔고딕OTF", 9F);
             this.BtnKCloud.ForeColor = System.Drawing.Color.White;
             this.BtnKCloud.Location = new System.Drawing.Point(0, 62);
             this.BtnKCloud.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -382,7 +386,7 @@
             this.BtnVstation.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.BtnVstation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.BtnVstation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnVstation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.BtnVstation.Font = new System.Drawing.Font("나눔고딕OTF", 9F);
             this.BtnVstation.ForeColor = System.Drawing.Color.White;
             this.BtnVstation.Location = new System.Drawing.Point(0, 0);
             this.BtnVstation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -398,30 +402,13 @@
             this.timerSliding.Interval = 10;
             this.timerSliding.Tick += new System.EventHandler(this.timerSliding_Tick);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 22);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 50;
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(844, 628);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
             // BtnInsert
             // 
-            this.BtnInsert.Location = new System.Drawing.Point(1202, 586);
+            this.BtnInsert.Font = new System.Drawing.Font("나눔고딕OTF", 10F, System.Drawing.FontStyle.Bold);
+            this.BtnInsert.Location = new System.Drawing.Point(1184, 529);
             this.BtnInsert.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnInsert.Name = "BtnInsert";
-            this.BtnInsert.Size = new System.Drawing.Size(86, 29);
+            this.BtnInsert.Size = new System.Drawing.Size(114, 56);
             this.BtnInsert.TabIndex = 2;
             this.BtnInsert.Text = "추가";
             this.BtnInsert.UseVisualStyleBackColor = true;
@@ -430,6 +417,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Font = new System.Drawing.Font("나눔고딕OTF", 10F);
             this.groupBox1.Location = new System.Drawing.Point(267, 126);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
@@ -439,12 +427,33 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "솔루션";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1.ColumnHeadersHeight = 40;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 20);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 40;
+            this.dataGridView1.RowTemplate.Height = 23;
+            this.dataGridView1.Size = new System.Drawing.Size(844, 630);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.Text = "나눔고딕OTF, 5pt";
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
             // BtnEdit
             // 
-            this.BtnEdit.Location = new System.Drawing.Point(1202, 635);
+            this.BtnEdit.Font = new System.Drawing.Font("나눔고딕OTF", 10F, System.Drawing.FontStyle.Bold);
+            this.BtnEdit.Location = new System.Drawing.Point(1184, 592);
             this.BtnEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnEdit.Name = "BtnEdit";
-            this.BtnEdit.Size = new System.Drawing.Size(86, 29);
+            this.BtnEdit.Size = new System.Drawing.Size(114, 56);
             this.BtnEdit.TabIndex = 3;
             this.BtnEdit.Text = "수정";
             this.BtnEdit.UseVisualStyleBackColor = true;
@@ -452,10 +461,11 @@
             // 
             // BtnDelete
             // 
-            this.BtnDelete.Location = new System.Drawing.Point(1202, 688);
+            this.BtnDelete.Font = new System.Drawing.Font("나눔고딕OTF", 10F, System.Drawing.FontStyle.Bold);
+            this.BtnDelete.Location = new System.Drawing.Point(1184, 656);
             this.BtnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(86, 29);
+            this.BtnDelete.Size = new System.Drawing.Size(114, 56);
             this.BtnDelete.TabIndex = 4;
             this.BtnDelete.Text = "삭제";
             this.BtnDelete.UseVisualStyleBackColor = true;
@@ -463,20 +473,42 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1202, 748);
+            this.button2.Font = new System.Drawing.Font("나눔고딕OTF", 10F, System.Drawing.FontStyle.Bold);
+            this.button2.Location = new System.Drawing.Point(1184, 720);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 29);
+            this.button2.Size = new System.Drawing.Size(114, 56);
             this.button2.TabIndex = 5;
             this.button2.Text = "종료";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.pictureBox1);
+            this.panel5.Location = new System.Drawing.Point(1141, 12);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(200, 100);
+            this.panel5.TabIndex = 6;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::TeamProjectFrontEnd.Properties.Resources.CI_1;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(200, 100);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // SolutionPage2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1353, 795);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.BtnDelete);
             this.Controls.Add(this.BtnEdit);
@@ -494,8 +526,10 @@
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             //
             // 폼 제목 수정
@@ -532,5 +566,7 @@
         private System.Windows.Forms.Button BtnEdit;
         private System.Windows.Forms.Button BtnDelete;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

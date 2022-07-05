@@ -58,7 +58,7 @@
             this.finishBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.finishBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.finishBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.finishBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.finishBtn.Font = new System.Drawing.Font("나눔고딕OTF", 10F, System.Drawing.FontStyle.Bold);
             this.finishBtn.Location = new System.Drawing.Point(176, 402);
             this.finishBtn.Name = "finishBtn";
             this.finishBtn.Size = new System.Drawing.Size(250, 50);
@@ -81,10 +81,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label6.Font = new System.Drawing.Font("나눔고딕OTF", 9F, System.Drawing.FontStyle.Bold);
             this.label6.Location = new System.Drawing.Point(141, 323);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(83, 15);
+            this.label6.Size = new System.Drawing.Size(76, 14);
             this.label6.TabIndex = 11;
             this.label6.Text = "비밀번호 확인";
             // 
@@ -107,7 +107,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.empNoTBox);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.groupBox1.Font = new System.Drawing.Font("나눔고딕OTF", 10F, System.Drawing.FontStyle.Bold);
             this.groupBox1.Location = new System.Drawing.Point(292, 59);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(600, 500);
@@ -122,7 +122,7 @@
             this.pwdCheckLb.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.pwdCheckLb.Location = new System.Drawing.Point(233, 347);
             this.pwdCheckLb.Name = "pwdCheckLb";
-            this.pwdCheckLb.Size = new System.Drawing.Size(11, 15);
+            this.pwdCheckLb.Size = new System.Drawing.Size(11, 16);
             this.pwdCheckLb.TabIndex = 14;
             this.pwdCheckLb.Text = " ";
             // 
@@ -133,7 +133,7 @@
             this.pwdLb.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.pwdLb.Location = new System.Drawing.Point(233, 278);
             this.pwdLb.Name = "pwdLb";
-            this.pwdLb.Size = new System.Drawing.Size(187, 15);
+            this.pwdLb.Size = new System.Drawing.Size(199, 16);
             this.pwdLb.TabIndex = 13;
             this.pwdLb.Text = "8~20자 이내의 영문 + 숫자 조합";
             // 
@@ -144,7 +144,7 @@
             this.idLb.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.idLb.Location = new System.Drawing.Point(233, 211);
             this.idLb.Name = "idLb";
-            this.idLb.Size = new System.Drawing.Size(175, 15);
+            this.idLb.Size = new System.Drawing.Size(186, 16);
             this.idLb.TabIndex = 12;
             this.idLb.Text = "6~15자 이내의 영문 또는 숫자";
             // 
@@ -155,6 +155,7 @@
             this.idCheckBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.idCheckBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.idCheckBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.idCheckBtn.Font = new System.Drawing.Font("나눔고딕OTF", 9F, System.Drawing.FontStyle.Bold);
             this.idCheckBtn.Location = new System.Drawing.Point(411, 184);
             this.idCheckBtn.Name = "idCheckBtn";
             this.idCheckBtn.Size = new System.Drawing.Size(100, 21);
@@ -177,10 +178,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.Font = new System.Drawing.Font("나눔고딕OTF", 9F, System.Drawing.FontStyle.Bold);
             this.label5.Location = new System.Drawing.Point(141, 254);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 15);
+            this.label5.Size = new System.Drawing.Size(51, 14);
             this.label5.TabIndex = 10;
             this.label5.Text = "비밀번호";
             // 
@@ -196,10 +197,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.Font = new System.Drawing.Font("나눔고딕OTF", 9F, System.Drawing.FontStyle.Bold);
             this.label4.Location = new System.Drawing.Point(141, 188);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 15);
+            this.label4.Size = new System.Drawing.Size(40, 14);
             this.label4.TabIndex = 9;
             this.label4.Text = "아이디";
             // 
@@ -211,15 +212,14 @@
             this.nameTBox.Name = "nameTBox";
             this.nameTBox.Size = new System.Drawing.Size(168, 21);
             this.nameTBox.TabIndex = 1;
-            this.nameTBox.TextChanged += new System.EventHandler(this.nameTBox_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Font = new System.Drawing.Font("나눔고딕OTF", 9F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(141, 125);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 15);
+            this.label2.Size = new System.Drawing.Size(29, 14);
             this.label2.TabIndex = 8;
             this.label2.Text = "이름";
             // 
@@ -231,15 +231,14 @@
             this.empNoTBox.Name = "empNoTBox";
             this.empNoTBox.Size = new System.Drawing.Size(168, 21);
             this.empNoTBox.TabIndex = 0;
-            this.empNoTBox.TextChanged += new System.EventHandler(this.empNoTBox_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Font = new System.Drawing.Font("나눔고딕OTF", 9F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(141, 64);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 15);
+            this.label1.Size = new System.Drawing.Size(51, 14);
             this.label1.TabIndex = 7;
             this.label1.Text = "사원번호";
             // 
@@ -256,10 +255,11 @@
             // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("나눔고딕OTF", 10F, System.Drawing.FontStyle.Bold);
             this.button1.Location = new System.Drawing.Point(1065, 579);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 32);
+            this.button1.Size = new System.Drawing.Size(88, 38);
             this.button1.TabIndex = 1;
             this.button1.Text = "뒤로가기";
             this.button1.UseVisualStyleBackColor = true;
@@ -275,7 +275,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "SignUpPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "회원가입";
+            this.Text = "SignUpPage";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
