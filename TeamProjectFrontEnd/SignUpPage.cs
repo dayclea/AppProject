@@ -206,9 +206,17 @@ namespace TeamProjectFrontEnd
                 {
                     MessageBox.Show("아이디가 입력되지 않았습니다.");
                 }
+                else if (Regex.IsMatch(inputId, @"[ㄱ-ㅎ가-힣~!@#$%^&*()_\-=+[\]{};:<>,.\""\']") == true)
+                {
+                    MessageBox.Show("아이디에는 한글 또는 특수문자는 사용이 불가합니다.");
+                }
                 else if (inputPwd == "" || inputPwd == null || inputRePwd == "" || inputRePwd == null)
                 {
                     MessageBox.Show("비밀번호가 입력되지 않았습니다.");
+                }
+                else if (Regex.IsMatch(inputPwd, @"[ㄱ-ㅎ가-힣~!@#$%^&*()_\-=+[\]{};:<>,.\""\']") == true)
+                {
+                    MessageBox.Show("비밀번호에는 한글 또는 특수문자는 사용이 불가합니다.");
                 }
                 else if (idCheck == false)
                 {
