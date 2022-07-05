@@ -102,7 +102,7 @@ namespace TeamProjectFrontEnd
                 button11.BackgroundImage = null;
                 BtnVstation.Text = "Vstation";
                 BtnVstation.BackgroundImage = null;
-                BtnKCloud.Text = "K-구름";
+                BtnKCloud.Text = "K - 구름";
                 BtnKCloud.BackgroundImage = null;
 
 
