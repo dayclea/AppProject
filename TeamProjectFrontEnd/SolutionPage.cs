@@ -34,7 +34,7 @@ namespace TeamProjectFrontEnd
 
             dataGridView1.SelectAll();
 
-            if (dataGridView1.SelectedCells[0].Value == null || dataGridView1.SelectedCells[2] == null || dataGridView1.SelectedCells[3].Value == null || dataGridView1.SelectedCells[4].Value == null)
+            if (dataGridView1.SelectedCells[0].Value == null || dataGridView1.SelectedCells[2].Value == null || dataGridView1.SelectedCells[3].Value == null || dataGridView1.SelectedCells[4].Value == null)
             {
                 MessageBox.Show("값을 입력해 주세요.", "Error");
                 return;
