@@ -248,9 +248,12 @@ namespace TeamProjectFrontEnd
                                     //정상적인 신청 완료 후, 로그인 화면으로 재이동
                                     //if ()
                                     LoginPage2 loginPage2 = new LoginPage2();
-                                    loginPage2.Tag = this;
-                                    loginPage2.Show();
+                                    //이하 2줄 빌드 시, 회원가입 완료 후 프로그램 종료되는 이슈로 인하여 수정
+                                    //loginPage2.Tag = this;
+                                    //loginPage2.Show();
                                     this.Hide();
+                                    loginPage2.ShowDialog();
+                                    this.Close();
                                 }
                             }
                             catch (Exception exc)
