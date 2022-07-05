@@ -102,7 +102,7 @@ namespace TeamProjectFrontEnd
                 button11.BackgroundImage = null;
                 BtnVstation.Text = "Vstation";
                 BtnVstation.BackgroundImage = null;
-                BtnKCloud.Text = "K - 구름";
+                BtnKCloud.Text = "K-구름";
                 BtnKCloud.BackgroundImage = null;
 
 
@@ -230,7 +230,7 @@ namespace TeamProjectFrontEnd
 
         private void BtnKCloud_Click(object sender, EventArgs e)
         {
-            BtnMenuClickEvent("K - 구름");
+            BtnMenuClickEvent("K-구름");
         }
 
         // 추가버튼 클릭 이벤트
