@@ -230,7 +230,7 @@ namespace TeamProjectFrontEnd
 
         private void BtnKCloud_Click(object sender, EventArgs e)
         {
-            BtnMenuClickEvent("K - 구름");
+            BtnMenuClickEvent("K-구름");
         }
 
         // 추가버튼 클릭 이벤트
@@ -410,6 +410,19 @@ namespace TeamProjectFrontEnd
             ds = dbLib2.GetSolution(groupBox1.Text);
 
             dataGridView1.DataSource = ds.Tables[0];
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            LoginPage2 loginPage = new LoginPage2();
+            this.Hide();
+            loginPage.ShowDialog();
+            this.Close();
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

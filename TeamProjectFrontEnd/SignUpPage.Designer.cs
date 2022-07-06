@@ -46,7 +46,7 @@
             this.empNoTBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Btn_Exit = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -58,7 +58,7 @@
             this.finishBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.finishBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.finishBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.finishBtn.Font = new System.Drawing.Font("나눔고딕OTF", 10F, System.Drawing.FontStyle.Bold);
+            this.finishBtn.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 10F, System.Drawing.FontStyle.Bold);
             this.finishBtn.Location = new System.Drawing.Point(176, 402);
             this.finishBtn.Name = "finishBtn";
             this.finishBtn.Size = new System.Drawing.Size(250, 50);
@@ -81,7 +81,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("나눔고딕OTF", 9F, System.Drawing.FontStyle.Bold);
+            this.label6.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Bold);
             this.label6.Location = new System.Drawing.Point(141, 323);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(76, 14);
@@ -107,7 +107,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.empNoTBox);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("나눔고딕OTF", 10F, System.Drawing.FontStyle.Bold);
+            this.groupBox1.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox1.Location = new System.Drawing.Point(292, 59);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(600, 500);
@@ -122,7 +122,7 @@
             this.pwdCheckLb.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.pwdCheckLb.Location = new System.Drawing.Point(233, 347);
             this.pwdCheckLb.Name = "pwdCheckLb";
-            this.pwdCheckLb.Size = new System.Drawing.Size(11, 16);
+            this.pwdCheckLb.Size = new System.Drawing.Size(15, 21);
             this.pwdCheckLb.TabIndex = 14;
             this.pwdCheckLb.Text = " ";
             // 
@@ -130,10 +130,11 @@
             // 
             this.pwdLb.AutoSize = true;
             this.pwdLb.BackColor = System.Drawing.Color.White;
+            this.pwdLb.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.pwdLb.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.pwdLb.Location = new System.Drawing.Point(233, 278);
             this.pwdLb.Name = "pwdLb";
-            this.pwdLb.Size = new System.Drawing.Size(199, 16);
+            this.pwdLb.Size = new System.Drawing.Size(157, 13);
             this.pwdLb.TabIndex = 13;
             this.pwdLb.Text = "8~20자 이내의 영문 + 숫자 조합";
             // 
@@ -141,10 +142,11 @@
             // 
             this.idLb.AutoSize = true;
             this.idLb.BackColor = System.Drawing.Color.White;
+            this.idLb.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.idLb.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.idLb.Location = new System.Drawing.Point(233, 211);
             this.idLb.Name = "idLb";
-            this.idLb.Size = new System.Drawing.Size(186, 16);
+            this.idLb.Size = new System.Drawing.Size(147, 13);
             this.idLb.TabIndex = 12;
             this.idLb.Text = "6~15자 이내의 영문 또는 숫자";
             // 
@@ -155,7 +157,7 @@
             this.idCheckBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.idCheckBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.idCheckBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.idCheckBtn.Font = new System.Drawing.Font("나눔고딕OTF", 9F, System.Drawing.FontStyle.Bold);
+            this.idCheckBtn.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Bold);
             this.idCheckBtn.Location = new System.Drawing.Point(411, 184);
             this.idCheckBtn.Name = "idCheckBtn";
             this.idCheckBtn.Size = new System.Drawing.Size(100, 21);
@@ -178,7 +180,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("나눔고딕OTF", 9F, System.Drawing.FontStyle.Bold);
+            this.label5.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Bold);
             this.label5.Location = new System.Drawing.Point(141, 254);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 14);
@@ -197,7 +199,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("나눔고딕OTF", 9F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Bold);
             this.label4.Location = new System.Drawing.Point(141, 188);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 14);
@@ -216,7 +218,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("나눔고딕OTF", 9F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(141, 125);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 14);
@@ -235,7 +237,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("나눔고딕OTF", 9F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("나눔고딕", 9F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(141, 64);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 14);
@@ -253,24 +255,30 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // Btn_Exit
             // 
-            this.button1.Font = new System.Drawing.Font("나눔고딕OTF", 10F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(1065, 579);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 38);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "뒤로가기";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Btn_Exit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Btn_Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(241)))));
+            this.Btn_Exit.FlatAppearance.BorderSize = 0;
+            this.Btn_Exit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
+            this.Btn_Exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
+            this.Btn_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Exit.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 10F, System.Drawing.FontStyle.Bold);
+            this.Btn_Exit.ForeColor = System.Drawing.Color.Black;
+            this.Btn_Exit.Location = new System.Drawing.Point(1056, 563);
+            this.Btn_Exit.Name = "Btn_Exit";
+            this.Btn_Exit.Size = new System.Drawing.Size(101, 47);
+            this.Btn_Exit.TabIndex = 3;
+            this.Btn_Exit.Text = "뒤로가기";
+            this.Btn_Exit.UseVisualStyleBackColor = false;
+            this.Btn_Exit.Click += new System.EventHandler(this.button1_Click);
             // 
             // SignUpPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 636);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Btn_Exit);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "SignUpPage";
@@ -302,6 +310,6 @@
         public System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button idCheckBtn;
         private System.Windows.Forms.Label pwdCheckLb;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Btn_Exit;
     }
 }

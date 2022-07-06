@@ -62,9 +62,7 @@ namespace TeamProjectFrontEnd
         //새로고침
         private void button2_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("abc");
             Console.WriteLine("1");
-
             refreshList();
         }
 
@@ -77,44 +75,27 @@ namespace TeamProjectFrontEnd
         {
             string connectString = string.Format("Server={0};Database={1};Uid ={2};Pwd={3};", "52.79.165.81", "db_emp", "teammate2", "teammate2");
             using (MySqlConnection conn = new MySqlConnection(connectString))
-
-                try
+                if (listView1.SelectedItems.Count > 0)
                 {
-                    conn.Open();
-                    //다중 승인 구현
-                    DialogResult drb = MessageBox.Show("선택한 계정을 승인 하시겠습니까?", "확인메세지", MessageBoxButtons.OKCancel);
-                    if (drb == DialogResult.OK)
+                    try
                     {
-
-                        if (listView1.SelectedItems.Count > 1)
+                        conn.Open();
+                        //다중 승인 구현
+                        DialogResult drb = MessageBox.Show("선택한 계정을 승인 하시겠습니까?", "확인메세지", MessageBoxButtons.OKCancel);
+                        if (drb == DialogResult.OK)
                         {
-                            empcodeSelect = listView1.SelectedItems[0].Text;
-                            for (int i = 1; i < listView1.SelectedItems.Count - 1; i++)
-                            {
-                                empcodeSelect = empcodeSelect + "\",\"" + listView1.SelectedItems[i].Text;
-                            }
-                            empcodeSelect = empcodeSelect + "\",\"" + listView1.SelectedItems[listView1.SelectedItems.Count - 1].Text;
 
-                            Console.WriteLine(empcodeSelect);
-
-                            MySqlCommand msc = new MySqlCommand("UPDATE tbl_account SET login_status = 1 WHERE 1=1 AND empcode IN  (\"" + empcodeSelect + "\");", conn);
-                            empcodeSelect = "";
-                            msc.CommandType = CommandType.Text;
-                            MySqlDataReader r = msc.ExecuteReader();
-                            r.Close();
-                            msc.ExecuteNonQuery();
-                            MessageBox.Show("승인완료");
-
-                        }
-                        //단일 선택일 경우
-                        else if (listView1.SelectedItems.Count == 1)
-                        {
-                            //SelectedItems[0].SubItems[4] == login_status
-                            Console.WriteLine(listView1.SelectedItems.Count);
-                            Console.WriteLine(listView1.SelectedItems[0].SubItems[4].Text);
-                            if (Convert.ToInt32(listView1.SelectedItems[0].SubItems[4].Text) == 0)
+                            if (listView1.SelectedItems.Count > 1)
                             {
                                 empcodeSelect = listView1.SelectedItems[0].Text;
+                                for (int i = 1; i < listView1.SelectedItems.Count - 1; i++)
+                                {
+                                    empcodeSelect = empcodeSelect + "\",\"" + listView1.SelectedItems[i].Text;
+                                }
+                                empcodeSelect = empcodeSelect + "\",\"" + listView1.SelectedItems[listView1.SelectedItems.Count - 1].Text;
+
+                                Console.WriteLine(empcodeSelect);
+
                                 MySqlCommand msc = new MySqlCommand("UPDATE tbl_account SET login_status = 1 WHERE 1=1 AND empcode IN  (\"" + empcodeSelect + "\");", conn);
                                 empcodeSelect = "";
                                 msc.CommandType = CommandType.Text;
@@ -122,17 +103,39 @@ namespace TeamProjectFrontEnd
                                 r.Close();
                                 msc.ExecuteNonQuery();
                                 MessageBox.Show("승인완료");
+
                             }
-                            else
+                            //단일 선택일 경우
+                            else if (listView1.SelectedItems.Count == 1)
                             {
-                                MessageBox.Show("이미 승인된 계정입니다.");
+                                //SelectedItems[0].SubItems[4] == login_status
+                                Console.WriteLine(listView1.SelectedItems.Count);
+                                Console.WriteLine(listView1.SelectedItems[0].SubItems[4].Text);
+                                if (Convert.ToInt32(listView1.SelectedItems[0].SubItems[4].Text) == 0)
+                                {
+                                    empcodeSelect = listView1.SelectedItems[0].Text;
+                                    MySqlCommand msc = new MySqlCommand("UPDATE tbl_account SET login_status = 1 WHERE 1=1 AND empcode IN  (\"" + empcodeSelect + "\");", conn);
+                                    empcodeSelect = "";
+                                    msc.CommandType = CommandType.Text;
+                                    MySqlDataReader r = msc.ExecuteReader();
+                                    r.Close();
+                                    msc.ExecuteNonQuery();
+                                    MessageBox.Show("승인완료");
+                                }
+                                else
+                                {
+                                    MessageBox.Show("이미 승인된 계정입니다.");
+                                }
                             }
                         }
                     }
+                    catch (Exception exc)
+                    {
+                        MessageBox.Show(exc.Message);
+                    }
                 }
-                catch (Exception exc)
+                else
                 {
-                    MessageBox.Show(exc.Message);
                 }
 
             refreshList();
