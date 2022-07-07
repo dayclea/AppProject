@@ -150,8 +150,14 @@ namespace TeamProjectFrontEnd
                 DialogResult dr = MessageBox.Show("선택한 계정을 삭제 하시겠습니까?", "확인메세지", MessageBoxButtons.OKCancel);
                 if (dr == DialogResult.OK)
                 {
-                    string connectString = string.Format("Server={0};Database={1};Uid ={2};Pwd={3};", "52.79.165.81", "db_emp", "teammate2", "teammate2");
-                    using (MySqlConnection conn = new MySqlConnection(connectString))
+                    if (listView1.SelectedItems[0].Text.Equals("T0001"))
+                    {
+                        MessageBox.Show("관리자 계정을 삭제할 수 없습니다.");
+                    }
+                    else
+                    {
+                        string connectString = string.Format("Server={0};Database={1};Uid ={2};Pwd={3};", "52.79.165.81", "db_emp", "teammate2", "teammate2");
+                        using (MySqlConnection conn = new MySqlConnection(connectString))
 
                         try
                         {
@@ -198,6 +204,7 @@ namespace TeamProjectFrontEnd
                         {
                             MessageBox.Show(exc.Message);
                         }
+                    }
                 }
             }
             else
