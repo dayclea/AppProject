@@ -119,6 +119,7 @@
             // 
             this.pwdCheckLb.AutoSize = true;
             this.pwdCheckLb.BackColor = System.Drawing.Color.White;
+            this.pwdCheckLb.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.pwdCheckLb.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.pwdCheckLb.Location = new System.Drawing.Point(233, 347);
             this.pwdCheckLb.Name = "pwdCheckLb";
