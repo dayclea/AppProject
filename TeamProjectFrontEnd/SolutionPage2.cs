@@ -411,5 +411,18 @@ namespace TeamProjectFrontEnd
 
             dataGridView1.DataSource = ds.Tables[0];
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            LoginPage2 loginPage = new LoginPage2();
+            this.Hide();
+            loginPage.ShowDialog();
+            this.Close();
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
