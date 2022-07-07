@@ -38,7 +38,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Btn_Exit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -120,7 +120,7 @@
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("나눔고딕OTF", 9F, System.Drawing.FontStyle.Bold);
+            this.button1.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 10F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Location = new System.Drawing.Point(462, 418);
             this.button1.Name = "button1";
@@ -153,17 +153,23 @@
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
             // 
-            // button2
+            // Btn_Exit
             // 
-            this.button2.Font = new System.Drawing.Font("나눔고딕OTF", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button2.Location = new System.Drawing.Point(1047, 567);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(88, 38);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "종료";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.btnExit_Click);
+            this.Btn_Exit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Btn_Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(241)))));
+            this.Btn_Exit.FlatAppearance.BorderSize = 0;
+            this.Btn_Exit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
+            this.Btn_Exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
+            this.Btn_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Exit.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 10F, System.Drawing.FontStyle.Bold);
+            this.Btn_Exit.ForeColor = System.Drawing.Color.Black;
+            this.Btn_Exit.Location = new System.Drawing.Point(1057, 566);
+            this.Btn_Exit.Name = "Btn_Exit";
+            this.Btn_Exit.Size = new System.Drawing.Size(101, 47);
+            this.Btn_Exit.TabIndex = 2;
+            this.Btn_Exit.Text = "종료";
+            this.Btn_Exit.UseVisualStyleBackColor = false;
+            this.Btn_Exit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // LoginPage2
             // 
@@ -172,9 +178,9 @@
             this.ClientSize = new System.Drawing.Size(1184, 636);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.Btn_Exit);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -182,7 +188,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "LoginPage2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "로그인";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -203,6 +209,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Btn_Exit;
     }
 }

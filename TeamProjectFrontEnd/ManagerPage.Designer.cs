@@ -61,7 +61,7 @@
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("나눔고딕OTF", 12F, System.Drawing.FontStyle.Bold);
+            this.button2.Font = new System.Drawing.Font("나눔고딕", 12F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(0, 67);
             this.button2.Name = "button2";
@@ -78,7 +78,7 @@
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSalmon;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("나눔고딕OTF", 15F, System.Drawing.FontStyle.Bold);
+            this.button1.Font = new System.Drawing.Font("나눔고딕", 15F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Name = "button1";
@@ -162,10 +162,10 @@
             // 
             // button6
             // 
-            this.button6.Font = new System.Drawing.Font("나눔고딕OTF", 10F, System.Drawing.FontStyle.Bold);
-            this.button6.Location = new System.Drawing.Point(650, 409);
+            this.button6.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 10F, System.Drawing.FontStyle.Bold);
+            this.button6.Location = new System.Drawing.Point(650, 407);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(158, 58);
+            this.button6.Size = new System.Drawing.Size(160, 60);
             this.button6.TabIndex = 4;
             this.button6.Text = "프로그램종료";
             this.button6.UseVisualStyleBackColor = true;
@@ -173,10 +173,10 @@
             // 
             // button5
             // 
-            this.button5.Font = new System.Drawing.Font("나눔고딕OTF", 10F, System.Drawing.FontStyle.Bold);
-            this.button5.Location = new System.Drawing.Point(650, 99);
+            this.button5.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 10F, System.Drawing.FontStyle.Bold);
+            this.button5.Location = new System.Drawing.Point(650, 114);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(159, 52);
+            this.button5.Size = new System.Drawing.Size(160, 60);
             this.button5.TabIndex = 3;
             this.button5.Text = "삭제";
             this.button5.UseVisualStyleBackColor = true;
@@ -184,10 +184,10 @@
             // 
             // button4
             // 
-            this.button4.Font = new System.Drawing.Font("나눔고딕OTF", 10F, System.Drawing.FontStyle.Bold);
+            this.button4.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 10F, System.Drawing.FontStyle.Bold);
             this.button4.Location = new System.Drawing.Point(650, 40);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(159, 53);
+            this.button4.Size = new System.Drawing.Size(160, 60);
             this.button4.TabIndex = 2;
             this.button4.Text = "승인";
             this.button4.UseVisualStyleBackColor = true;
@@ -195,12 +195,12 @@
             // 
             // button3
             // 
-            this.button3.Font = new System.Drawing.Font("나눔고딕OTF", 10F, System.Drawing.FontStyle.Bold);
-            this.button3.Location = new System.Drawing.Point(650, 345);
+            this.button3.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 10F, System.Drawing.FontStyle.Bold);
+            this.button3.Location = new System.Drawing.Point(650, 333);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(159, 58);
+            this.button3.Size = new System.Drawing.Size(160, 60);
             this.button3.TabIndex = 1;
-            this.button3.Text = "메인화면으로";
+            this.button3.Text = "솔루션 조회";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -212,7 +212,7 @@
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5});
-            this.listView1.Font = new System.Drawing.Font("나눔고딕OTF", 9F);
+            this.listView1.Font = new System.Drawing.Font("나눔고딕", 9F);
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
@@ -261,7 +261,7 @@
             this.Controls.Add(this.panelSideMenu);
             this.Name = "ManagerPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ManagerPage";
+            this.Text = "계정관리";
             this.panelSideMenu.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
