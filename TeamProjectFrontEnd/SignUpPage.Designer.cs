@@ -288,7 +288,10 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-
+            //
+            // 폼 제목 수정
+            //
+            this.Text = "회원가입";
         }
 
         #endregion
