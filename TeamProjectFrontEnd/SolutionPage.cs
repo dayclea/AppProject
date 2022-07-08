@@ -34,10 +34,27 @@ namespace TeamProjectFrontEnd
 
             dataGridView1.SelectAll();
 
-            if (dataGridView1.SelectedCells[0].Value == null || dataGridView1.SelectedCells[2].Value == null || dataGridView1.SelectedCells[3].Value == null || dataGridView1.SelectedCells[4].Value == null)
+
+            try
             {
-                MessageBox.Show("값을 입력해 주세요.", "Error");
+                if (dataGridView1.SelectedCells[0].Value == null || dataGridView1.SelectedCells[2].Value == null || dataGridView1.SelectedCells[3].Value == null || dataGridView1.SelectedCells[4].Value == null)
+                {
+                    MessageBox.Show("값을 입력해 주세요.", "Error");
+                    return;
+                }
+                else if (dataGridView1.SelectedCells[0].Value.ToString() == "" || dataGridView1.SelectedCells[2].Value.ToString() == "" || dataGridView1.SelectedCells[3].Value.ToString() == "" || dataGridView1.SelectedCells[4].Value.ToString() == "")
+                {
+                    MessageBox.Show("값을 입력해 주세요!", "Error");
+                    return;
+                }
+            }
+            catch (Exception exp)
+            {
+                Console.WriteLine(exp);
+
+                MessageBox.Show("값을 입력해 주세요~", "Error");
                 return;
+
             }
 
             // String solution_code = (dataGridView1.SelectedCells[0].Value).ToString();
